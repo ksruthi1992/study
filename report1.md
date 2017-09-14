@@ -5,17 +5,17 @@
 * Customer Requirements
 * [Glossary](#glossary)
 * Functional Requirments
- * Stakeholders
- * Actors and Goals
- * Use Cases
+  * Stakeholders
+  * Actors and Goals
+  * Use Cases
 * Nonfunctional Requirements
 * Domain Analysis
- * Domain Model
- * System Operation Contracts
- * Mathematical Model
+  * Domain Model
+  * System Operation Contracts
+  * Mathematical Model
 * User Interface Design
- * Preliminary Design
- * User Effort Estimation
+  * Preliminary Design
+  * User Effort Estimation
 * Plan of Work
 * References
 
