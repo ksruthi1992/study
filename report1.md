@@ -3,7 +3,7 @@
 ### Table of contents  
 * [Project Proposal](http://cloudmytrash.com:1234/tux-proposal.html)
 * Customer Requirements
-* Glossary
+* [Glossary](#glossary)
 * Functional Requirments
  * Stakeholders
  * Actors and Goals
@@ -19,5 +19,5 @@
 * Plan of Work
 * References
 
-### Glossary
+### <a name="glossary"></a>Glossary
 
