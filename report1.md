@@ -53,11 +53,11 @@ Requermets Prioity Description
 
 <!-- Hey guys, let's just assign our names to these okay? -->
 Use Case Description  
- * UC-1 User Searches for open study space  **_(Luke)_**
+ * UC-1 User Searches for open study space  **_(Travis)_**
  * UC-2 User Searches for study space with amenity  **_(Blank)_**
  * UC-3 User reserves a room  **_(Blank)_**
  * UC-4 System logs user  **_(Blank)_**
- * UC-5 System analyzes trends  **_(Travis)_**
+ * UC-5 System analyzes trends  **_(Luke)_**
  * UC-6 System displays data  **_(Alex)_**
  * UC-7 User leaves comment  **_(Blank)_**
 
