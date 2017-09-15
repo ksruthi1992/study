@@ -23,28 +23,16 @@
 ### <a name="requirements"></a>Customer Requirements  
 Requermets Prioity Description  
 <hr>
-<<<<<<< HEAD
 
-* REQ - 1 5 Find place on campus to study
-* REQ - 2 3 System finds a place near me  
-* REQ - 3 3 System is easier to use than a map  
-* REQ - 4 1 System can find group space  
-* REQ - 5 2 System can find quiet(nap) space  
-* REQ - 6 3 User can reserve a room  
-* REQ - 7 3 System can search for amenities (locks/whiteboards/outlets/wi-fi/printers)  
-* REQ - 8 4 System analyzes data to track trends  
-* REQ - 9 3 User can leave comments   
-=======
-* REQ - 1 5 Find place on campus to study
-* REQ - 2 3 System finds a place near me
-* REQ - 3 3 System is easier to use than a map
-* REQ - 4 1 System can find group space
-* REQ - 5 2 System can find quiet(nap) space
-* REQ - 6 3 User can reserve a room
-* REQ - 7 3 System can search for amenities (locks/whiteboards/outlets/wi-fi/printers)
-* REQ - 8 4 System analyzes data to track trends
-* REQ - 9 3 User can leave comments
->>>>>>> 71ed93cedf816f0fbce1c37f358ee72982036c14
+* **REQ - 1** 5 Find place on campus to study
+* **REQ - 2** 3 System finds a place near me  
+* **REQ - 3** 3 System is easier to use than a map  
+* **REQ - 4** 1 System can find group space  
+* **REQ - 5** 2 System can find quiet(nap) space  
+* **REQ - 6** 3 User can reserve a room  
+* **REQ - 7** 3 System can search for amenities (locks/whiteboards/outlets/wi-fi/printers)  
+* **REQ - 8** 4 System analyzes data to track trends  
+* **REQ - 9** 3 User can leave comments   
 <hr>
 
 
@@ -56,37 +44,22 @@ Requermets Prioity Description
 
 #### <a name="actor"></a>Actors and Goals  
 <hr>
-<<<<<<< HEAD
 
  *  Users  
  *  Admins  
-=======
-*  Users
-*  Admins
->>>>>>> 71ed93cedf816f0fbce1c37f358ee72982036c14
 
 #### <a name="usecase"></a>Use Cases  
 <hr> 
 
 <!-- Hey guys, let's just assign our names to these okay? -->
 Use Case Description  
-<<<<<<< HEAD
- * UC-1 User Searches for open study space  **_(Travis)_**
+ * UC-1 User Searches for open study space  **_(Luke)_**
  * UC-2 User Searches for study space with amenity  **_(Blank)_**
  * UC-3 User reserves a room  **_(Blank)_**
  * UC-4 System logs user  **_(Blank)_**
- * UC-5 System analyzes trends  **_(Luke)_**
+ * UC-5 System analyzes trends  **_(Travis)_**
  * UC-6 System displays data  **_(Alex)_**
  * UC-7 User leaves comment  **_(Blank)_**
-=======
-* UC-1 User Searches for open study space
-* UC-2 User Searches for study space with amenity
-* UC-3 User reserves a room
-* UC-4 System logs user
-* UC-5 System analyzes trends
-* UC-6 System displays data
-* UC-7 User leaves comment 
->>>>>>> 71ed93cedf816f0fbce1c37f358ee72982036c14
 
 
 #### <a name="diagrams"></a>System Sequence Diagrams
