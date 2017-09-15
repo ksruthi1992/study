@@ -25,15 +25,15 @@
 ### <a name="glossary"></a>Glossary
 
 ### <a name="functional"></a>Functional Requirments
-*REQ - 1 Find place on campus to study
-*REQ - 2  find a place near me
-*REQ - 3 easier to use than a map
-*REQ - 4 find group space
-*REQ - 5 find quiet(nap) space
-*REQ - 6 reserve a room
-*REQ - 7 amenities (locks/whiteboards/outlets/wi-fi/printers
-*REQ - 8 data analysis
-*REQ - 9 user comments and anyalasys
+* REQ - 1 Find place on campus to study
+* REQ - 2  find a place near me
+* REQ - 3 easier to use than a map
+* REQ - 4 find group space
+* REQ - 5 find quiet(nap) space
+* REQ - 6 reserve a room
+* REQ - 7 amenities (locks/whiteboards/outlets/wi-fi/printers
+* REQ - 8 data analysis
+* REQ - 9 user comments and anyalasys
 
 
 #### <a name="stakeholders"></a>Stakeholders
