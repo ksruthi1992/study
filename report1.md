@@ -59,7 +59,7 @@ Use Case Description
  * UC-4 System logs user  **_(Blank)_**
  * UC-5 System analyzes trends  **_(Luke)_**
  * UC-6 System displays data  **_(Alex)_**
- * UC-7 User leaves comment  **_(Blank)_**
+ * UC-7 User leaves comment  **_(Edward)_**
 
 
 #### <a name="diagrams"></a>System Sequence Diagrams
