@@ -21,7 +21,7 @@
 * [References](#ref)
 
 ### <a name="requirements"></a>Customer Requirements  
-Requermets Prioity Description  
+Requirements Priority Description  
 <hr>
 
 * **REQ - 1** 5 Find place on campus to study
@@ -38,7 +38,7 @@ Requermets Prioity Description
 
 ### <a name="glossary"></a>Glossary
 
-### <a name="functional"></a>Functional Requirments
+### <a name="functional"></a>Functional Requirements
 
 #### <a name="stakeholders"></a>Stakeholders
 
@@ -53,7 +53,7 @@ Requermets Prioity Description
 
 <!-- Hey guys, let's just assign our names to these okay? -->
 Use Case Description  
- * UC-1 User Searches for open study space  **_(Blank)_**
+ * UC-1 User Searches for open study space  **_(Nick)_**
  * UC-2 User Searches for study space with amenity  **_(Travis)_**
  * UC-3 User reserves a room  **_(Blank)_**
  * UC-4 System logs user  **_(Blank)_**
@@ -64,7 +64,7 @@ Use Case Description
 
 #### <a name="diagrams"></a>System Sequence Diagrams
 
-### <a name="nonfunctional"></a>Nonfunctional Requirments
+### <a name="nonfunctional"></a>Nonfunctional Requirements
 
 ### <a name="domain_analysis"></a>Domain Analysis
 
