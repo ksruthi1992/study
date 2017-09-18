@@ -45,16 +45,16 @@ Requermets Prioity Description
 #### <a name="actor"></a>Actors and Goals  
 <hr>
 
- *  Users  
- *  Admins  
+ *  Users-Use the system to find places to study 
+ *  Admins-Manage the system to add or remove locations 
 
 #### <a name="usecase"></a>Use Cases  
 <hr> 
 
 <!-- Hey guys, let's just assign our names to these okay? -->
 Use Case Description  
- * UC-1 User Searches for open study space  **_(Travis)_**
- * UC-2 User Searches for study space with amenity  **_(Blank)_**
+ * UC-1 User Searches for open study space  **_(Blank)_**
+ * UC-2 User Searches for study space with amenity  **_(Travis)_**
  * UC-3 User reserves a room  **_(Blank)_**
  * UC-4 System logs user  **_(Blank)_**
  * UC-5 System analyzes trends  **_(Luke)_**
