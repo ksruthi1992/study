@@ -55,8 +55,11 @@ Use Case Description
  * UC-2 User Searches for study space with amenity  **_(Travis)_**
  * UC-3 User reserves a room  **_(Blank)_**
  * UC-4 System logs user  **_(Blank)_**
- * UC-5 System analyzes trends  **_(Luke)_**
- Use Case 5
+ * UC-5 System analyzes trends  **_(Luke)_**			
+ * UC-6 System displays data  **_(Alex)_**
+ * UC-7 User leaves comment  **_(Edward)_**
+
+Use Case 5
 System analyzes trends
 
 Related REQs:  REQ1, REQ2, REQ4, REQ5, REQ6, and REQ8
@@ -76,9 +79,6 @@ Flow of Events for Main Success Scenerio:
 -> System update triggers analysis algorithm
 
 <- Database releases updated trend data
-				
- * UC-6 System displays data  **_(Alex)_**
- * UC-7 User leaves comment  **_(Edward)_**
 
 
 #### <a name="diagrams"></a>System Sequence Diagrams
