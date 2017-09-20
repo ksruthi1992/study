@@ -67,6 +67,15 @@ Use Case Description
 |Participating Actor|None                                                                                |
 |Preconditions      |hmmm                                                                                |
 
+|Use Case 3         |                                                                                    |
+|-------------------|------------------------------------------------------------------------------------|
+|Related REQs       |REQ6                                                                                |
+|Initiating Actors  |Student                                                                             |
+|Actor's Goals      |To reserve a room                                                                   |
+|Participating Actor|Scheduler                                                                           |
+|Preconditions      |                                                                                    |
+|Postconditions     |                                                                                    |
+
 Use Case 5
 System analyzes trends
 
