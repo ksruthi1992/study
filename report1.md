@@ -70,13 +70,11 @@ Use Case Description
 |Participating Actor|Database                                                                            |
 |Preconditions      |Filter search is on screen                                                          |
 |Postconditions     |Search results displayed on screen                                                  |
-|:-----------------:|------------------------------------------------------------------------------------|
 |Flow of Events     |                                                                                    |
 |->                 |1.User selects the search option                                                    |
 |<-                 |2.System displays the search page                                                   |
 |->                 |3.User selects combatination of avalible amenities they want to search for          |
 |<-                 |4.Database returns availible study areas and how full they are                      |
-|:-----------------:|------------------------------------------------------------------------------------|
 |Alt. Flow of events|                                                                                    |
 |->                 |3a.User selects combanation of unavalible amenities                                 |
 |<-                 |	4.Database returns and displays message to refine search                         |
