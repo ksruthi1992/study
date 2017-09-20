@@ -58,6 +58,27 @@ Use Case Description
  * UC-3 User reserves a room  **_(Blank)_**
  * UC-4 System logs user  **_(Blank)_**
  * UC-5 System analyzes trends  **_(Luke)_**
+ Use Case 5
+System analyzes trends
+
+Related REQs:  REQ1, REQ2, REQ4, REQ5, REQ6, and REQ8
+
+Initiating Actors: System, Admin?
+
+Actors Goal: Analyze trends to predict study space availability
+
+Participating Actor: Student, Database
+
+Preconditions:  database is not empty
+
+Postconditions:  useage trend data is updated
+
+Flow of Events for Main Success Scenerio:
+
+-> System update triggers analysis algorithm
+
+<- Database releases updated trend data
+				
  * UC-6 System displays data  **_(Alex)_**
  * UC-7 User leaves comment  **_(Edward)_**
 
