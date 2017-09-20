@@ -97,6 +97,15 @@ Flow of Events for Main Success Scenerio:
 
 <- Database releases updated trend data
 
+|Use Case 6          |System displays data                                  |
+|--------------------|------------------------------------------------------|
+|Related REQs        |REQ1, REQ2, REQ3, REQ4, REQ5                          |
+|Initiating actors   |System                                                |
+|Actor's goals       |System displays data in a clear and easy to use way   |
+|Participating actors|Database                                              |
+|Preconditions       |Data needs to be in the Base                          |
+
+
 
 #### <a name="diagrams"></a>System Sequence Diagrams
 
