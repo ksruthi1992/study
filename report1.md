@@ -51,8 +51,8 @@
 
 <!-- Hey guys, let's just assign our names to these okay? -->
 Use Case Description  
- * UC-1 User Searches for open study space  **_(Nick)_**
- * UC-2 User Searches for study space with amenity  **_(Travis)_**
+ * UC-1 User searches for open study space  **_(Nick)_**
+ * UC-2 User searches for study space with amenity  **_(Travis)_**
  * UC-3 User reserves a room  **_(Tara)_**
  * UC-4 System logs user  **_(Blank)_**
  * UC-5 System analyzes trends  **_(Luke)_**			
@@ -62,13 +62,23 @@ Use Case Description
  <hr>
 
 
-|Use Case 2         |                                                                                    |
+|Use Case 2         |User searches for a study space with amenity                                        |
 |-------------------|------------------------------------------------------------------------------------|
 |Related REQs       |REQ1, REQ2, REQ7                                                                    |
 |Initiatinf Actors  |Student                                                                             |
 |Actor's Goals      |To search for study spaces with amenities(White boards, outlets, good wi-fi, ect...)|
-|Participating Actor|None                                                                                |
-|Preconditions      |hmmm                                                                                |
+|Participating Actor|Database                                                                            |
+|Preconditions      |Filter search is on screen                                                          |
+|Postconditions     |Search results displayed on screen                                                  |
+|--------------------------------------------------------------------------------------------------------|
+|Flow of Events                                                                                          |
+|-> 1.User selects the search option                                                                     |
+|<- 2.System displays the search page                                                                    |
+|-> 3.User selects combatination of avalible amenities they want to search for                           |
+|<- 4.Database returns availible study areas and how full they are                                       |
+|--------------------------------------------------------------------------------------------------------|
+|Alternate Flow of events                                                                                |
+|3a.                                                                                                     |
 
 |Use Case 3         |                                  |
 |-------------------|----------------------------------|
