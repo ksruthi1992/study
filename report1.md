@@ -59,6 +59,14 @@ Use Case Description
  * UC-6 System displays data  **_(Alex)_**
  * UC-7 User leaves comment  **_(Edward)_**
 
+|Use Case 2                          |
+|-------------------|----------------|
+|Related REQs       |REQ1, REQ2, REQ7|
+|Initiatinf Actors  |Student         |
+|Actor's Goals      |To search for study spaces with amenities(White boards, outlets, good wi-fi, ect...)|
+|Participating Actor|None|
+|Preconditions      |hmmm|
+
 Use Case 5
 System analyzes trends
 
