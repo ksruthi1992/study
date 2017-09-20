@@ -21,19 +21,17 @@
 * [References](#ref)
 
 ### <a name="requirements"></a>Customer Requirements  
-Requirements Priority Description  
-<hr>
-
-* **REQ - 1** 5 Find place on campus to study
-* **REQ - 2** 3 System finds a place near me  
-* **REQ - 3** 3 System is easier to use than a map  
-* **REQ - 4** 1 System can find group space  
-* **REQ - 5** 2 System can find quiet(nap) space  
-* **REQ - 6** 3 User can reserve a room  
-* **REQ - 7** 3 System can search for amenities (locks/whiteboards/outlets/wi-fi/printers)  
-* **REQ - 8** 4 System analyzes data to track trends  
-* **REQ - 9** 3 User can leave comments   
-<hr>
+|Requirements|Priority|Description                                                                |
+|------------|:------:|---------------------------------------------------------------------------|
+|**REQ - 1** |5       |Find place on campus to study                                              |
+|**REQ - 2** |3       |System finds a place near me                                               |
+|**REQ - 3** |3       |System is easier to use than a map                                         |
+|**REQ - 4** |1       |System can find group space                                                | 
+|**REQ - 5** |2       |System can find quiet(nap) space                                           |
+|**REQ - 6** |3       |User can reserve a room                                                    |
+|**REQ - 7** |3       |System can search for amenities (locks/whiteboards/outlets/wi-fi/printers) |
+|**REQ - 8** |4       |System analyzes data to track trends                                       |
+|**REQ - 9** |3       |User can leave comments                                                    |
 
 
 ### <a name="glossary"></a>Glossary
