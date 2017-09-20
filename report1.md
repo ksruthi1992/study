@@ -58,6 +58,9 @@ Use Case Description
  * UC-5 System analyzes trends  **_(Luke)_**			
  * UC-6 System displays data  **_(Alex)_**
  * UC-7 User leaves comment  **_(Edward)_**
+ 
+ <hr>
+
 
 |Use Case 2         |                                                                                    |
 |-------------------|------------------------------------------------------------------------------------|
@@ -105,7 +108,7 @@ Flow of Events for Main Success Scenerio:
 |Participating actors|Database                                              |
 |Preconditions       |Data needs to be in the Base                          |
 
-
+<hr>
 
 #### <a name="diagrams"></a>System Sequence Diagrams
 
