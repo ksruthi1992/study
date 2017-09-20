@@ -56,7 +56,7 @@ Use Case Description
  * UC-3 User reserves a room  **_(Tara)_**
  * UC-4 System logs user  **_(Blank)_**
  * UC-5 System analyzes trends  **_(Luke)_**			
- * UC-6 System displays data  **_(Alex)_**
+ * UC-6 User input how busy an area is  **_(Alex)_**
  * UC-7 User leaves comment  **_(Edward)_**
  
  <hr>
@@ -65,7 +65,7 @@ Use Case Description
 |Use Case 2         |User searches for a study space with amenity                                        |
 |-------------------|------------------------------------------------------------------------------------|
 |Related REQs       |REQ1, REQ2, REQ7                                                                    |
-|Initiatinf Actors  |Student                                                                             |
+|Initiating Actors  |Student                                                                             |
 |Actor's Goals      |To search for study spaces with amenities(White boards, outlets, good wi-fi, ect...)|
 |Participating Actor|Database                                                                            |
 |Preconditions      |Filter search is on screen                                                          |
@@ -73,10 +73,10 @@ Use Case Description
 |Flow of Events     |                                                                                    |
 |->                 |1.User selects the search option                                                    |
 |<-                 |2.System displays the search page                                                   |
-|->                 |3.User selects combatination of avalible amenities they want to search for          |
+|->                 |3.User selects combatination of available amenities they want to search for         |
 |<-                 |4.Database returns availible study areas and how full they are                      |
-|Alt. Flow of events|                                                                                    |
-|->                 |3a.User selects combanation of unavalible amenities                                 |
+|Alt. Flow of Events|                                                                                    |
+|->                 |3a.User selects combanation of unavailable amenities                                |
 |<-                 |	4.Database returns and displays message to refine search                         |
 
 |Use Case 3         |                                  |
