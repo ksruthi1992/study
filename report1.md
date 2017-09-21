@@ -118,7 +118,7 @@ Flow of Events for Main Success Scenerio:
 |Actor's goals       |Student can submit how busy an area is                |
 |Participating actors|Database                                              |
 |Preconditions       |Selection screen for level of space congestion        |
-                     |Button for submitting space congestion level          |
+|                    |Button for submitting space congestion level          |
 |Postconditions      |Data is submitted and stored in database              |
 
 |Flow of events      |   |Scenario 1                                          |
