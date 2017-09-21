@@ -109,13 +109,29 @@ Flow of Events for Main Success Scenerio:
 
 <- Database releases updated trend data
 
-|Use Case 6          |System displays data                                  |
+<hr>
+
+|Use Case 6          |User inputs how busy an area is                       |
 |--------------------|------------------------------------------------------|
-|Related REQs        |REQ1, REQ2, REQ3, REQ4, REQ5                          |
-|Initiating actors   |System                                                |
-|Actor's goals       |System displays data in a clear and easy to use way   |
+|Related REQs        |REQ9                                                  |
+|Initiating actors   |Student                                               |
+|Actor's goals       |Student can submit how busy an area is                |
 |Participating actors|Database                                              |
-|Preconditions       |Data needs to be in the Base                          |
+|Preconditions       |Selection screen for level of space congestion        |
+                     |Button for submitting space congestion level          |
+|Postconditions      |Data is submitted and stored in database              |
+
+|Flow of events      |   |Scenario 1                                          |
+|--------------------|---|----------------------------------------------------|
+|**->**              |1. | _User selects the "Submit" button for current area_|
+|**<-**              |2. | _System displays options for level of congestion_  |
+|**->**              |3a.| _User selects either 1, 2 , or 3 on screen_        |
+|**<-**              |4a.| _System thanks user for submitting feedback_       |
+|                    |   | _System sends user back to floor status page_      |
+|                    |   |                                                    |
+|**Alternate events**|   |**Scenario 2**                                      |
+|**->**              |3b.| _User selects the cancel option_                   |
+|**<-**              |4b.| _System brings user back to the floor status page_ |
 
 <hr>
 
