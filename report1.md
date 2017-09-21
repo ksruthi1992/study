@@ -61,6 +61,19 @@ Use Case Description
  
  <hr>
 
+|Use Case 1         |User searches for open study space                        |
+|-------------------|----------------------------------------------------------|
+|Related REQs       |REQ1, REQ2, REQ4, REQ5                                    |
+|Initiating Actors  |Student                                                   |
+|Actor's Goals      |To search for an open study spaces                        |
+|Participating Actor|Database                                                  |
+|Preconditions      |Search screen is active                                   |
+|Postconditions     |Available space displayed                                 |
+|Flow of Events     |                                                          |
+|->                 |1.User selects the search option                          |
+|<-                 |2.System displays the search page                         |
+|->                 |3.User looks through open areas                           |
+|<-                 |4.Database returns available space in the requested area  |
 
 |Use Case 2         |User searches for a study space with amenity                                        |
 |-------------------|------------------------------------------------------------------------------------|
