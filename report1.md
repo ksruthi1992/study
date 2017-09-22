@@ -75,9 +75,10 @@ Use Case Description
 |Related REQs       |REQ6                              |
 |Initiating Actors  |Student                           |
 |Actor's Goals      |To reserve a room                 |
-|Participating Actor|Scheduler                         |
+|Participating Actor|None                              |
 |Preconditions      |Room is empty                     |
 |Postconditions     |Room will now be reserved         |
+|Flow of Events     |                                  |
 
 Use Case 5
 System analyzes trends
