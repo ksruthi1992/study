@@ -134,22 +134,19 @@ Flow of Events for Main Success Scenerio:
 |Related REQs        |REQ9                                                  |
 |Initiating actors   |Student                                               |
 |Actor's goals       |Student can submit how busy an area is                |
-|Participating actors|Database                                              |
+|Participating actors|None                                                  |
 |Preconditions       |Selection screen for level of space congestion        |
 |                    |Button for submitting space congestion level          |
 |Postconditions      |Data is submitted and stored in database              |
-
-|Flow of events      |   |Scenario 1                                          |
-|--------------------|---|----------------------------------------------------|
-|**->**              |1. | _User selects the "Submit" button for current area_|
-|**<-**              |2. | _System displays options for level of congestion_  |
-|**->**              |3a.| _User selects either 1, 2 , or 3 on screen_        |
-|**<-**              |4a.| _System thanks user for submitting feedback_       |
-|                    |   | _System sends user back to floor status page_      |
-|                    |   |                                                    |
-|**Alternate events**|   |**Scenario 2**                                      |
-|**->**              |3b.| _User selects the cancel option_                   |
-|**<-**              |4b.| _System brings user back to the floor status page_ |
+|**Flow of events**  |**Scenario 1**                                        |
+|**->**              |1. _User selects the "Submit" button for current area_|
+|**<-**              |2. _System displays options for level of congestion_  |
+|**->**              |3a. _User selects either 1, 2 , or 3 on screen_       |
+|**<-**              |4a. _System thanks user for submitting feedback_      |
+|                    | _System sends user back to floor status page_        |
+|**Alternate events**|**Scenario 2**                                        |
+|**->**              |3b. _User selects the cancel option_                  |
+|**<-**              |4b. _System brings user back to the floor status page_|
 
 <hr>
 
