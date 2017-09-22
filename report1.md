@@ -101,6 +101,10 @@ Use Case Description
 |Preconditions      |Room is empty                     |
 |Postconditions     |Room will now be reserved         |
 |Flow of Events     |                                  |
+|->                 |1. User selects reserve a room option|
+|<-                 |2. System displays whether or not room is available|
+|->		    |3. User reserves available room   |
+|<-		    |4. System displays confirmation   | 
 
 Use Case 5
 System analyzes trends
