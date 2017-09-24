@@ -54,7 +54,7 @@ Use Case Description
  * UC-1 User searches for open study space  **_(Nick)_**
  * UC-2 User searches for study space with amenity  **_(Travis)_**
  * UC-3 User reserves a room  **_(Tara)_**
- * UC-4 System logs user  **_(Blank)_**
+ * UC-4 System logs user  **_(Luis)_**
  * UC-5 System analyzes trends  **_(Luke)_**			
  * UC-6 User input how busy an area is  **_(Alex)_**
  * UC-7 User leaves comment  **_(Edward)_**
@@ -127,8 +127,6 @@ Flow of Events for Main Success Scenerio:
 
 <- Database releases updated trend data
 
-<hr>
-
 |Use Case 6          |User inputs how busy an area is                       |
 |--------------------|------------------------------------------------------|
 |Related REQs        |REQ9                                                  |
@@ -148,7 +146,20 @@ Flow of Events for Main Success Scenerio:
 |**->**              |3b. _User selects the cancel option_                  |
 |**<-**              |4b. _System brings user back to the floor status page_|
 
-<hr>
+**Traceability Matrix**  
+|**Req't**|**PW**|UC1|UC2|UC3|UC4|UC5|UC6|UC7|
+|---------|:----:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|REQ1     |5     |X  |X  |   |   |X  |   |   |
+|REQ2     |3     |X  |X  |   |   |X  |   |   |
+|REQ3     |3     |   |   |   |   |   |   |   |
+|REQ4     |1     |X  |   |   |   |X  |   |   |
+|REQ5     |2     |X  |   |   |   |X  |   |   |
+|REQ6     |3     |   |   |X  |   |X  |   |   |
+|REQ7     |3     |   |X  |   |   |   |   |   |
+|REQ8     |4     |   |   |   |   |X  |   |   |
+|REQ9     |3     |   |   |   |   |   |X  |   |
+|MAX PW   |      |5  |5  |3  |   |5  |3  |   |
+|Total PW |      |11 |11 |3  |   |18 |3  |   |
 
 #### <a name="diagrams"></a>System Sequence Diagrams
 
