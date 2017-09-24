@@ -147,6 +147,7 @@ Flow of Events for Main Success Scenerio:
 |**<-**              |4b. _System brings user back to the floor status page_|
 
 **Traceability Matrix**  
+
 |**Req't**|**PW**|UC1|UC2|UC3|UC4|UC5|UC6|UC7|
 |---------|:----:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |REQ1     |5     |X  |X  |   |   |X  |   |   |
