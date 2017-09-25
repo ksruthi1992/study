@@ -177,11 +177,32 @@ Flow of Events for Main Success Scenerio:
 |**->**              |3b. _User selects the cancel option_                  |
 |**<-**              |4b. _System brings user back to the floor status page_|
 
+
+|Use Case 7          |User enters a comment                                 |
+|--------------------|------------------------------------------------------|
+|Related REQs        |REQ9, REQ1                                            |
+|Initiating actors   |Student                                               |
+|Actor's goals       |Student can comment anything about a room             |
+|Participating actors|None                                                  |
+|Preconditions       |Selection of room                                     |
+|                    |Text field for inputting comments                     |
+|Postconditions      |Comment is submitted and stored in database           |
+|**Flow of events**  |**Scenario 1**                                        |
+|**->**              |1. _User selects a floor/room to comment on_          |
+|**<-**              |2. _System displays a text box_                       | 
+|**->**              |3a. _User enters and submits a comment_               |
+|**<-**              |4a. _System adds comment to db_                       |
+|**Alternate events**|**Scenario 2**                                        |
+|**->**              |3b. _User selects the cancel option_                  |
+|**<-**              |4b. _System closes text box, but stays on the page_   |
+
+![image](diagrams/UC7_Diagram.png)
+
 **Traceability Matrix**  
 
 |**Req't**|**PW**|UC1|UC2|UC3|UC4|UC5|UC6|UC7|
 |---------|:----:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|REQ1     |5     |X  |X  |   |   |X  |   |   |
+|REQ1     |5     |X  |X  |   |   |X  |   | X |
 |REQ2     |3     |X  |X  |   |   |X  |   |   |
 |REQ3     |3     |   |   |   |   |   |   |   |
 |REQ4     |1     |X  |   |   |   |X  |   |   |
@@ -189,9 +210,9 @@ Flow of Events for Main Success Scenerio:
 |REQ6     |3     |   |   |X  |   |X  |   |   |
 |REQ7     |3     |   |X  |   |   |   |   |   |
 |REQ8     |4     |   |   |   |   |X  |   |   |
-|REQ9     |3     |   |   |   |   |   |X  |   |
-|MAX PW   |      |5  |5  |3  |   |5  |3  |   |
-|Total PW |      |11 |11 |3  |   |18 |3  |   |
+|REQ9     |3     |   |   |   |   |   |X  | X |
+|MAX PW   |      |5  |5  |3  |   |5  |3  | 5 |
+|Total PW |      |11 |11 |3  |   |18 |3  | 8 |
 
 #### <a name="diagrams"></a>System Sequence Diagrams
 
