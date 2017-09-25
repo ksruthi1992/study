@@ -64,6 +64,12 @@ Individual Contribution:
 ### <a name="glossary"></a>Glossary
 
 ### <a name="functional"></a>Functional Requirements
+   * REQ-1: Find place on campus to study
+   * REQ-2: System finds a place near me
+   * REQ-4: System ca find group space
+   * REQ-6: User can reserve a room
+   * REQ-7: System cab search for amenities (locks/whiteboards/outlets/wifi/printers)
+   * REQ-8: System analyzes data to track trends
 
 #### <a name="stakeholders"></a>Stakeholders
 
