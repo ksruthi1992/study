@@ -80,7 +80,7 @@ Use Case Description
 |Related REQs       |REQ1, REQ2, REQ7                                                                    |
 |Initiating Actors  |Student                                                                             |
 |Actor's Goals      |To search for study spaces with amenities(White boards, outlets, good wi-fi, ect...)|
-|Participating Actor|Database                                                                            |
+|Participating Actor|None                                                                                |
 |Preconditions      |Filter search is on screen                                                          |
 |Postconditions     |Search results displayed on screen                                                  |
 |Flow of Events     |                                                                                    |
@@ -91,6 +91,8 @@ Use Case Description
 |Alt. Flow of Events|                                                                                    |
 |->                 |3a.User selects combanation of unavailable amenities                                |
 |<-                 |	4.Database returns and displays message to refine search                         |
+
+![image](diagrams/UC2_Diagram.png)
 
 |Use Case 3         |                                  |
 |-------------------|----------------------------------|
