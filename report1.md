@@ -62,8 +62,17 @@ Individual Contribution:
 
 
 ### <a name="glossary"></a>Glossary
+  * Study Space: a place to study, sleep or work in a group
+  * Amenities: outlets for charging, quiet, whiteboards, printers, monitors
+  * Trends: useage trends for the different study spaces
 
 ### <a name="functional"></a>Functional Requirements
+   * REQ-1: Find place on campus to study
+   * REQ-2: System finds a place near me
+   * REQ-4: System ca find group space
+   * REQ-6: User can reserve a room
+   * REQ-7: System cab search for amenities (locks/whiteboards/outlets/wifi/printers)
+   * REQ-8: System analyzes data to track trends
 
 #### <a name="stakeholders"></a>Stakeholders
   * Students: will be able to more effiecntly find and use study spaces
@@ -102,6 +111,8 @@ Use Case Description
 |<-                 |2.System displays the search page                         |
 |->                 |3.User looks through open areas                           |
 |<-                 |4.Database returns available space in the requested area  |
+
+![image](diagrams/UC1_Diagram.png)
 
 |Use Case 2         |User searches for a study space with amenity                                        |
 |-------------------|------------------------------------------------------------------------------------|
@@ -157,6 +168,7 @@ Use Case Description
 |Second Alt. Flow of Events| |
 |<-|3b. System displays that the user was unable to log in successfully and is returned to the main menu|
 
+![image](diagrams/UC4.png)
 
 |Use Case 5         |System analyzes trends                  |
 |-------------------|----------------------------------------|
@@ -170,6 +182,8 @@ Use Case Description
 |Event Flow         |                                        |
 |->                 | update triggers analysis algorithm     |
 |<-                 | Database releases updated trend data   |
+
+![image](diagrams/UC5.png)
 
 |Use Case 6          |User inputs how busy an area is                       |
 |--------------------|------------------------------------------------------|
@@ -230,19 +244,17 @@ Use Case Description
 
 #### <a name="diagrams"></a>System Sequence Diagrams
 
+<<<<<<< HEAD
+=======
 ![image](diagrams/System_Sequence_Diagrams/usecase_1-2.png)
 ![image](diagrams/System_Sequence_Diagrams/usecase_6.png)
 
+>>>>>>> 3e0685da68bdfb56d9f0d92d3664297419a6195c
 ### <a name="nonfunctional"></a>Nonfunctional Requirements
 
-|Requirements|Priority|Description                         |
-|------------|--------|------------------------------------|
-|REQ - 10    |        |User can navigate site easily       |
-|REQ - 11    |        |System should display current status of study rooms|
-|REQ - 12    |        |System should allow multiple users at once|
-|REQ - 13    |        |Site should require minimum maintenance. At least once a week|
-|REQ - 14    |        |All user data should be stored in the system database, not on the User's local device|
-
+  * REQ-3: System is easier to use than a map
+  * REQ-5: System can find a quiet(nap) space
+  * REQ-9: User can leave comments
 
 ### <a name="domain_analysis"></a>Domain Analysis
 
@@ -251,17 +263,106 @@ Use Case Description
 #### <a name="contracts"></a>System Operation Contracts
 
 ### <a name="ui_design"></a>User Interface Design
-<img src="diagrams/mockups/home.png" style="width: 400px;"/>
-<img src="diagrams/mockups/menu.png" style="width: 400px;"/>
-<img src="diagrams/mockups/submit.png" style="width: 400px;"/>
-<img src="diagrams/mockups/status.png" style="width: 400px;"/>
-<img src="diagrams/mockups/filter.png" style="width: 400px;"/>
 
 #### <a name="prelim_design"></a> Preliminary Design
+#### Home Page
+<hr>
+   The user will start at the home page, which will display information about buildings that the user is near.
+   Here the user can see a summary of the buildings and select one from  the list for further information.
+<br>
+<br>
+
+<img src="diagrams/mockups/home.png" style="width: 400px;"/>
+<br>
+
+#### Menu
+<hr>
+   The sidebar menu will be available to the user at all times.  One tap on the menu icon will pull up the menu and allow the user to easily navigate the site. 
+<br>
+<br>
+<img src="diagrams/mockups/menu.png" style="width: 400px;"/>
+<br>
+
+#### Submit Page
+<hr>
+   Here the user can input how crowded a room is with a simple form after selecting a building. 
+<br>
+<br>
+<img src="diagrams/mockups/submit.png" style="width: 400px;"/>
+<br>
+
+#### Status Page
+<hr>
+   This page will display the rooms/floors and whether or not they are busy. 
+<br>
+<br>
+<img src="diagrams/mockups/status.png" style="width: 400px;"/>
+<br>
+
+#### Filter Page
+<hr>
+   Here the user can filter buildings and rooms based on certain amenities and search criteria to find a place to study that suits their needs.
+<br>
+<br>
+<img src="diagrams/mockups/filter.png" style="width: 400px;"/>
 
 #### <a name="effort"></a>User Effort Estimation
+
+#### Scenario 1: User looks for any open areas nearby
+
+1. Navigation: 1 Total Click
+
+* User clicks on one of the nearby listed buildings for information about open rooms
+
+2. Data Entry: None
+
+3. Fraction of Nav vs Data Entry (Nav/Data)
+
+* All Navigation
+
+
+#### Scenario 2: User looks for any open areas nearby
+
+1. Navigation: 3 Total Clicks
+
+* User clicks to open the menu
+
+* User clicks "filter" from the menu
+
+* User enters form and clicks submit 
+
+2. Data entry: 2-10 clicks
+
+* Select options from checkmark form
+
+* Click Search to display rooms matching criteria
+
+3. Fraction of Nav vs Data Entry (Nav/Data)
+
+* Depending on Options Selected: 3/2 - 3/10
+
+
+#### Scenario 3: User contributes data for a room
+
+1. Navigation: 4 Total Clicks
+
+* User clicks on one of the nearby listed buildings for information about open rooms
+
+* User clicks "update status" 
+
+* User fills out form 
+
+* User clicks submit
+
+2. Data Entry: 1 click
+
+* User click one of three options for how full a room is
+
+3. Fraction of Nav vs Data Entry (Nav/Data)
+
+*  4/1
+
 
 ### <a name="plan"></a>Plan of Work
 
 ### <a name="ref"></a>References
-Marsic, Ivan. Software Engineering. Rutgers University, New Brunswick, New Jersey , 2012
