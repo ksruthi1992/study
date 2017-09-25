@@ -66,7 +66,8 @@ Individual Contribution:
 ### <a name="functional"></a>Functional Requirements
 
 #### <a name="stakeholders"></a>Stakeholders
-
+  * Students: will be able to more effiecntly find and use study spaces
+  * School: more attractive to prospective students because of it's high tech efficency
 #### <a name="actor"></a>Actors and Goals  
 <hr>
 
