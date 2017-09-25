@@ -62,6 +62,9 @@ Individual Contribution:
 
 
 ### <a name="glossary"></a>Glossary
+  * Study Space: a place to study, sleep or work in a group
+  * Amenities: outlets for charging, quiet, whiteboards, printers, monitors
+  * Trends: useage trends for the different study spaces
 
 ### <a name="functional"></a>Functional Requirements
    * REQ-1: Find place on campus to study
