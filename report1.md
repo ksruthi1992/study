@@ -237,10 +237,11 @@ Flow of Events for Main Success Scenerio:
 #### <a name="math_model"></a>Mathematical Model
 
 ### <a name="ui_design"></a>User Interface Design
-<img src="diagrams/mockups/home.png" alt="Drawing" style="width: 400px;"/>
-<img src="diagrams/mockups/menu.png" alt="Drawing" style="width: 400px;"/>
-<img src="diagrams/mockups/status.png" alt="Drawing" style="width: 400px;"/>
-<img src="diagrams/mockups/filter.png" alt="Drawing" style="width: 400px;"/>
+<img src="diagrams/mockups/home.png" style="width: 400px;"/>
+<img src="diagrams/mockups/menu.png" style="width: 400px;"/>
+<img src="diagrams/mockups/submit.png" style="width: 400px;"/>
+<img src="diagrams/mockups/status.png" style="width: 400px;"/>
+<img src="diagrams/mockups/filter.png" style="width: 400px;"/>
 
 #### <a name="prelim_design"></a> Preliminary Design
 
