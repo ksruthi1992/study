@@ -135,6 +135,8 @@ Use Case Description
 |->		    |3. User reserves available room   |
 |<-		    |4. System displays confirmation   | 
 
+![image](diagrams/UC3_diagram.png)
+
 Use Case 5
 System analyzes trends
 
