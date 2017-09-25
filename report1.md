@@ -243,6 +243,7 @@ Use Case Description
 |Total PW |      |11 |11 |3  |9  |18 |3  | 8 |
 
 <hr>
+
 #### <a name="diagrams"></a>System Sequence Diagrams
 
 ![image](diagrams/System_Sequence_Diagrams/usecase_1-2.png)
