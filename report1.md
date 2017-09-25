@@ -138,7 +138,7 @@ Use Case Description
 ![image](diagrams/UC3_diagram.png)
 
 |Use Case 5         |System analyzes trends                  |
-|------------------------------------------------------------|
+|-------------------|----------------------------------------|
 |Related REQs       | REQ1, REQ2, REQ4, REQ5, REQ6, and REQ8 |
 |Initiating Actors  | Admin                                  |
 |Actors Goal        | Analyze trends to predict study space  |
