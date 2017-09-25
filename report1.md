@@ -279,7 +279,7 @@ Use Case Description
 #### Scenario 1: User looks for any open areas nearby
 
 1. Navigation: 1 Total Click
-<br>
+
 a. User clicks on one of the nearby listed buildings for information about open rooms
 <br>
 2. Data Entry: None
@@ -292,7 +292,7 @@ a. All Navigation
 #### Scenario 2: User looks for any open areas nearby
 
 1. Navigation: 3 Total Clicks
-<br>
+
 a. User clicks to open the menu
 <br>
 b. User clicks "filter" from the menu
@@ -313,7 +313,7 @@ a. Depending on Options Selected: 3/2 - 3/10
 #### Scenario 3: User contributes data for a room
 
 1. Navigation: 4 Total Clicks
-<br>
+
 a. User clicks on one of the nearby listed buildings for information about open rooms
 <br>
 b. User clicks "update status" 
