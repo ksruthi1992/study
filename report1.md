@@ -177,6 +177,26 @@ Flow of Events for Main Success Scenerio:
 |**->**              |3b. _User selects the cancel option_                  |
 |**<-**              |4b. _System brings user back to the floor status page_|
 
+
+|Use Case 7          |User enters a comment                                 |
+|--------------------|------------------------------------------------------|
+|Related REQs        |REQ9                                                  |
+|Initiating actors   |Student                                               |
+|Actor's goals       |Student can comment anything about a room             |
+|Participating actors|None                                                  |
+|Preconditions       |Selection of room                                     |
+|                    |Text field for inputting comments                     |
+|Postconditions      |Comment is submitted and stored in database           |
+|**Flow of events**  |**Scenario 1**                                        |
+|**->**              |1. _User selects a floor/room to comment on_          |
+|**<-**              |2. _System displays a text box_                       | 
+|**->**              |3a. _User enters and submits a comment_               |
+|**<-**              |4a. _System adds comment to db_                       |
+|**Alternate events**|**Scenario 2**                                        |
+|**->**              |3b. _User selects the cancel option_                  |
+|**<-**              |4b. _System closes text box, but stays on the page_   |
+
+
 **Traceability Matrix**  
 
 |**Req't**|**PW**|UC1|UC2|UC3|UC4|UC5|UC6|UC7|
