@@ -3,7 +3,7 @@
 
 Course title: CSC 131 Section 4 - Computer Software Engineering
 
-Team number: 3
+Team number: 2
 
 Team name: Team Tux
 
@@ -21,7 +21,7 @@ Team members:
  *  Luke
  *  Nick
  *  Tara Ross
- *  Travis
+ *  Travis Keri
 
 Individual Contribution:
 
