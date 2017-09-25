@@ -276,8 +276,8 @@ Use Case Description
 
 #### <a name="effort"></a>User Effort Estimation
 
-* Scenario 1: User looks for any open areas nearby
-<br>
+#### Scenario 1: User looks for any open areas nearby
+
 1. Navigation: 1 Total Click
 <br>
 a. User clicks on one of the nearby listed buildings for information about open rooms
@@ -289,8 +289,8 @@ a. User clicks on one of the nearby listed buildings for information about open 
 a. All Navigation
 <br>
 
-* Scenario 2: User looks for any open areas nearby
-<br>
+#### Scenario 2: User looks for any open areas nearby
+
 1. Navigation: 3 Total Clicks
 <br>
 a. User clicks to open the menu
@@ -310,8 +310,8 @@ b. Click Search to display rooms matching criteria
 a. Depending on Options Selected: 3/2 - 3/10
 <br>
 
-* Scenario 3: User contributes data for a room
-<br>
+#### Scenario 3: User contributes data for a room
+
 1. Navigation: 4 Total Clicks
 <br>
 a. User clicks on one of the nearby listed buildings for information about open rooms
