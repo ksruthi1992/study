@@ -173,10 +173,10 @@ Use Case Description
 |Use Case 5         |System analyzes trends                  |
 |-------------------|----------------------------------------|
 |Related REQs       | REQ1, REQ2, REQ4, REQ5, REQ6, and REQ8 |
-|Initiating Actors  | Admin                                  |
+|Initiating Actors  | None                                   |
 |Actors Goal        | Analyze trends to predict study space  |
 |                   | availability                           |
-|Participating Actor| Student                                |
+|Participating Actor| None                                   |
 |Preconditions      | database is not empty                  |
 |Postconditions     | useage trend data is updated           |
 |Event Flow         |                                        |
