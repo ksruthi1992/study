@@ -280,57 +280,57 @@ Use Case Description
 #### Scenario 1: User looks for any open areas nearby
 
 1. Navigation: 1 Total Click
-<br>
-a. User clicks on one of the nearby listed buildings for information about open rooms
-<br>
+
+* User clicks on one of the nearby listed buildings for information about open rooms
+
 2. Data Entry: None
-<br>
+
 3. Fraction of Nav vs Data Entry (Nav/Data)
-<br>
-a. All Navigation
-<br>
+
+* All Navigation
+
 
 #### Scenario 2: User looks for any open areas nearby
 
 1. Navigation: 3 Total Clicks
-<br>
-a. User clicks to open the menu
-<br>
-b. User clicks "filter" from the menu
-<br>
-c. User enters form and clicks submit 
-<br>
+
+* User clicks to open the menu
+
+* User clicks "filter" from the menu
+
+* User enters form and clicks submit 
+
 2. Data entry: 2-10 clicks
-<br>
-a. Select options from checkmark form
-<br>
-b. Click Search to display rooms matching criteria
-<br>
+
+* Select options from checkmark form
+
+* Click Search to display rooms matching criteria
+
 3. Fraction of Nav vs Data Entry (Nav/Data)
-<br>
-a. Depending on Options Selected: 3/2 - 3/10
-<br>
+
+* Depending on Options Selected: 3/2 - 3/10
+
 
 #### Scenario 3: User contributes data for a room
 
 1. Navigation: 4 Total Clicks
-<br>
-a. User clicks on one of the nearby listed buildings for information about open rooms
-<br>
-b. User clicks "update status" 
-<br>
-c. User fills out form 
-<br>
-d. User clicks submit
-<br>
+
+* User clicks on one of the nearby listed buildings for information about open rooms
+
+* User clicks "update status" 
+
+* User fills out form 
+
+* User clicks submit
+
 2. Data Entry: 1 click
-<br>
-a. User click one of three options for how full a room is
-<br>
+
+* User click one of three options for how full a room is
+
 3. Fraction of Nav vs Data Entry (Nav/Data)
-<br>
-a. 4/1
-<br>
+
+*  4/1
+
 
 ### <a name="plan"></a>Plan of Work
 
