@@ -102,6 +102,8 @@ Use Case Description
 |->                 |3.User looks through open areas                           |
 |<-                 |4.Database returns available space in the requested area  |
 
+![image](diagrams/UC1_Diagram.png)
+
 |Use Case 2         |User searches for a study space with amenity                                        |
 |-------------------|------------------------------------------------------------------------------------|
 |Related REQs       |REQ1, REQ2, REQ7                                                                    |
