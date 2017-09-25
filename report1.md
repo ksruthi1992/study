@@ -330,6 +330,7 @@ a. User click one of three options for how full a room is
 <br>
 a. 4/1
 <br>
+
 ### <a name="plan"></a>Plan of Work
 
 ### <a name="ref"></a>References
