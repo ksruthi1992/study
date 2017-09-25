@@ -232,15 +232,15 @@ Use Case Description
 |---------|:----:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |REQ1     |5     |X  |X  |   |   |X  |   | X |
 |REQ2     |3     |X  |X  |   |   |X  |   |   |
-|REQ3     |3     |   |   |   |   |   |   |   |
+|REQ3     |3     |   |   |   |x  |   |   |   |
 |REQ4     |1     |X  |   |   |   |X  |   |   |
 |REQ5     |2     |X  |   |   |   |X  |   |   |
-|REQ6     |3     |   |   |X  |   |X  |   |   |
-|REQ7     |3     |   |X  |   |   |   |   |   |
+|REQ6     |3     |   |   |X  |x  |X  |   |   |
+|REQ7     |3     |   |X  |   |x  |   |   |   |
 |REQ8     |4     |   |   |   |   |X  |   |   |
 |REQ9     |3     |   |   |   |   |   |X  | X |
-|MAX PW   |      |5  |5  |3  |   |5  |3  | 5 |
-|Total PW |      |11 |11 |3  |   |18 |3  | 8 |
+|MAX PW   |      |5  |5  |3  |3  |5  |3  | 5 |
+|Total PW |      |11 |11 |3  |9  |18 |3  | 8 |
 
 #### <a name="diagrams"></a>System Sequence Diagrams
 
