@@ -112,7 +112,7 @@ Use Case Description
 
 |Use Case 2         |User searches for a study space with amenity                                        |
 |-------------------|------------------------------------------------------------------------------------|
-|Related REQs       |REQ1, REQ2, REQ7                                                                    |
+|Related REQs       |REQ1, REQ2, REQ3, REQ7                                                                    |
 |Initiating Actors  |Student                                                                             |
 |Actor's Goals      |To search for study spaces with amenities(White boards, outlets, good wi-fi, ect...)|
 |Participating Actor|None                                                                                |
@@ -230,8 +230,6 @@ Use Case Description
 #### <a name="domain_model"></a>Domain Model
 
 #### <a name="contracts"></a>System Operation Contracts
-
-#### <a name="math_model"></a>Mathematical Model
 
 ### <a name="ui_design"></a>User Interface Design
 
