@@ -365,6 +365,8 @@ Use Case Description
 
 ### <a name="plan"></a>Plan of Work
 
+![image](diagrams/PlanofWork.png)
+
 ### <a name="ref"></a>References
 
 <hr>
