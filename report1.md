@@ -266,6 +266,8 @@ Use Case Description
 
 #### <a name="domain_model"></a>Domain Model
 
+![image](diagrams/domainmodel.png)
+
 #### <a name="contracts"></a>System Operation Contracts
 
 ### <a name="ui_design"></a>User Interface Design
