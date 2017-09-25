@@ -153,6 +153,7 @@ Use Case Description
 |<-                 | Database releases updated trend data   |
 
 ![image](diagrams/UC5.png)
+
 |Use Case 6          |User inputs how busy an area is                       |
 |--------------------|------------------------------------------------------|
 |Related REQs        |REQ9                                                  |
