@@ -215,7 +215,9 @@ Use Case Description
 
 ### <a name="nonfunctional"></a>Nonfunctional Requirements
 
-
+  * REQ-3: System is easier to use than a map
+  * REQ-5: System can find a quiet(nap) space
+  * REQ-9: User can leave comments
 
 ### <a name="domain_analysis"></a>Domain Analysis
 
