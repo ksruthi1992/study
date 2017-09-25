@@ -177,6 +177,7 @@ Flow of Events for Main Success Scenerio:
 |**->**              |3b. _User selects the cancel option_                  |
 |**<-**              |4b. _System brings user back to the floor status page_|
 
+![image](diagrams/UC6_Diagram.png)
 
 |Use Case 7          |User enters a comment                                 |
 |--------------------|------------------------------------------------------|
