@@ -244,12 +244,11 @@ Use Case Description
 
 #### <a name="diagrams"></a>System Sequence Diagrams
 
-<<<<<<< HEAD
-=======
+
 ![image](diagrams/System_Sequence_Diagrams/usecase_1-2.png)
+
 ![image](diagrams/System_Sequence_Diagrams/usecase_6.png)
 
->>>>>>> 3e0685da68bdfb56d9f0d92d3664297419a6195c
 ### <a name="nonfunctional"></a>Nonfunctional Requirements
 
   * REQ-3: System is easier to use than a map
