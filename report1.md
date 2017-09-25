@@ -211,6 +211,7 @@ Use Case Description
 #### <a name="diagrams"></a>System Sequence Diagrams
 
 ![image](diagrams/System_Sequence_Diagrams/usecase_1-2.png)
+![image](diagrams/System_Sequence_Diagrams/usecase_6.png)
 
 ### <a name="nonfunctional"></a>Nonfunctional Requirements
 
