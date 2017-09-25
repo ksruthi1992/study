@@ -215,13 +215,6 @@ Use Case Description
 
 ### <a name="nonfunctional"></a>Nonfunctional Requirements
 
-|Requirements|Priority|Description                         |
-|------------|--------|------------------------------------|
-|REQ - 10    |        |User can navigate site easily       |
-|REQ - 11    |        |System should display current status of study rooms|
-|REQ - 12    |        |System should allow multiple users at once|
-|REQ - 13    |        |Site should require minimum maintenance. At least once a week|
-|REQ - 14    |        |All user data should be stored in the system database, not on the User's local device|
 
 
 ### <a name="domain_analysis"></a>Domain Analysis
