@@ -196,6 +196,7 @@ Flow of Events for Main Success Scenerio:
 |**->**              |3b. _User selects the cancel option_                  |
 |**<-**              |4b. _System closes text box, but stays on the page_   |
 
+![image](diagrams/UC7_Diagram.png)
 
 **Traceability Matrix**  
 
