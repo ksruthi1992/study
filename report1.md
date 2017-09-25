@@ -137,26 +137,18 @@ Use Case Description
 
 ![image](diagrams/UC3_diagram.png)
 
-Use Case 5
-System analyzes trends
-
-Related REQs:  REQ1, REQ2, REQ4, REQ5, REQ6, and REQ8
-
-Initiating Actors: System, Admin?
-
-Actors Goal: Analyze trends to predict study space availability
-
-Participating Actor: Student, Database
-
-Preconditions:  database is not empty
-
-Postconditions:  useage trend data is updated
-
-Flow of Events for Main Success Scenerio:
-
--> System update triggers analysis algorithm
-
-<- Database releases updated trend data
+|Use Case 5         |System analyzes trends                  |
+|------------------------------------------------------------|
+|Related REQs       | REQ1, REQ2, REQ4, REQ5, REQ6, and REQ8 |
+|Initiating Actors  | Admin                                  |
+|Actors Goal        | Analyze trends to predict study space  |
+|                   | availability                           |
+|Participating Actor| Student                                |
+|Preconditions      | database is not empty                  |
+|Postconditions     | useage trend data is updated           |
+|Event Flow         |                                        |
+|->                 | update triggers analysis algorithm     |
+|<-                 | Database releases updated trend data   |
 
 |Use Case 6          |User inputs how busy an area is                       |
 |--------------------|------------------------------------------------------|
