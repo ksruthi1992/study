@@ -229,13 +229,48 @@ Use Case Description
 #### <a name="math_model"></a>Mathematical Model
 
 ### <a name="ui_design"></a>User Interface Design
-<img src="diagrams/mockups/home.png" style="width: 400px;"/>
-<img src="diagrams/mockups/menu.png" style="width: 400px;"/>
-<img src="diagrams/mockups/submit.png" style="width: 400px;"/>
-<img src="diagrams/mockups/status.png" style="width: 400px;"/>
-<img src="diagrams/mockups/filter.png" style="width: 400px;"/>
 
 #### <a name="prelim_design"></a> Preliminary Design
+#### Home Page
+<hr>
+   The user will start at the home page, which will display information about buildings that the user is near.
+   Here the user can see a summary of the buildings and select one from  the list for further information.
+<br>
+<br>
+
+<img src="diagrams/mockups/home.png" style="width: 400px;"/>
+<br>
+
+#### Menu
+<hr>
+   The sidebar menu will be available to the user at all times.  One tap on the menu icon will pull up the menu and allow the user to easily navigate the site. 
+<br>
+<br>
+<img src="diagrams/mockups/menu.png" style="width: 400px;"/>
+<br>
+
+#### Submit Page
+<hr>
+   Here the user can input how crowded a room is with a simple form. 
+<br>
+<br>
+<img src="diagrams/mockups/submit.png" style="width: 400px;"/>
+<br>
+
+#### Status Page
+<hr>
+   This page will display the rooms/floors and whether or not they are busy. 
+<br>
+<br>
+<img src="diagrams/mockups/status.png" style="width: 400px;"/>
+<br>
+
+#### Filter Page
+<hr>
+   Here the user can filter buildings and rooms based on certain amenities and search criteria to find a place to study that suits their needs.
+<br>
+<br>
+<img src="diagrams/mockups/filter.png" style="width: 400px;"/>
 
 #### <a name="effort"></a>User Effort Estimation
 
