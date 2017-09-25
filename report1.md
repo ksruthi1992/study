@@ -281,55 +281,55 @@ Use Case Description
 1. Navigation: 1 Total Click
 
 * User clicks on one of the nearby listed buildings for information about open rooms
-<br>
+
 2. Data Entry: None
-<br>
+
 3. Fraction of Nav vs Data Entry (Nav/Data)
-<br>
+
 * All Navigation
-<br>
+
 
 #### Scenario 2: User looks for any open areas nearby
 
 1. Navigation: 3 Total Clicks
 
 * User clicks to open the menu
-<br>
+
 * User clicks "filter" from the menu
-<br>
+
 * User enters form and clicks submit 
-<br>
+
 2. Data entry: 2-10 clicks
-<br>
+
 * Select options from checkmark form
-<br>
+
 * Click Search to display rooms matching criteria
-<br>
+
 3. Fraction of Nav vs Data Entry (Nav/Data)
-<br>
+
 * Depending on Options Selected: 3/2 - 3/10
-<br>
+
 
 #### Scenario 3: User contributes data for a room
 
 1. Navigation: 4 Total Clicks
 
 * User clicks on one of the nearby listed buildings for information about open rooms
-<br>
+
 * User clicks "update status" 
-<br>
+
 * User fills out form 
-<br>
+
 * User clicks submit
-<br>
+
 2. Data Entry: 1 click
-<br>
+
 * User click one of three options for how full a room is
-<br>
+
 3. Fraction of Nav vs Data Entry (Nav/Data)
-<br>
-* 4/1
-<br>
+
+*  4/1
+
 
 ### <a name="plan"></a>Plan of Work
 
