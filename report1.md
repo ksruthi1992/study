@@ -253,7 +253,7 @@ Use Case Description
 
 #### Submit Page
 <hr>
-   Here the user can input how crowded a room is with a simple form. 
+   Here the user can input how crowded a room is with a simple form after selecting a building. 
 <br>
 <br>
 <img src="diagrams/mockups/submit.png" style="width: 400px;"/>
@@ -276,6 +276,60 @@ Use Case Description
 
 #### <a name="effort"></a>User Effort Estimation
 
+* Scenario 1: User looks for any open areas nearby
+<br>
+1. Navigation: 1 Total Click
+<br>
+a. User clicks on one of the nearby listed buildings for information about open rooms
+<br>
+2. Data Entry: None
+<br>
+3. Fraction of Nav vs Data Entry (Nav/Data)
+<br>
+a. All Navigation
+<br>
+
+* Scenario 2: User looks for any open areas nearby
+<br>
+1. Navigation: 3 Total Clicks
+<br>
+a. User clicks to open the menu
+<br>
+b. User clicks "filter" from the menu
+<br>
+c. User enters form and clicks submit 
+<br>
+2. Data entry: 2-10 clicks
+<br>
+a. Select options from checkmark form
+<br>
+b. Click Search to display rooms matching criteria
+<br>
+3. Fraction of Nav vs Data Entry (Nav/Data)
+<br>
+a. Depending on Options Selected: 3/2 - 3/10
+<br>
+
+* Scenario 3: User contributes data for a room
+<br>
+1. Navigation: 4 Total Clicks
+<br>
+a. User clicks on one of the nearby listed buildings for information about open rooms
+<br>
+b. User clicks "update status" 
+<br>
+c. User fills out form 
+<br>
+d. User clicks submit
+<br>
+2. Data Entry: 1 click
+<br>
+a. User click one of three options for how full a room is
+<br>
+3. Fraction of Nav vs Data Entry (Nav/Data)
+<br>
+a. 4/1
+<br>
 ### <a name="plan"></a>Plan of Work
 
 ### <a name="ref"></a>References
