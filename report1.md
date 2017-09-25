@@ -91,7 +91,7 @@ Use Case Description
  * UC-1 User searches for open study space  **_(Nick)_**
  * UC-2 User searches for study space with amenity  **_(Travis)_**
  * UC-3 User reserves a room  **_(Tara)_**
- * UC-4 System logs user  **_(Luis)_**
+ * UC-4 System logs user in  **_(Luis)_**
  * UC-5 System analyzes trends  **_(Luke)_**			
  * UC-6 User input how busy an area is  **_(Alex)_**
  * UC-7 User leaves comment  **_(Edward)_**
@@ -148,6 +148,26 @@ Use Case Description
 |<-		    |4. System displays confirmation   | 
 
 ![image](diagrams/UC3_diagram.png)
+
+|Use Case 4         |System logs user in                                        |
+|-------------------|------------------------------------------------------------------------------------|
+|Related REQs       |REQ3, REQ6, REQ7                                                                    |
+|Initiating Actors  |Student                                                                             |
+|Actor's Goals      |To be identified by the system so that the system can record the actor who is reserving a room and link its input as well as comments to itself.|
+|Participating Actor|None                                                                                |
+|Preconditions      |The actor has a username registered in the database or has a browser with cookies enabled to be allowed to enter to the system as a guest.                                                          |
+|Postconditions     |The user is logged in as a registered user or a guest.                                                  |
+|Flow of Events     |                                                                                    |
+|<-		|1.System displays main menu and prompts for method for system access: username account or guest|
+|->                 |2.User submits log in information                                                    |
+|<-                 |3.System displays if the user logged in successfully                                                   |
+|<-                 |4.System displays option to add input, comments or reserve a room         |
+|Alt. Flow of Events|                                                                                    |
+|->                 |2a.User has cookies enabled and logs in as a guest                                |
+|<-                 |3a.System displays option to add input as to how busy an area is                         |
+|Second Alt. Flow of Events| |
+|<-|3b. System displays that the user was unable to log in successfully and is returned to the main menu|
+
 
 |Use Case 5         |System analyzes trends                  |
 |-------------------|----------------------------------------|
