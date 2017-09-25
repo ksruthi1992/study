@@ -242,14 +242,18 @@ Use Case Description
 |MAX PW   |      |5  |5  |3  |3  |5  |3  | 5 |
 |Total PW |      |11 |11 |3  |9  |18 |3  | 8 |
 
+<hr>
 #### <a name="diagrams"></a>System Sequence Diagrams
 
 ![image](diagrams/System_Sequence_Diagrams/usecase_1-2.png)
 
-![image](diagrams/System_Sequence_Diagrams/usecase_6.png)
-
 ![image](diagrams/System_Sequence_Diagrams/usecase_3.png)
 
+![image](diagrams/System_Sequence_Diagrams/usecase_6.png)
+
+![image](diagrams/System_Sequence_Diagrams/usecase_7.png)
+
+<hr>
 
 ### <a name="nonfunctional"></a>Nonfunctional Requirements
 
