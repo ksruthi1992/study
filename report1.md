@@ -173,10 +173,10 @@ Use Case Description
 |Use Case 5         |System analyzes trends                  |
 |-------------------|----------------------------------------|
 |Related REQs       | REQ1, REQ2, REQ4, REQ5, REQ6, and REQ8 |
-|Initiating Actors  | None                                   |
+|Initiating Actors  | Admin                                  |
 |Actors Goal        | Analyze trends to predict study space  |
 |                   | availability                           |
-|Participating Actor| None                                   |
+|Participating Actor| Student                                |
 |Preconditions      | database is not empty                  |
 |Postconditions     | useage trend data is updated           |
 |Event Flow         |                                        |
@@ -232,22 +232,24 @@ Use Case Description
 |---------|:----:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |REQ1     |5     |X  |X  |   |   |X  |   | X |
 |REQ2     |3     |X  |X  |   |   |X  |   |   |
-|REQ3     |3     |   |   |   |X  |   |   |   |
+|REQ3     |3     |   |   |   |   |   |   |   |
 |REQ4     |1     |X  |   |   |   |X  |   |   |
 |REQ5     |2     |X  |   |   |   |X  |   |   |
-|REQ6     |3     |   |   |X  |X  |X  |   |   |
-|REQ7     |3     |   |X  |   |X  |   |   |   |
+|REQ6     |3     |   |   |X  |   |X  |   |   |
+|REQ7     |3     |   |X  |   |   |   |   |   |
 |REQ8     |4     |   |   |   |   |X  |   |   |
 |REQ9     |3     |   |   |   |   |   |X  | X |
-|MAX PW   |      |5  |5  |3  |3  |5  |3  | 5 |
-|Total PW |      |11 |11 |3  |9  |18 |3  | 8 |
+|MAX PW   |      |5  |5  |3  |   |5  |3  | 5 |
+|Total PW |      |11 |11 |3  |   |18 |3  | 8 |
 
 #### <a name="diagrams"></a>System Sequence Diagrams
-
 
 ![image](diagrams/System_Sequence_Diagrams/usecase_1-2.png)
 
 ![image](diagrams/System_Sequence_Diagrams/usecase_6.png)
+
+![image](diagrams/System_Sequence_Diagrams/usecase_3.png)
+
 
 ### <a name="nonfunctional"></a>Nonfunctional Requirements
 
