@@ -180,7 +180,7 @@ Flow of Events for Main Success Scenerio:
 
 |Use Case 7          |User enters a comment                                 |
 |--------------------|------------------------------------------------------|
-|Related REQs        |REQ9                                                  |
+|Related REQs        |REQ9, REQ1                                            |
 |Initiating actors   |Student                                               |
 |Actor's goals       |Student can comment anything about a room             |
 |Participating actors|None                                                  |
@@ -201,7 +201,7 @@ Flow of Events for Main Success Scenerio:
 
 |**Req't**|**PW**|UC1|UC2|UC3|UC4|UC5|UC6|UC7|
 |---------|:----:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|REQ1     |5     |X  |X  |   |   |X  |   |   |
+|REQ1     |5     |X  |X  |   |   |X  |   | X |
 |REQ2     |3     |X  |X  |   |   |X  |   |   |
 |REQ3     |3     |   |   |   |   |   |   |   |
 |REQ4     |1     |X  |   |   |   |X  |   |   |
@@ -209,9 +209,9 @@ Flow of Events for Main Success Scenerio:
 |REQ6     |3     |   |   |X  |   |X  |   |   |
 |REQ7     |3     |   |X  |   |   |   |   |   |
 |REQ8     |4     |   |   |   |   |X  |   |   |
-|REQ9     |3     |   |   |   |   |   |X  |   |
-|MAX PW   |      |5  |5  |3  |   |5  |3  |   |
-|Total PW |      |11 |11 |3  |   |18 |3  |   |
+|REQ9     |3     |   |   |   |   |   |X  | X |
+|MAX PW   |      |5  |5  |3  |   |5  |3  | 5 |
+|Total PW |      |11 |11 |3  |   |18 |3  | 8 |
 
 #### <a name="diagrams"></a>System Sequence Diagrams
 
