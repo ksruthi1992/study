@@ -75,7 +75,8 @@ Individual Contribution:
    * REQ-8: System analyzes data to track trends
 
 #### <a name="stakeholders"></a>Stakeholders
-
+  * Students: will be able to more effiecntly find and use study spaces
+  * School: more attractive to prospective students because of it's high tech efficency
 #### <a name="actor"></a>Actors and Goals  
 <hr>
 
