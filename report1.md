@@ -102,6 +102,8 @@ Use Case Description
 |->                 |3.User looks through open areas                           |
 |<-                 |4.Database returns available space in the requested area  |
 
+![image](diagrams/UC1_Diagram.png)
+
 |Use Case 2         |User searches for a study space with amenity                                        |
 |-------------------|------------------------------------------------------------------------------------|
 |Related REQs       |REQ1, REQ2, REQ7                                                                    |
@@ -137,26 +139,20 @@ Use Case Description
 
 ![image](diagrams/UC3_diagram.png)
 
-Use Case 5
-System analyzes trends
+|Use Case 5         |System analyzes trends                  |
+|-------------------|----------------------------------------|
+|Related REQs       | REQ1, REQ2, REQ4, REQ5, REQ6, and REQ8 |
+|Initiating Actors  | Admin                                  |
+|Actors Goal        | Analyze trends to predict study space  |
+|                   | availability                           |
+|Participating Actor| Student                                |
+|Preconditions      | database is not empty                  |
+|Postconditions     | useage trend data is updated           |
+|Event Flow         |                                        |
+|->                 | update triggers analysis algorithm     |
+|<-                 | Database releases updated trend data   |
 
-Related REQs:  REQ1, REQ2, REQ4, REQ5, REQ6, and REQ8
-
-Initiating Actors: System, Admin?
-
-Actors Goal: Analyze trends to predict study space availability
-
-Participating Actor: Student, Database
-
-Preconditions:  database is not empty
-
-Postconditions:  useage trend data is updated
-
-Flow of Events for Main Success Scenerio:
-
--> System update triggers analysis algorithm
-
-<- Database releases updated trend data
+![image](diagrams/UC5.png)
 
 |Use Case 6          |User inputs how busy an area is                       |
 |--------------------|------------------------------------------------------|
@@ -177,6 +173,7 @@ Flow of Events for Main Success Scenerio:
 |**->**              |3b. _User selects the cancel option_                  |
 |**<-**              |4b. _System brings user back to the floor status page_|
 
+![image](diagrams/UC6_Diagram.png)
 
 |Use Case 7          |User enters a comment                                 |
 |--------------------|------------------------------------------------------|
@@ -231,8 +228,103 @@ Flow of Events for Main Success Scenerio:
 ### <a name="ui_design"></a>User Interface Design
 
 #### <a name="prelim_design"></a> Preliminary Design
+#### Home Page
+<hr>
+   The user will start at the home page, which will display information about buildings that the user is near.
+   Here the user can see a summary of the buildings and select one from  the list for further information.
+<br>
+<br>
+
+<img src="diagrams/mockups/home.png" style="width: 400px;"/>
+<br>
+
+#### Menu
+<hr>
+   The sidebar menu will be available to the user at all times.  One tap on the menu icon will pull up the menu and allow the user to easily navigate the site. 
+<br>
+<br>
+<img src="diagrams/mockups/menu.png" style="width: 400px;"/>
+<br>
+
+#### Submit Page
+<hr>
+   Here the user can input how crowded a room is with a simple form after selecting a building. 
+<br>
+<br>
+<img src="diagrams/mockups/submit.png" style="width: 400px;"/>
+<br>
+
+#### Status Page
+<hr>
+   This page will display the rooms/floors and whether or not they are busy. 
+<br>
+<br>
+<img src="diagrams/mockups/status.png" style="width: 400px;"/>
+<br>
+
+#### Filter Page
+<hr>
+   Here the user can filter buildings and rooms based on certain amenities and search criteria to find a place to study that suits their needs.
+<br>
+<br>
+<img src="diagrams/mockups/filter.png" style="width: 400px;"/>
 
 #### <a name="effort"></a>User Effort Estimation
+
+#### Scenario 1: User looks for any open areas nearby
+
+1. Navigation: 1 Total Click
+
+* User clicks on one of the nearby listed buildings for information about open rooms
+
+2. Data Entry: None
+
+3. Fraction of Nav vs Data Entry (Nav/Data)
+
+* All Navigation
+
+
+#### Scenario 2: User looks for any open areas nearby
+
+1. Navigation: 3 Total Clicks
+
+* User clicks to open the menu
+
+* User clicks "filter" from the menu
+
+* User enters form and clicks submit 
+
+2. Data entry: 2-10 clicks
+
+* Select options from checkmark form
+
+* Click Search to display rooms matching criteria
+
+3. Fraction of Nav vs Data Entry (Nav/Data)
+
+* Depending on Options Selected: 3/2 - 3/10
+
+
+#### Scenario 3: User contributes data for a room
+
+1. Navigation: 4 Total Clicks
+
+* User clicks on one of the nearby listed buildings for information about open rooms
+
+* User clicks "update status" 
+
+* User fills out form 
+
+* User clicks submit
+
+2. Data Entry: 1 click
+
+* User click one of three options for how full a room is
+
+3. Fraction of Nav vs Data Entry (Nav/Data)
+
+*  4/1
+
 
 ### <a name="plan"></a>Plan of Work
 
