@@ -259,7 +259,7 @@ Use Case Description
 
 #### <a name="domain_model"></a>Domain Model
 
-
+![image](diagrams/domainmodel.png)
 
 ### <a name="ui_design"></a>User Interface Design
 
