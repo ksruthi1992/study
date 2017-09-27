@@ -28,7 +28,7 @@ Individual Contribution:
 
 
 ### Table of contents  
-* [Project Proposal](http://cloudmytrash.com:1234/tux-proposal.html)
+* [Project Proposal](tux-proposal.html)
 * [Customer Requirements](#requirements)
 * [Glossary](#glossary)
 * [Functional Requirments](#functional)
