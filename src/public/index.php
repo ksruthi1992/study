@@ -21,11 +21,18 @@ $app->get('/buildings', function (Request $request, Response $response){
     return $this->renderer->render($response, "/views/buildings.phtml");
 });
 
+$app->get('/status', function (Request $request, Response $response) {
+    return $this->renderer->render($response, "/views/status.phtml");
+});
 
 
+$app->get('/filter', function (Request $request, Response $response) {
+    return $this->renderer->render($response, "/views/filter.phtml");
+});
 
-
-
+$app->get('/submit', function (Request $request, Response $response) {
+    return $this->renderer->render($response, "/views/submit.phtml");
+});
 
 
 
