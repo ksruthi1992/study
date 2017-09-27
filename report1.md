@@ -28,7 +28,7 @@ Individual Contribution:
 
 
 ### Table of contents  
-* [Project Proposal](Tux Proposal.html)
+* [Project Proposal](Tux_Proposal.html)
 * [Customer Requirements](#requirements)
 * [Glossary](#glossary)
 * [Functional Requirments](#functional)
