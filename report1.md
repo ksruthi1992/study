@@ -28,7 +28,7 @@ Individual Contribution:
 
 
 ### Table of contents  
-* [Project Proposal](teamtux.ddns.net/Tux_Proposal.html)
+* [Project Proposal](http://teamtux.ddns.net/Tux_Proposal.html)
 * [Customer Requirements](#requirements)
 * [Glossary](#glossary)
 * [Functional Requirments](#functional)
