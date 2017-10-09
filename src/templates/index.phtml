@@ -1,34 +1,27 @@
-<html>
+{% extends "base.phtml" %}
 
-<head>
-
-</head>
-
-<body>
-
-    <?php 
-        $title = "Home";
-        include("base/menu.phtml");
-    ?>
-
-
+{% block title%}Study{% endblock %}
+{% block content %}
     <div class="ui container">
 
         <div class="ui segments">
             
             <div class="ui segment">
-                <h3>Display info about nearby buildings</h3>
+                <h3>Nearby Buildings</h3>
             </div>
 
             <div class="ui segment">
                 <table class="ui celled unstackable table">
+                    <tr>
+                        <td>AIRC</td>
+                        <td> <i class="blue lemon icon"></i> </td>
+                    </tr>             
+                    <tr>
+                        <td>Library</td>
+                        <td>5</td>
+                    </tr>             
                     <tr><td>Building 1</td></tr>             
-                    <tr><td>Building 1</td></tr>             
-                    <tr><td>Building 1</td></tr>             
-                    <tr><td>Building 1</td></tr>             
-                    <tr><td>Building 1</td></tr>             
-                    <tr><td>Building 1</td></tr>             
-                    <tr><td>Building 1</td></tr>             
+                    
                     <tr><td>Building 1</td></tr>             
 
                 </table>
@@ -39,11 +32,6 @@
         </div>
     
     </div>
-</body>
 
 
-
-
-
-
-</html>
+{% endblock %}

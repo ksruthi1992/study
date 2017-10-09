@@ -1,20 +1,41 @@
 <?php
+require '../../vendor/autoload.php';
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
-use Slim\Views\PhpRenderer;
 
-require '../../vendor/autoload.php';
+
+$configuration = [
+    'settings' => [
+        'displayErrorDetails' => true,
+    ],
+];
+
 
 //app setup
-$app = new \Slim\App;
+$app = new \Slim\App($configuration);
+
 $container = $app->getContainer();
 
+// Register component on container
+$container['view'] = function ($container) {
+    $view = new \Slim\Views\Twig('../templates', [
+        'cache' => '../cache',
+        'auto_reload' => true,
+    ]);
+    
+    // Instantiate and add Slim specific extension
+    $basePath = rtrim(str_ireplace('index.php', '', $container['request']->getUri()->getBasePath()), '/');
+    $view->addExtension(new Slim\Views\TwigExtension($container['router'], $basePath));
+
+    return $view;
+};
+
 //set the path for finding the templates
-$container['renderer'] = new PhpRenderer("../templates");
+//$container['renderer'] = new PhpRenderer("../templates");
 
 //renders the index page of the site
 $app->get('/', function (Request $request, Response $response) {
-    return $this->renderer->render($response, "index.phtml");
+    return $this->view->render($response, "index.phtml");
 });
 
 $app->get('/buildings', function (Request $request, Response $response){
