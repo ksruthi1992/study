@@ -2,36 +2,30 @@
 require '../../vendor/autoload.php';
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
+use Slim\Views;
+use Slim\Views\PhpRenderer;
 
-
-$configuration = [
-    'settings' => [
-        'displayErrorDetails' => true,
-    ],
-];
 
 
 //app setup
-$app = new \Slim\App($configuration);
-
+$app = new \Slim\App;
 $container = $app->getContainer();
 
-// Register component on container
+//Register component on container
 $container['view'] = function ($container) {
-    $view = new \Slim\Views\Twig('../templates', [
-        'cache' => '../cache',
-        'auto_reload' => true,
+    $view = new \Slim\Views\Twig('../templates',[
+        'cache' => false,
     ]);
-    
-    // Instantiate and add Slim specific extension
-    $basePath = rtrim(str_ireplace('index.php', '', $container['request']->getUri()->getBasePath()), '/');
-    $view->addExtension(new Slim\Views\TwigExtension($container['router'], $basePath));
+
+    $view->addExtension(new \Slim\Views\TwigExtension(
+        $container->router,
+        $container->request->getUri()
+    ));
 
     return $view;
 };
 
-//set the path for finding the templates
-//$container['renderer'] = new PhpRenderer("../templates");
+
 
 //renders the index page of the site
 $app->get('/', function (Request $request, Response $response) {

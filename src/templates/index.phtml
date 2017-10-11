@@ -1,37 +1,145 @@
 {% extends "base.phtml" %}
-
 {% block title%}Study{% endblock %}
 {% block content %}
-    <div class="ui container">
+<div class="ui container" >
+   <div class="ui segments" style="font-size: 25px">
+      <div class="ui segment">
+         <h1>Spaces and Places</h1>
+      </div>
+      <div class="ui segment">
+         <div class="ui accordion">
+            <div class="title ">
+               <i style="font-size: 20px"class="dropdown icon"></i>
+               <span style="font-size: 20px"><i class=" red circle icon"></i>AIRC  <i style="float: right"class="large info circle icon"></i></span>
+            </div>
+            <div class="content ">
+               <table class="ui celled unstackable table">
+                  <tr>
+                  <thead>
+                  </thead>
+ 
+                  <td>
+                  <div id="column1" style="float:left; margin:0; width:50%;">
+                        Floor 1
+                </div>
 
-        <div class="ui segments">
+                <div id="column2" style="float:right; margin:0; width:50%;">
+                <div id="test1" class="ui small yellow progress " data-percent="60">
+                  <div class="bar"></div>
+            	  <div class="label"> There is some seating available</div> 	
+                    </div>
+
+                </div>
+
+
+                  </td>
+                  </tr>             
+                  <tr>
+                     <td>
+                     <div id="column1" style="float:left; margin:0; width:50%;">
+                        Floor 2
+                </div>
+
+                <div id="column2" style="float:right; margin:0; width:50%;">
+                <div class="ui small progress">
+                  <div class="bar"></div>
+ 
+                    </div>
             
-            <div class="ui segment">
-                <h3>Nearby Buildings</h3>
-            </div>
-
-            <div class="ui segment">
-                <table class="ui celled unstackable table">
-                    <tr>
-                        <td>AIRC</td>
-                        <td> <i class="blue lemon icon"></i> </td>
-                    </tr>             
-                    <tr>
-                        <td>Library</td>
-                        <td>5</td>
-                    </tr>             
-                    <tr><td>Building 1</td></tr>             
+                </div>
                     
-                    <tr><td>Building 1</td></tr>             
-
-                </table>
-   
-
+                    </td>
+                  </tr>
+               </table>
             </div>
+            <div class="title ">
+               <span style="font-size: 20px"><i class="dropdown icon"></i>
+               <i class=" green circle icon"></i>University Union  <i style="float: right"class="large info circle icon"></i>
+               </span>
+            </div>
+            <div class="content ">
+               <table class="ui celled unstackable table">
+                  <tr>
+                  <thead>
+                  </thead>
+ 
+                  <td>
+                  <div id="column1" style="float:left; margin:0; width:50%;">
+                        Floor 1
+                </div>
 
-        </div>
-    
-    </div>
+                <div id="column2" style="float:right; margin:0; width:50%;">
+                <div class="ui small progress">
+                  <div class="bar"></div>
+ 
+                    </div>
+            
+                </div>
 
 
+                  </td>
+                  </tr>             
+                  <tr>
+                     <td>
+                     <div id="column1" style="float:left; margin:0; width:50%;">
+                        Floor 2
+                </div>
+
+                <div id="column2" style="float:right; margin:0; width:50%;">
+                <div class="ui small progress">
+                  <div class="bar"></div>
+ 
+                    </div>
+            
+                </div>
+                    
+                    </td>
+                  </tr>
+               </table>
+            </div>
+            
+            <div class="title ">
+            	<span style="font-size: 20px">
+               <i class="dropdown icon"></i>
+               <i class=" yellow circle icon"></i> Library  <i style="float: right"class="large info circle icon"></i>
+               </span>
+            </div>
+            
+            <div class="content ">
+               <table class="ui celled unstackable table">
+                  <tr>
+                  <thead>
+                  </thead>
+                  <td>
+                      
+                  <div id="column1" style="float:left; margin:0; width:50%;">
+                        Floor 1
+                </div>
+
+                <div id="column2" style="float:right; margin:0; width:50%;">
+                <div class="ui small progress">
+                  <div class="bar"></div>
+ 
+                    </div>
+            
+                </div>
+
+                  </td>
+                  </tr>             
+                  <tr>
+                     <td> <i class="green circle icon"></i> Floor 2</td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script>
+      $(document).ready(function () {
+      
+          $('.ui.accordion').accordion({ exclusive  : false});
+          $('#test1').progress();
+      });
+   </script>
+</div>
 {% endblock %}
