@@ -24,48 +24,47 @@
     };
 
     //renders the index page of the site
-    $app->get(
-        '/', function (Request $request, Response $response) {
+    //made
+    $app->get('/', function (Request $request, Response $response) {
             return $this->view->render($response, "index.phtml");
         }
     );
-    $app->get(
-        '/buildings', function (Request $request, Response $response){
+    //made
+    $app->get('/buildings', function (Request $request, Response $response){
             return $this->renderer->render($response, "/views/buildings.phtml");
         }
     );
-    $app->get(
-        '/status', function (Request $request, Response $response) {
+    //un-made
+    $app->get('/status', function (Request $request, Response $response) {
             return $this->renderer->render($response, "/views/status.phtml");
         }
     );
-    $app->get(
-        '/filter', function (Request $request, Response $response) {
+    //un-made
+    $app->get('/filter', function (Request $request, Response $response) {
             return $this->renderer->render($response, "/views/filter.phtml");
         }
     );
-    $app->get(
-        '/submit', function (Request $request, Response $response) {
+    //un-made   
+    $app->get('/submit', function (Request $request, Response $response) {
             return $this->renderer->render($response, "/views/submit.phtml");
         }
     );
 
     //these are just example routes, but they are currently functional
     //_____________________________________________________________________
-    $app->get(
-        '/hello/{name}', function (Request $request, Response $response) {
+    $app->get('/hello/{name}', function (Request $request, Response $response) {
             $name = $request->getAttribute('name');
             $response->getBody()->write("Hello, $name");
             return $response;
         }
     );
-    $app->get(
-        '/test', function (Request $request, Response $response) {
+    $app->get('/test', function (Request $request, Response $response) {
             $response->getBody()->write("I am testing");
             return $response;
         }
     );
+
     $app->run();
-    
+
 //removed '}', but not sure if needed. Also, " ? > " was added
 ?>
