@@ -1,132 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
+  <head>
     <title>{% block title %}{% endblock %}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<meta charset='utf-8'>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="Executive Woocommerce">  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
-<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js"></script>
-</head>
-<body >
-
-  
-
-<style>
-    .white {
-        color : white;
-    }
-    .green_custom {
-        color : #33fda1;
-    }
-    .red_custom {
-      color : #fa388d
-    }
-    .blue_back {
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Executive Woocommerce">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet" />
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js"></script>
+  </head>
+  <body>
+    <style>
+      .white {
+          color : white;
+      }
+      .green_custom {
+          color : #33fda1;
+      }
+      .red_custom {
+        color : #fa388d
+      }
+      .blue_back {
         background-color : #0b5e29;
-    }
-    .fixed {
-    position: fixed;
-    }
-    .full_wide {
+      }
+      .fixed {
+        position: fixed;
+      }
+      .full_wide {
         width: 100%;
-    }
-    .bigger {
-    	font-size: 25px;
-    }
-</style>
-
-
-  <style media="screen">
-    .toggler {
-      cursor: pointer;
-    }
-  </style>
-  <script type="text/javascript">
-  $(function() {
-
-    $('#show-sidebar').click(function() {
-      //$('#show-sidebar').hide(); 
-      console.log("i'm clicking")
-      $('#hamburger-button').removeClass('sidebar').addClass('sidebar');
-      $('.menu.sidebar').sidebar('toggle');
-    });
-
-    $('#hide-sidebar').click(function() {
-      //$('#show-sidebar').show();
-      $('.menu.sidebar').sidebar('toggle');
-      $('#hamburger-button').removeClass('cancel').addClass('sidebar');
-
-    });
-
-    
-
-  /*
-    $('#show-sidebar').click(function() {
-      $('.menu.sidebar').sidebar('toggle');
-    });
-    $('.menu.sidebar')
-      .sidebar('toggle', function(){
-        console.log("yeeeeee");
-      });
-    
-*/
-
-  });
-  </script>
-</head>
+      }
+      .bigger {
+      	font-size: 25px;
+      }
+    </style>
+    <style media="screen">
+      .toggler {
+        cursor: pointer;
+      }
+    </style>
+    <script type="text/javascript">
+      $(
+        function() {
+          $('#show-sidebar').click(
+            function() {
+              //$('#show-sidebar').hide(); 
+              console.log("i'm clicking"); //I added semi-collon. Yet, I am not sure if it's necessary.
+              $('#hamburger-button').removeClass('sidebar').addClass('sidebar');
+              $('.menu.sidebar').sidebar('toggle');
+            }
+          );
+          $('#hide-sidebar').click(function() {
+            //$('#show-sidebar').show();
+            $('.menu.sidebar').sidebar('toggle');
+            $('#hamburger-button').removeClass('cancel').addClass('sidebar');
+          });
+          /*
+          $('#show-sidebar').click(
+            function() {
+              $('.menu.sidebar').sidebar('toggle');
+            }
+          );
+          $('.menu.sidebar').sidebar(
+            'toggle', function(){
+              console.log("yeeeeee");
+            }
+          );
+          */
+        }
+      );
+    </script>
+  </head>
   <body >
     <div class="ui left  vertical menu sidebar blue_back ">
       <div class="item">
         <div id="hide-sidebar" class="button">
-           <strong> Menu</strong>
+           <strong>Menu</strong>
         </div>
       </div>
       <a class="item" href="/">
         <i class="home icon"></i>Home 
       </a>
-
       <a class="item" href="/filter">
         <i class="filter icon"></i>Filter
       </a>
-
       <a class="item" href="/support">
-        Support <i class="life ring icon"></i>
+        Support<i class="life ring icon"></i>
       </a>
     </div>
     <div id="push" class="pusher" >
       <div style=" width: 100%; height: 60px;" class="blue_back ui inverted vertical sticky fixed top white" >
-
         <div id="show-sidebar" class="button toggler white" style="margin: 15px; display: inline-block; ">
-            <i id="hamburger-button" class="big sidebar inverted icon"></i>
-
+          <i id="hamburger-button" class="big sidebar inverted icon"></i>
         </div>      
         <div style="display: inline-block;  margin-left:auto; margin-right:auto;">
-              Title
+          Title
         </div>
-
       </div>
-    <div style="height: 75px">
-
+      <div style="height: 75px">
       </div>
-	  
       <!-- Site content !-->
       {% block content %}
       {% endblock %}
-	  
     </div>
-    
-
-</body>
+  </body>
 </html>
