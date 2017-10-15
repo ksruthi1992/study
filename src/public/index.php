@@ -5,31 +5,42 @@
     use Slim\Views;
     use Slim\Views\PhpRenderer;
 
-    //app setup
+    //App setup
+        //Create Slim app
     $app = new \Slim\App;
+        //Fetch DI container
     $container = $app->getContainer();
 
 
     //Register component on container
+        //Register Twig View Helper
     $container['view'] = function ($container) {
         $view = new \Slim\Views\Twig('../templates',[
             'cache' => false,
         ]);
+        // Cache has been disabled
+
         $view->addExtension(
             new \Slim\Views\TwigExtension(
                 $container->router,
                 $container->request->getUri()
             )
         );
+
         return $view;
     };
 
     //renders the index page of the site
     //made
-    $app->get('/', function (Request $request, Response $response) {
+        //Define named routes
+    $app->get('/', function (Request $request, Response $response, $args) {
             return $this->view->render($response, "index.phtml");
         }
     );
+
+        //Render from string
+    //Is also possible
+
     //made
     $app->get('/buildings', function (Request $request, Response $response){
             return $this->view->render($response, "views/building.phtml");
@@ -66,17 +77,17 @@
             return $response;
         }
     );
-    $app->get(
-        '/test', function (Request $request, Response $response) {
+    $app->get('/test', function (Request $request, Response $response) {
             $response->getBody()->write("I am testing");
             return $response;
         }
     );
 
     //these are made for testing purposes
-    require('../app/api/counter.php');
-    require('../modules/connect.php');
+    require_once('../app/api/counter.php');
+    require_once('../modules/connect.php');
 
+    //Run app
     $app->run();
 
-//removed '}', but not sure if needed. Also, " ? > " was added
+//removed '}', but not sure if needed
