@@ -12,35 +12,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    
+    <!--local Semantic UI 
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    -->
 
     <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js"></script>
+
+    <!-- colors -->
+    <link rel="stylesheet" href="css/base.css" />
   </head>
   <body>
-    <style>
-      .white {
-        color : white;
-      }
-      .green_custom {
-        color : #33fda1;
-      }
-      .red_custom {
-        color : #fa388d
-      }
-      .blue_back {
-        background-color : #0b5e29;
-      }
-      .fixed {
-        position: fixed;
-      }
-      .full_wide {
-        width: 100%;
-      }
-      .bigger {
-      	font-size: 25px;
-      }
-    </style>
+
     <style media="screen">
       .toggler {
         cursor: pointer;
@@ -86,24 +76,39 @@
         </div>
       </div>
       <a class="item" href="/">
-        <i class="home icon"></i>Home 
+        Home<i class="home icon"></i> 
       </a>
+      <!--  removed
       <a class="item" href="/filter">
-        <i class="filter icon"></i>Filter
-      </a>
+        Filter<i class="filter icon"></i>
+      </a>-->
       <a class="item" href="/support">
         Support<i class="life ring icon"></i>
       </a>
     </div>
     <div id="push" class="pusher" >
+
+
+      <!-- menu -->
       <div style=" width: 100%; height: 60px;" class="blue_back ui inverted vertical sticky fixed top white" >
-        <div id="show-sidebar" class="button toggler white" style="margin: 15px; display: inline-block; ">
+
+        <!-- button -->
+        <div id="show-sidebar" class="button toggler white" style="margin: 15px; display: inline-block;">
           <i id="hamburger-button" class="big sidebar inverted icon"></i>
-        </div>      
-        <div style="display: inline-block;  margin-left:auto; margin-right:auto;">
-          Title
+        </div> 
+
+        <!-- logo -->
+        <div style="display:inline-block; margin-left:auto; margin-right:auto; top: 10px; position: relative; padding-right: 10px;">
+          <img src="img/logo.png" style="margin" />
+        </div>  
+
+        <!-- title -->
+        <div style="display: inline-block; margin-left:auto; margin-right:auto; margin-bottom:10px; font-size: 20px;">
+            <a href="/" style="text-decoration: none;">SpotFinder.tk</a>
         </div>
       </div>
+
+
       <div style="height: 75px">
       </div>
       <!-- Site content !-->

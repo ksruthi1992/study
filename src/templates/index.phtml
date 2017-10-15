@@ -2,10 +2,42 @@
 {% block title%}Study{% endblock %}
 {% block content %}
 <div class="ui container" >
-  <div class="ui segments" style="font-size: 25px">
+  <div class="ui segments" style="font-size: 25px; margin-top: 25px;">
     <div class="ui segment">
-      <h1>Spaces and Places</h1>
+      <h1>Spots</h1>
     </div>
+
+    <!-- Find -->
+    <div class="ui segment">
+      <div class="ui category search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search Spot">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
+
+
+    <!-- Amenities -->
+    <div class="ui segment">
+      <div class="ui sub header">Features</div>
+
+      <select multiple="" name="skills" class="ui fluid normal dropdown">
+        <option value="">Features</option>
+        <option value="bathrooms">Bathrooms</option>
+        <option value="quiet">Quiet</option>
+        <option value="group_friendly">Group Friendly</option>
+        <option value="water_fountain">Water Fountain</option>
+        <option value="coffee">Coffee</option>
+        <option value="snacks">Snacks</option>
+        <option value="food">Fod</option>
+        <option value="power_outlets">Power Outlets</option>
+        <option value="computer_access">Computer Access</option>
+        
+      </select>
+    </div>
+
     <div class="ui segment">
       <div class="ui accordion">
         <div class="title ">
@@ -110,14 +142,40 @@
         </div>
       </div>
     </div>
+
+
+
   </div>
   <script>
     $(document).ready(
       function () {
+        $('.ui.search')
+          .search({
+            source: content
+          })
+        ;
+
+        $('.ui.dropdown')
+          .dropdown(
+
+          )
+        ;
+
         $('.ui.accordion').accordion({ exclusive  : false});
         $('#test1').progress();
       }
+
+
+
+
     );
+    var content = [
+      { title: 'AIRC/ARC Academic Information Resource Center' },
+      { title: 'Library' },
+      { title: 'Riverside Hall' },
+      { title: 'Santa Clara Hall' }
+    ];
+
   </script>
 </div>
 {% endblock %}
