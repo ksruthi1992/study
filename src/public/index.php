@@ -9,6 +9,7 @@
     $app = new \Slim\App;
     $container = $app->getContainer();
 
+
     //Register component on container
     $container['view'] = function ($container) {
         $view = new \Slim\Views\Twig('../templates',[
@@ -31,22 +32,29 @@
     );
     //made
     $app->get('/buildings', function (Request $request, Response $response){
-            return $this->renderer->render($response, "/views/buildings.phtml");
+            return $this->view->render($response, "views/building.phtml");
         }
     );
     //un-made
     $app->get('/status', function (Request $request, Response $response) {
-            return $this->renderer->render($response, "/views/status.phtml");
+            return $this->renderer->render($response, "views/status.phtml");
         }
     );
-    //un-made
+    //made
     $app->get('/filter', function (Request $request, Response $response) {
-            return $this->renderer->render($response, "/views/filter.phtml");
+            $response->getBody()->write("This is the filter");
+            return $response;
+        }
+    );
+    //made 
+    $app->get('/support', function (Request $request, Response $response) {
+            $response->getBody()->write("This is the support section");
+            return $response;
         }
     );
     //un-made   
     $app->get('/submit', function (Request $request, Response $response) {
-            return $this->renderer->render($response, "/views/submit.phtml");
+            return $this->renderer->render($response, "views/submit.phtml");
         }
     );
 
@@ -58,13 +66,17 @@
             return $response;
         }
     );
-    $app->get('/test', function (Request $request, Response $response) {
+    $app->get(
+        '/test', function (Request $request, Response $response) {
             $response->getBody()->write("I am testing");
             return $response;
         }
     );
 
+    //these are made for testing purposes
+    require('../app/api/counter.php');
+    require('../modules/connect.php');
+
     $app->run();
 
 //removed '}', but not sure if needed. Also, " ? > " was added
-?>
