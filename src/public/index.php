@@ -53,6 +53,13 @@
         }
     );
 
+        //Account section
+    $app->get('/account', function (Request $request, Response $response, $args) use(&$campuses) {
+            $data = ['campuses'=>$campuses];
+            return $this->view->render($response, "/views/account.phtml", $data);
+        }
+    );
+
         // EXAMPLES start
     //these are just example routes, but they are currently functional
     $app->get('/hello/{name}', function (Request $request, Response $response) {
