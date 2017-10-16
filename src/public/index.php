@@ -16,9 +16,17 @@
         //Register Twig View Helper
     $container['view'] = function ($container) {
         $view = new \Slim\Views\Twig('../templates',[
-            'cache' => false,
+            'cache' => false
         ]);
         // Cache has been disabled
+
+        //debugger which i dont know how to configure
+        //$twig = new Twig_Environment($loader, array(
+        //    'debug' => true
+        //));
+        //$twig->addExtension(new Twig_Extension_Debug());
+        // debugger end
+
 
         $view->addExtension(
             new \Slim\Views\TwigExtension(
@@ -27,14 +35,23 @@
             )
         );
 
+        
+
         return $view;
     };
+
+
+
+    //connection modules
+    require_once('../modules/connect.php');
+    require_once('../modules/getCampuses.php');
 
     //renders the index page of the site
     //made
         //Define named routes
-    $app->get('/', function (Request $request, Response $response, $args) {
-            return $this->view->render($response, "index.phtml");
+    $app->get('/', function (Request $request, Response $response, $args) use(&$campuses) {
+            $data = ['campuses'=>$campuses];
+            return $this->view->render($response, "index.phtml", $data);
         }
     );
 
@@ -85,7 +102,6 @@
 
     //these are made for testing purposes
     require_once('../app/api/counter.php');
-    require_once('../modules/connect.php');
 
     //Run app
     $app->run();

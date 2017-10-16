@@ -37,10 +37,20 @@
         <option value="computer_access">Computer Access</option>
         
       </select>
+
     </div>
 
+    <!-- DEBUGGER -->
     <div class="ui segment">
-      this is a test
+      
+      {{ campuses|json_encode() }}
+      <ul>
+      {% for idcampus, name in campuses %}
+          <li>
+            {{ name.campuses }}
+          </li>
+      {% endfor %}
+      </ul>
     </div>
 
     <div class="ui segment">
