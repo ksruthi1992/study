@@ -3,3 +3,7 @@ bin/*
 vendor/*
 /src/cache
 /src/templates_old
+#added later
+semantic
+semantic.json
+node_modules
