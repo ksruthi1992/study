@@ -13,14 +13,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
     
-    <!--local Semantic UI 
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"></script>
-    <script src="semantic/dist/semantic.min.js"></script>
-    -->
 
     <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
@@ -41,34 +33,21 @@
         function() {
           $('#show-sidebar').click(
             function() {
-              //$('#show-sidebar').hide(); 
               console.log("i'm clicking"); //I added semi-collon. Yet, I am not sure if it's necessary.
               $('#hamburger-button').removeClass('sidebar').addClass('sidebar');
               $('.menu.sidebar').sidebar('toggle');
             }
           );
           $('#hide-sidebar').click(function() {
-            //$('#show-sidebar').show();
             $('.menu.sidebar').sidebar('toggle');
             $('#hamburger-button').removeClass('cancel').addClass('sidebar');
           });
-          /*
-          $('#show-sidebar').click(
-            function() {
-              $('.menu.sidebar').sidebar('toggle');
-            }
-          );
-          $('.menu.sidebar').sidebar(
-            'toggle', function(){
-              console.log("yeeeeee");
-            }
-          );
-          */
         }
       );
     </script>
   </head>
   <body >
+    <!-- left -->
     <div class="ui left  vertical menu sidebar blue_back ">
       <div class="item">
         <div id="hide-sidebar" class="button">
@@ -78,10 +57,11 @@
       <a class="item" href="/">
         Home<i class="home icon"></i> 
       </a>
-      <!--  removed
+      <!-- FILTER start
       <a class="item" href="/filter">
         Filter<i class="filter icon"></i>
-      </a>-->
+      </a>
+      FILTER end -->
       <a class="item" href="/support">
         Support<i class="life ring icon"></i>
       </a>
@@ -89,7 +69,7 @@
     <div id="push" class="pusher" >
 
 
-      <!-- menu -->
+      <!-- top menu -->
       <div style=" width: 100%; height: 60px;" class="blue_back ui inverted vertical sticky fixed top white" >
 
         <!-- button -->
@@ -128,8 +108,7 @@
               List of campuses
             </div>
 
-            
-            {{ name }}
+            <!-- TESTING area for campuses -->
 
             <div class="item">
               <img class="ui avatar image" src="/images/avatar/small/justen.jpg">
@@ -152,7 +131,7 @@
         <script>
           $(document).ready(
             function () {
-              //$('.ui.dropdown').dropdown('show');
+              
             }
           );
       </script>

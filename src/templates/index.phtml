@@ -32,7 +32,7 @@
         <option value="water_fountain">Water Fountain</option>
         <option value="coffee">Coffee</option>
         <option value="snacks">Snacks</option>
-        <option value="food">Fod</option>
+        <option value="food">Food</option>
         <option value="power_outlets">Power Outlets</option>
         <option value="computer_access">Computer Access</option>
         
@@ -40,10 +40,19 @@
 
     </div>
 
-    <!-- DEBUGGER -->
+    <!-- START debug segment -->
     <div class="ui segment">
       
+      <!-- array -->
+      {{ campuses }}
+
+      <br><br>
+
+      <!-- array enconded in json -->
       {{ campuses|json_encode() }}
+
+
+      <!-- array listed to the best of my ability -->
       <ul>
       {% for idcampus, name in campuses %}
           <li>
@@ -51,7 +60,9 @@
           </li>
       {% endfor %}
       </ul>
+
     </div>
+    <!-- END debug segment -->
 
     <div class="ui segment">
       <div class="ui accordion">

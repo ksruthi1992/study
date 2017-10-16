@@ -35,59 +35,25 @@
             )
         );
 
-        
-
         return $view;
     };
 
-
-
-    //connection modules
+        //MODULES
+    //Connection to the database
     require_once('../modules/connect.php');
+    //Fetch campuses from database
     require_once('../modules/getCampuses.php');
 
-    //renders the index page of the site
-    //made
-        //Define named routes
+    //ROUTES defined
+        //Home section
     $app->get('/', function (Request $request, Response $response, $args) use(&$campuses) {
             $data = ['campuses'=>$campuses];
             return $this->view->render($response, "index.phtml", $data);
         }
     );
 
-        //Render from string
-    //Is also possible
-
-    //made
-    $app->get('/buildings', function (Request $request, Response $response){
-            return $this->view->render($response, "views/building.phtml");
-        }
-    );
-    //un-made
-    $app->get('/status', function (Request $request, Response $response) {
-            return $this->renderer->render($response, "views/status.phtml");
-        }
-    );
-    //made
-    $app->get('/filter', function (Request $request, Response $response) {
-            $response->getBody()->write("This is the filter");
-            return $response;
-        }
-    );
-    //made 
-    $app->get('/support', function (Request $request, Response $response) {
-            $response->getBody()->write("This is the support section");
-            return $response;
-        }
-    );
-    //un-made   
-    $app->get('/submit', function (Request $request, Response $response) {
-            return $this->renderer->render($response, "views/submit.phtml");
-        }
-    );
-
+        // EXAMPLES start
     //these are just example routes, but they are currently functional
-    //_____________________________________________________________________
     $app->get('/hello/{name}', function (Request $request, Response $response) {
             $name = $request->getAttribute('name');
             $response->getBody()->write("Hello, $name");
@@ -99,9 +65,22 @@
             return $response;
         }
     );
+        // EXAMPLES end
 
-    //these are made for testing purposes
+        //ALPHA start
+    //Building
+    $app->get('/building', function (Request $request, Response $response){
+            return $this->view->render($response, "views/building.phtml");
+        }
+    );
+    //Support Section
+    $app->get('/support', function (Request $request, Response $response) {
+            $response->getBody()->write("This is the Support section");
+            return $response;
+        }
+    );
     require_once('../app/api/counter.php');
+    //ALPHA end
 
     //Run app
     $app->run();
