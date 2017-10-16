@@ -42,25 +42,30 @@
 
     <!-- START debug segment -->
     <div class="ui segment">
-      
-      <!-- array -->
-      {{ campuses }}
 
-      <br><br>
-
+      <strong>campus Array:</strong><br>
       <!-- array enconded in json -->
       {{ campuses|json_encode() }}
 
 
-      <!-- array listed to the best of my ability -->
+      <!-- contents of database -->
+      Campuses:
       <ul>
-      {% for idcampus, name in campuses %}
+      {% for campus in campuses %}
           <li>
-            {{ name.campuses }}
+            {{ campus.name }}
           </li>
       {% endfor %}
       </ul>
 
+      Buildings:
+      <ul>
+      {% for building in buildings %}
+          <li>
+            {{ building.name }}
+          </li>
+      {% endfor %}
+      </ul>
     </div>
     <!-- END debug segment -->
 

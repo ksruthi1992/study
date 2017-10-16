@@ -41,13 +41,14 @@
         //MODULES
     //Connection to the database
     require_once('../modules/connect.php');
-    //Fetch campuses from database
+    //Fetch places from database
     require_once('../modules/getCampuses.php');
+    require_once('../modules/getBuildings.php');
 
     //ROUTES defined
         //Home section
-    $app->get('/', function (Request $request, Response $response, $args) use(&$campuses) {
-            $data = ['campuses'=>$campuses];
+    $app->get('/', function (Request $request, Response $response, $args) use(&$campuses, &$buildings) {
+            $data = ['campuses'=>$campuses, 'buildings'=>$buildings];
             return $this->view->render($response, "index.phtml", $data);
         }
     );

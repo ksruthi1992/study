@@ -1,19 +1,27 @@
 <?php
 
 	$query	= "select * from campuses order by name";
-	$result = $connection->query($query);
-	
+
+	$result = mysqli_query($connection, $query);
+	//alternative:
+	//$result = $connection->query($query);
+
 	while($row = $result->fetch_assoc()){
-		$data[]=$row;
+
+		$campus_data[]=$row;
+
 	}
 
-	if(isset($data)){
-		header('Content-Type: application/json');
-		$campuses=&$data;
+	if(isset($campus_data)){
 
+		//header('Content-Type: application/json');
+
+		$campuses=&$campus_data;
 		//non-reference
 		//$campuses=$data;
-
 		//encoded
 		//$campuses= json_encode($data);
+
 	}
+
+	//close mysql connection
