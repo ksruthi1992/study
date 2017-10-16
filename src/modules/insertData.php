@@ -19,5 +19,7 @@ $conn = new mysqli($serverName, $userName,"");
 
 if($conn->connect_error){
   die("Connection failed: " . $conn->connect_error);
+}else{
+  echo "Super sweet connection made. \n";
 }
 ?>
