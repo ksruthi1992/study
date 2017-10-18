@@ -22,4 +22,7 @@ if($conn->connect_error){
 }else{
   echo "Super sweet connection made. \n";
 }
+
+$conn = "INSERT INTO data (floorNumber, availability, buildingNumber)
+VALUES (jasonObject.floorNumber, jasonObject.availability, jasonObject.buildingNumber)";
 ?>
