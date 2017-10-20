@@ -50,10 +50,14 @@
             {{ building.name }}
           </div>
           <div class="content">
+            <i class="large info icon"></i><a href="/building" style="text-decoration: none;color: black;">Expand building description</a><br><br>
             {% set particularBuilding = loop.index %}
             {% for floor in floors[particularBuilding] %}
-              Floor {{ floors[particularBuilding][loop.index].name }}
-              <br><!-- print this line brake only if index is 1 -->
+              <a href="/floor" style="color: black;">Floor {{ floors[particularBuilding][loop.index].name }}</a>
+              
+              {% if (loop.last == true) %}
+                <br><br>
+              {% endif %}
                 <div class="ui small indicating progress" data-percent="100">
                   <div class="bar"></div>
                   <div class="label">There is plenty of seating available.</div>
