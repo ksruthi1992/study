@@ -45,8 +45,8 @@
         <div class="ui accordion">
           {% for building in buildings %}
         
-          <div class="title">
-            <i class="dropdown icon"></i>
+          <div class="title" style="font-size: 20px;">
+            <i class="dropdown icon"></i><i class="green circle icon"></i>
             {{ building.name }}
           </div>
           <div class="content">
@@ -54,7 +54,7 @@
             {% for floor in floors[particularBuilding] %}
               Floor {{ floors[particularBuilding][loop.index].name }}
               <br><!-- print this line brake only if index is 1 -->
-                <div class="ui indicating progress" data-percent="100">
+                <div class="ui small indicating progress" data-percent="100">
                   <div class="bar"></div>
                   <div class="label">There is plenty of seating available.</div>
                 </div>
