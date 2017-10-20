@@ -42,13 +42,16 @@
     //Connection to the database
     require_once('../modules/connect.php');
     //Fetch places from database
+    require_once('../modules/setSelection.php');
+    require_once('../modules/getSelection.php');
     require_once('../modules/getCampuses.php');
     require_once('../modules/getBuildings.php');
+    require_once('../modules/getFloors.php');
 
     //ROUTES defined
         //Home section
-    $app->get('/', function (Request $request, Response $response, $args) use(&$campuses, &$buildings) {
-            $data = ['campuses'=>$campuses, 'buildings'=>$buildings];
+    $app->get('/', function (Request $request, Response $response, $args) use(&$campuses, &$buildings, &$floors) {
+            $data = ['campuses'=>$campuses, 'buildings'=>$buildings, 'floors'=>$floors];
             return $this->view->render($response, "index.phtml", $data);
         }
     );

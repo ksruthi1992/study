@@ -40,195 +40,29 @@
 
     </div>
 
-    <!-- START debug segment -->
     <div class="ui segment">
-
-      <strong>campus Array:</strong><br>
-      <!-- array enconded in json -->
-      {{ campuses|json_encode() }}
-
-
-      <!-- contents of database -->
-      Campuses:
-      <ul>
-      {% for campus in campuses %}
-          <li>
-            {{ campus.name }}
-          </li>
-      {% endfor %}
-      </ul>
-
-      Buildings:
-      <ul>
-      {% for building in buildings %}
-          <li>
+      
+        <div class="ui accordion">
+          {% for building in buildings %}
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
             {{ building.name }}
-          </li>
-      {% endfor %}
-      </ul>
-    </div>
-    <!-- END debug segment -->
-
-    <div class="ui segment">
-      <div class="ui accordion">
-        <div class="title ">
-            <i style="font-size: 20px"class="dropdown icon"></i>
-            <span style="font-size: 20px">
-              <i class="green circle icon"></i>AIRC/ARC Academic Information Resource Center<i style="float: right"class="large info circle icon"></i>
-             </span>
+          </div>
+          <div class="content">
+            {% set particularBuilding = loop.index %}
+            {% for floor in floors[particularBuilding] %}
+              Floor {{ floors[particularBuilding][loop.index].name }}
+              <br><!-- print this line brake only if index is 1 -->
+                <div class="ui indicating progress" data-percent="100">
+                  <div class="bar"></div>
+                  <div class="label">There is plenty of seating available.</div>
+                </div>
+            {% endfor %}
+          </div>
+          {% endfor %}
         </div>
-        <div class="content ">
-          <table class="ui celled unstackable table">
-            <tr>
-              <thead>
-              </thead>
-              <td>
-                <div id="column1" style="float:left; margin:0; width:50%;">
-                  <i class="green circle icon"></i>Floor 1
-                </div>
-                <div id="column2" style="float:right; margin:0; width:50%;">
-                  <div id="test1" class="ui small yellow progress " data-percent="60">
-                    <div class="bar"></div>
-                    <div class="label">There is some seating available</div> 	
-                  </div>
-                </div>
-              </td>
-            </tr>             
-            <tr>
-              <td>
-                <div id="column1" style="float:left; margin:0; width:50%;">
-                  <i class="green circle icon"></i>Floor 2
-                </div>
-                <div id="column2" style="float:right; margin:0; width:50%;">
-                  <div class="ui small progress">
-                    <div class="bar"></div>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="title ">
-          <span style="font-size: 20px">
-            <i class="dropdown icon"></i>
-            <i class=" green circle icon"></i>Library<i style="float: right"class="large info circle icon"></i>
-          </span>
-        </div>
-        <div class="content ">
-          <table class="ui celled unstackable table">
-            <tr>
-              <thead>
-              </thead>
-              <td>
-                <div id="column1" style="float:left; margin:0; width:50%;">
-                  <i class="green circle icon"></i>Floor 1
-                </div>
-                <div id="column2" style="float:right; margin:0; width:50%;">
-                  <div class="ui small progress">
-                    <div class="bar"></div>
-                  </div>
-                </div>
-              </td>
-            </tr>             
-            <tr>
-              <td>
-                <div id="column1" style="float:left; margin:0; width:50%;">
-                  <i class="green circle icon"></i>Floor 2
-                </div>
-                <div id="column2" style="float:right; margin:0; width:50%;">
-                  <div class="ui small progress">
-                    <div class="bar"></div>
-                  </div>
-                </div>  
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="title ">
-          <span style="font-size: 20px">
-            <i class="dropdown icon"></i>
-            <i class=" green circle icon"></i>Riverside Hall<i style="float: right"class="large info circle icon"></i>
-          </span>
-        </div>
-        <div class="content ">
-          <table class="ui celled unstackable table">
-            <tr>
-              <thead>
-              </thead>
-              <td>
-                <div id="column1" style="float:left; margin:0; width:50%;">
-                  <i class="green circle icon"></i>Floor 1
-                </div>
-                <div id="column2" style="float:right; margin:0; width:50%;">
-                  <div class="ui small progress">
-                    <div class="bar"></div>
-                  </div>
-                </div>
-              </td>
-            </tr>             
-            <tr>
-              <td><i class="green circle icon"></i>Floor 2</td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="title ">
-          <span style="font-size: 20px">
-            <i class="dropdown icon"></i>
-            <i class=" green circle icon"></i>Santa Clara Hall<i style="float: right"class="large info circle icon"></i>
-          </span>
-        </div>
-        <div class="content ">
-          <table class="ui celled unstackable table">
-            <tr>
-              <thead>
-              </thead>
-              <td>
-                <div id="column1" style="float:left; margin:0; width:50%;">
-                  <i class="green circle icon"></i>Floor 1
-                </div>
-                <div id="column2" style="float:right; margin:0; width:50%;">
-                  <div class="ui small progress">
-                    <div class="bar"></div>
-                  </div>
-                </div>
-              </td>
-            </tr>             
-            <tr>
-              <td><i class="green circle icon"></i>Floor 2</td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="title ">
-          <span style="font-size: 20px">
-            <i class="dropdown icon"></i>
-            <i class=" green circle icon"></i>University Union<i style="float: right"class="large info circle icon"></i>
-          </span>
-        </div>
-        <div class="content ">
-          <table class="ui celled unstackable table">
-            <tr>
-              <thead>
-              </thead>
-              <td>
-                <div id="column1" style="float:left; margin:0; width:50%;">
-                  <i class="green circle icon"></i>Floor 1
-                </div>
-                <div id="column2" style="float:right; margin:0; width:50%;">
-                  <div class="ui small progress">
-                    <div class="bar"></div>
-                  </div>
-                </div>
-              </td>
-            </tr>             
-            <tr>
-              <td><i class="green circle icon"></i>Floor 2</td>
-            </tr>
-          </table>
-        </div>
-
-      </div>
+      
     </div>
 
 
@@ -250,11 +84,10 @@
         ;
 
         $('.ui.accordion').accordion({ exclusive  : false});
-        $('#test1').progress();
+        $('.ui.indicating.progress').progress();
       }
 
-
-
+      
 
     );
     var content = [

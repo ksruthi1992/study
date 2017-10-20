@@ -1,6 +1,6 @@
 <?php
 
-	$query	= "select * from building order by name";
+	$query	= "select * from building where campus_id = $campusSelected order by name";
 
 	$result = mysqli_query($connection, $query);
 
