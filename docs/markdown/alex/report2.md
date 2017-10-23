@@ -1,3 +1,5 @@
+<hr/>
+
 # Progress Report and Plan of Work
 
 ## Use Cases implemented so far:
@@ -29,7 +31,8 @@
     Option for users to leave comments have not been implemented yet.
 
 ## Plan of Work
-![image](https://i.imgur.com/ognkfIM.png)
+![image](https://i.imgur.com/3jKowce.png)
+![image](https://i.imgur.com/O2LZJgR.png)
 
 ## Breakdown of Responsibilities
 
