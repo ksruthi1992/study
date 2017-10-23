@@ -9,5 +9,4 @@ d. Persistent Data Storage
 
 e. Network Protocall
 
-        We are using HTTP. We chose HTTP simply because the majority of the group had some experi$
-
+        We are using HTTP. We chose HTTP simply because the majority of the group had some experie with HTTP, and it is easy to work with.
