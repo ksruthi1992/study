@@ -55,11 +55,29 @@
             return $this->view->render($response, "index.phtml", $data);
         }
     );
-
+    
+    $app->get('/building', function (Request $request, Response $response, $args) use(&$campuses) {
+            $data = ['campuses'=>$campuses];
+            return $this->view->render($response, "/views/building.phtml", $data);
+        }
+    );
+    
+    $app->get('/floor', function (Request $request, Response $response, $args) use(&$campuses) {
+            $data = ['campuses'=>$campuses];
+            return $this->view->render($response, "/views/floor.phtml", $data);
+        }
+    );
+    
         //Account section
     $app->get('/account', function (Request $request, Response $response, $args) use(&$campuses) {
             $data = ['campuses'=>$campuses];
             return $this->view->render($response, "/views/account.phtml", $data);
+        }
+    );
+
+    $app->get('/signup', function (Request $request, Response $response, $args) use(&$campuses) {
+            $data = ['campuses'=>$campuses];
+            return $this->view->render($response, "/views/signUp.phtml", $data);
         }
     );
 
@@ -78,12 +96,6 @@
     );
         // EXAMPLES end
 
-        //ALPHA start
-    //Building
-    $app->get('/building', function (Request $request, Response $response){
-            return $this->view->render($response, "views/building.phtml");
-        }
-    );
     //Support Section
     $app->get('/support', function (Request $request, Response $response) {
             $response->getBody()->write("This is the Support section");
