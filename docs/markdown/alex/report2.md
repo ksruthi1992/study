@@ -6,10 +6,10 @@
 
 |Implemented     |Use Case Description                               |
 |----------------|---------------------------------------------------|
-|**Yes**         | * UC-1 User searches for open study space         |
-|**Yes**         | * UC-2 User searches for study space with amenity |
+|**In progress** | * UC-1 User searches for open study space         |
+|**In Progress** | * UC-2 User searches for study space with amenity |
 |**No**          | * UC-3 User reserves a room                       |
-|**Yes**         | * UC-4 System logs user in                        |
+|**In progress** | * UC-4 System logs user in                        |
 |**In progress** | * UC-5 System analyzes trends                     |
 |**In limbo**    | * UC-6 User input how busy an area is             |
 |**Not yet**     | * UC-7 User leaves comment                        |
