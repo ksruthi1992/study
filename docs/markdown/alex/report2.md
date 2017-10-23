@@ -36,3 +36,10 @@
 
 ## Breakdown of Responsibilities
 
+|Task           |Members               |
+|---------------|----------------------|
+|**Coordinator**|_**Edward**_          |
+|JavaScript     |_Edward, Alex_        |
+|HTML/CSS       |_Nick_                |
+|Algorithms     |_Travis_              |
+|Backend        |_Luke, Luis, Tara_    |
