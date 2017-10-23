@@ -1,16 +1,17 @@
 #### Find Spot
 <hr>
-The user will start at the "Find a Spot" page, which will a display what campus you are at and a search prompt to find desired building. Below, there is a list of all the buildings that can be clicked on to show the availability for each floor the building has.   //insert find spot picture
+The user will start at the "Find a Spot" page, which will a display what campus you are at and a search prompt to find desired building. Below, there is a list of all the buildings that can be clicked on to show the availability for each floor the building has.   
 <br>
+![image](diagrams/SpotFind.png)
+![image](diagrams/SpotFind2.png)
 <br>
-<img src="diagrams/FindSpot.png" style= "width: 400x;"/>
-<img src="diagrams/FindSpot2.png" style= "width: 400x;"/>
 #### Menu
 <hr>
-The sidebar menu will be available to the user at all times.  One tap on the menu icon will pull up the menu and allow the user to easily navigate the site. Can choose between "Find a Spot", "My Account", and "Support" //menu picture
+The sidebar menu will be available to the user at all times.  One tap on the menu icon will pull up the menu and allow the user to easily navigate the site. Can choose between "Find a Spot", "My Account", and "Support" 
 <br>
 <br>
-<img src="diagrams/Menu.png" style= "width: 400x;"/>
+![image](diagrams/Menu.png)
+<br>
 #### Submit Data
 <hr>
 Not implemented yet, but will perform in same way as before.
@@ -22,7 +23,8 @@ Not implemented yet, but will perform in same way as before.
 User can login to original account or create a new account, it they are new to the site.
 <br>
 <br>
-<img src="diagram/Login.png" style= "width: 400x;"/>
+![image](diagrams/Login.png)
+<br>
 #### Scenario 1: User looks for any open area nearby.
 1. Navigation: 1 Total Click
 * User clicks on one of the nearby listed buildings for information about open rooms.
