@@ -78,9 +78,6 @@ We have decided to put this use case on hold, to focus on the others. If there i
 -![image](diagrams/classDiagram.png)
 <hr>
 
-#### <a name="dataTypes"></a>Data Types and Operation Signatures
-<hr>
-
 ### <a name="system"></a>System Architecture and System Design
 <hr>
 
@@ -231,11 +228,11 @@ User can login to original account or create a new account, if they are new to t
 3. Fraction of Nav vs Data Entry (Nav/Data)
 * All Navigation
 
--#### Scenario 2: User looks for any open areas, with desired features, nearby.
+#### Scenario 2: User looks for any open areas, with desired features, nearby.
  -1. Navigation: 1 Total Click
  -* User clicks on desired features.
  
- -#### Scenario 3: User contributes data for a room.
+#### Scenario 3: User contributes data for a room.
  -1. Navigation: 4 Total Clicks
  -* User clicks on one of the nearby listed buildings for information about open rooms.
  -* User clicks "Update Status"
