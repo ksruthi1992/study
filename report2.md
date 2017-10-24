@@ -48,7 +48,7 @@ Team members:
 <hr>
 Use case 1 & 2
 
-![image](diagrams/interaction_diagrams/Use_case_1&2_interaction_diagram.jpg)
+![image](diagrams/Interaction_Diagrams/Use_case_1-2_interaction_diagram.jpg)
 
 **Use case 1 and 2 have the same interaction diagram**
 
@@ -58,15 +58,15 @@ We have decided to put this use case on hold, to focus on the others. If there i
 
 Use case 5
 
-![image](diagrams/interaction_diagrams/Use_case_5_interaction_diagram.jpg)
+![image](diagrams/Interaction_Diagrams/Use_case_5_interaction_diagram.jpg)
 
 Use case 6
 
-![image](diagrams/interaction_diagrams/Use_case_6_interaction_diagram.jpg)
+![image](diagrams/Interaction_Diagrams/Use_case_6_interaction_diagram.jpg)
 
 Use case 7
 
-![image](diagrams/interaction_diagrams/Use_case_7_interaction_diagram.jpg)
+![image](diagrams/Interaction_Diagrams/Use_case_7_interaction_diagram.jpg)
 
 ### <a name="interface"></a>Class Diagram and Interface Specification
 <hr>
