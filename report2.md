@@ -57,7 +57,7 @@ We have decided to put this use case on hold, to focus on the others. If there i
 
 **Use case 4**
 
-![image](diagrams/Interaction_Diagrams/Use_case_4_interacion_diagran.jpg)
+![image](diagrams/Interaction_Diagrams/Use_case_4_interaction_diagran.jpg)
 
 **Use case 5**
 
