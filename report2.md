@@ -75,6 +75,7 @@ We have decided to put this use case on hold, to focus on the others. If there i
 <hr>
 
 #### <a name="classDiagram"></a>Class Diagram
+-![image](diagrams/classDiagram.png)
 <hr>
 
 #### <a name="dataTypes"></a>Data Types and Operation Signatures
