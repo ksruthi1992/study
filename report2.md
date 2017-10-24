@@ -27,7 +27,6 @@ Team members:
  * [Interation Diagrams](#interation)
  * [Class Diagram and Interface Specification](#interface)
    * [Class Diagram](#classDiagram)
-   * [Data Types and Operation Signatures](#dataTypes)
  * [System Architecture and System Design](#system)
    * [Architectural Style](#architecturalStyle)
    * [Identifying Subsystems](#identifyingSubsystems)
@@ -73,8 +72,7 @@ We have decided to put this use case on hold, to focus on the others. If there i
 #### <a name="classDiagram"></a>Class Diagram
 <hr>
 
-#### <a name="dataTypes"></a>Data Types and Operation Signatures
-<hr>
+![image](diagrams/'Study Class Diagram.png')
 
 ### <a name="system"></a>System Architecture and System Design
 <hr>
