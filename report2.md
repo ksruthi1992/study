@@ -230,6 +230,20 @@ User can login to original account or create a new account, if they are new to t
 3. Fraction of Nav vs Data Entry (Nav/Data)
 * All Navigation
 
+-#### Scenario 2: User looks for any open areas, with desired features, nearby.
+ -1. Navigation: 1 Total Click
+ -* User clicks on desired features.
+ 
+ -#### Scenario 3: User contributes data for a room.
+ -1. Navigation: 4 Total Clicks
+ -* User clicks on one of the nearby listed buildings for information about open rooms.
+ -* User clicks "Update Status"
+ -* User fills out form
+ -* User clicks submit
+ -2. Data Entry: 1 click
+ -* User click one of the three options for how full a room is
+ -3. Fraction of Nav vs Data Entry (Nav/Data)
+ -* 4/1
 
 ### <a name="progressReportsandPOW"></a>Progress Report and Plan of Work
 <hr>
