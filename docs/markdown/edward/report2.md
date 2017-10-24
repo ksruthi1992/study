@@ -2,7 +2,7 @@
 b) 
 
     ## Identifying Subsystems 
-    img here
+    ![image](diagrams/subsystems.png)
 
     The three subsystems are the client's browser, the server, and the database.  The client 
     will access the server and the server retrieve data from the database. 
