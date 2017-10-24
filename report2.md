@@ -51,9 +51,13 @@ Team members:
 
 ![image](diagrams/Interaction_Diagrams/Use_case_1-2_interaction_diagram.jpg)
 
-**Use case 3 & 4**
+**Use case 3**
 
 We have decided to put this use case on hold, to focus on the others. If there is time to implement them we will come back to them.
+
+**Use case 4**
+
+![image](diagrams/Interaction_Diagrams/Use_case_4_interacion_diagran.jpg)
 
 **Use case 5**
 
@@ -112,10 +116,35 @@ We have decided to put this use case on hold, to focus on the others. If there i
 ### <a name="uIDandI"></a>User Interface Design and Implementation
 <hr>
 
-### <a name="progressReportsandPOW"></a>Progress Report and Plan of Work
-<hr>
+#### Find Spot
+The user will start at the "Find a Spot" page, which will display what campus you are at and a search prompt to find desired building. Below, there is a list of all the buildings that can be clicked on to show the availability for each floor the building has.
 
-#### <a name="progressReport"></a>ProgressReport
+
+![image](diagrams/FindSpot.PNG)
+
+
+![image](diagrams/FindSpot2.PNG)
+
+
+#### Menu
+The sidebar menu will be available to the user at all times.  One tap on the menu icon will pull up the menu and allow the user to easily navigate the site. Can choose between "Find a Spot", "My Account", and "Support"
+
+![image](diagrams/Menu.PNG)
+
+#### Login Page
+User can login to original account or create a new account, if they are new to the site.
+
+![image](diagrams/Login.PNG)
+
+#### Scenario 1: User looks for any open area nearby.
+1. Navigation: 1 Total Click
+* User clicks on one of the nearby listed building for information about open rooms.
+2. Data Entry: None
+3. Fraction of Nav vs Data Entry (Nav/Data)
+* All Navigation
+
+
+### <a name="progressReportsandPOW"></a>Progress Report and Plan of Work
 <hr>
 
 ### Use Cases implemented so far:
@@ -149,37 +178,6 @@ We have decided to put this use case on hold, to focus on the others. If there i
 
 ![image](diagrams/PlanOfWorkChart.png)
 ![image](diagrams/PlanOfWorkGraph.png)
-
-#### Find Spot
-The user will start at the "Find a Spot" page, which will display what campus you are at and a search prompt to find desired building. Below, there is a list of all the buildings that can be clicked on to show the availability for each floor the building has.
-
-
-![image](diagrams/FindSpot.PNG)
-
-
-![image](diagrams/FindSpot2.PNG)
-
-
-#### Menu
-The sidebar menu will be available to the user at all times.  One tap on the menu icon will pull up the menu and allow the user to easily navigate the site. Can choose between "Find a Spot", "My Account", and "Support"
-
-![image](diagrams/Menu.PNG)
-
-#### Login Page
-User can login to original account or create a new account, if they are new to the site.
-
-![image](diagrams/Login.PNG)
-
-#### Scenario 1: User looks for any open area nearby.
-1. Navigation: 1 Total Click
-* User clicks on one of the nearby listed building for information about open rooms.
-2. Data Entry: None
-3. Fraction of Nav vs Data Entry (Nav/Data)
-* All Navigation
-
-<hr>
-
-
 
 ### Breakdown of Responsibilities
 
