@@ -3,7 +3,7 @@
 The user will start at the "Find a Spot" page, which will a display what campus you are at and a search prompt to find desired building. Below, there is a list of all the buildings that can be clicked on to show the availability for each floor the building has.   
 <br>
 ![image](diagrams/SpotFind.png)
-![image](diagrams/SpotFind2.png)
+![image](diagrams/SpotFind3.png)
 <br>
 #### Menu
 <hr>
@@ -33,8 +33,8 @@ User can login to original account or create a new account, it they are new to t
 * All Navigation
 
 #### Scenario 2: User looks for any open areas nearby.
-1. 
-
+1. Navigation: 1 Total Click
+* User clicks on features.
 
 #### Scenario 3: User contributes data for a room.
 1. Navigation: 4 Total Clicks
@@ -46,4 +46,5 @@ User can login to original account or create a new account, it they are new to t
 * User click one of the three options for how full a room is
 3. Fraction of Nav vs Data Entry (Nav/Data)
 * 4/1
+
 
