@@ -156,48 +156,48 @@ We are using HTTP. We chose HTTP simply because the majority of the group had so
 
 #### <a name="algorithms"></a>Algorithms
 As of now, the team has only developed the algorithm for the user to log in. No other advanced algorithms have been developed at the moment.
+<br /><br />
+Log In<br />
+Pseudo-code:<br /><br />
 
-Log In
-Pseudo-code:
-
-//variable holding username provided
-$providedUser;
-//variable holding password provided
-$providedPassword;
+//variable holding username provided<br />
+$providedUser;<br />
+//variable holding password provided<br />
+$providedPassword;<br />
 //check if user is in database
-if(doesUserExist($providedUser)){
-    //if successful then compare with password
-    if(logIn($providedUser,$providedPassword)){
-        //if successfull then log in and redirect to page for users logged in
-        $user=$providedUser;
-        request('/account/logIn');
-    }
-}
+<br />if(doesUserExist($providedUser)){
+<br />    //if successful then compare with password
+<br />    if(logIn($providedUser,$providedPassword)){
+<br />        //if successfull then log in and redirect to page for users logged in
+<br />        $user=$providedUser;
+<br />        request('/account/logIn');
+<br />    }
+<br />}
 
 <hr>
 
 #### <a name="dataStuctures"></a>Data Structures
 Arrays
-The application developed makes use of multiple two dimensional or three dimensional arrays to minimize the amount of times the information is consulted to the database.
-
-Arrays of two dimensions are as follows:
-
-Array_of_Campuses{
-    Array_of_CSUS_Campus[
-        Array_of_AIRC_Floors('Floor 1' => trafficInFloorValue1, 'Floor 2' => trafficInFloorValue2),
-        Array_of_Library_Floors('Floor 1' => trafficInFloorValue1, 'Floor 2' => trafficInFloorValue2)
-    ],
-    Array_of_Davis_Campus[
-        Array_of_StudentCenter_Floors('Floor 1' => trafficInFloorValue1, 'Floor 2' => trafficInFloorValue2),
-        Array_of_Library_Floors('Floor 1' => trafficInFloorValue1, 'Floor 2' => trafficInFloorValue2)
-    ]
-}
-
-Algorithms that the team expects to develop will pull the necessary data as needed in order to display it in the appropiate manner on the graphical user interface.
-
-Hashed Tables
-
-Hashing tables haven't been designed and are expected to be developed to protect the user's password in the database for increased protection. These passwords will be unrecoverable and new ones have to be created if the user wants to restore their account due to forgotten paswords.
+<br />The application developed makes use of multiple two dimensional or three dimensional arrays to minimize the amount of times the information is consulted to the database.
+<br />
+<br />Arrays of two dimensions are as follows:
+<br />
+<br />Array_of_Campuses{
+<br />    Array_of_CSUS_Campus[
+<br />        Array_of_AIRC_Floors('Floor 1' => trafficInFloorValue1, 'Floor 2' => trafficInFloorValue2),
+<br />        Array_of_Library_Floors('Floor 1' => trafficInFloorValue1, 'Floor 2' => trafficInFloorValue2)
+<br />    ],
+<br />    Array_of_Davis_Campus[
+<br />        Array_of_StudentCenter_Floors('Floor 1' => trafficInFloorValue1, 'Floor 2' => trafficInFloorValue2),
+<br />        Array_of_Library_Floors('Floor 1' => trafficInFloorValue1, 'Floor 2' => trafficInFloorValue2)
+<br />    ]
+<br />}
+<br />
+<br />Algorithms that the team expects to develop will pull the necessary data as needed in order to display it in the appropiate manner on the graphical user interface.
+<br />
+<br />Hashed Tables
+<br />
+<br />Hashing tables haven't been designed and are expected to be developed to protect the user's password in the database for increased protection. These passwords will be unrecoverable and new ones have to be created if the user wants to restore their account due to forgotten paswords.
 <hr>
 
 ### <a name="uIDandI"></a>User Interface Design and Implementation
