@@ -115,18 +115,19 @@ We have decided to put this use case on hold, to focus on the others. If there i
 
 #### <a name="progressReport"></a>ProgressReport
 <hr>
+
 #### Find Spot
 The user will start at the "Find a Spot" page, which will display what campus you are at and a search prompt to find desired building. Below, there is a list of all the buildings that can be clicked on to show the availability for each floor the building has.
-![image](diagrams/SpotFind.png)
-![image](diagrams/SpotFind2.png)
+![image](diagrams/SpotFind.PNG)
+![image](diagrams/SpotFind2.PNG)
 
 #### Menu
-The sidebar menu will be available to the user at all times.  One tap on the menu icon will pull up the menu and allow the user to easily navigate the site. Can choose between "Find s Spot", "My Account", and "Support"
-![image](diagrams/Menu.png)
+The sidebar menu will be available to the user at all times.  One tap on the menu icon will pull up the menu and allow the user to easily navigate the site. Can choose between "Find a Spot", "My Account", and "Support"
+![image](diagrams/Menu.PNG)
 
 #### Login Page
 User can login to original account or create a new account, if they are new to the site.
-![image](diagrams/Login.png)
+![image](diagrams/Login.PNG)
 
 #### Scenario 1: User looks for any open area nearby.
 1. Navigation: 1 Total Click
