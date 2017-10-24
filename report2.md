@@ -72,7 +72,7 @@ We have decided to put this use case on hold, to focus on the others. If there i
 #### <a name="classDiagram"></a>Class Diagram
 <hr>
 
-![image](diagrams/'Study Class Diagram.png')
+![image](diagrams/classDiagram.png)
 
 ### <a name="system"></a>System Architecture and System Design
 <hr>
@@ -152,7 +152,6 @@ User can login to original account or create a new account, if they are new to t
 * 4/1
 
 #### <a name="planOfWork"></a>Plan of Work
-<<<<<<< HEAD
 =======
 <hr>
->>>>>>> 61f707e5651f1b0baf36124ecf5064034f39ea7d
+
