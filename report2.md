@@ -11,7 +11,7 @@ Project: Study Spot Finder
 
 Project website: www.SpotFinder.tk
 
-Submission date: Monday, September 25, 2017 at 5:00 PM P.D.T.
+Submission date: Monday, October 23, 2017 at 11:59 PM P.D.T.
 
 Team members:
 
@@ -24,10 +24,9 @@ Team members:
  *  Travis Keri
 
 ### Table of contents
- * [Interation Diagrams](#interation)
+ * [Interaction Diagrams](#interation)
  * [Class Diagram and Interface Specification](#interface)
    * [Class Diagram](#classDiagram)
-   * [Data Types and Operation Signatures](#dataTypes)
  * [System Architecture and System Design](#system)
    * [Architectural Style](#architecturalStyle)
    * [Identifying Subsystems](#identifyingSubsystems)
