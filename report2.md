@@ -147,8 +147,8 @@ We have decided to put this use case on hold, to focus on the others. If there i
     Option for users to leave comments have not been implemented yet.
 #### <a name="planOfWork"></a>Plan of Work
 
-![image](https://i.imgur.com/3jKowce.png)
-![image](https://i.imgur.com/O2LZJgR.png)
+![image](diagrams/PlanOfWorkChart.png)
+![image](diagrams/PlanOfWorkGraph.png)
 
 #### Find Spot
 The user will start at the "Find a Spot" page, which will display what campus you are at and a search prompt to find desired building. Below, there is a list of all the buildings that can be clicked on to show the availability for each floor the building has.
