@@ -27,6 +27,7 @@ Team members:
  * [Interation Diagrams](#interation)
  * [Class Diagram and Interface Specification](#interface)
    * [Class Diagram](#classDiagram)
+   * [Data Types and Operation Signatures](#dataTypes)
  * [System Architecture and System Design](#system)
    * [Architectural Style](#architecturalStyle)
    * [Identifying Subsystems](#identifyingSubsystems)
@@ -72,73 +73,32 @@ We have decided to put this use case on hold, to focus on the others. If there i
 #### <a name="classDiagram"></a>Class Diagram
 <hr>
 
-![image](diagrams/classDiagram.png)
+#### <a name="dataTypes"></a>Data Types and Operation Signatures
+<hr>
 
 ### <a name="system"></a>System Architecture and System Design
+<hr>
 
 #### <a name="architcturalStyle"></a>Architecural Style
 <hr>
 
-For our archictecture we used a central database to store all data.  It is a MYSQL database. The webserver pulls all data from this one database.
-
-
 #### <a name="identifyinSubsystems"></a>Identifying Subsystems
 <hr>
-
-
-  ![image](diagrams/subsystems.png)
-  <br>
-    The three subsystems are the client's browser, the server, and the database.  The client will access the server and the server retrieve data from the database. 
 
 #### <a name="mapping"></a>Mapping Subsystems to Hardware
 <hr>
 
-    There is a server that serves a website.  
-    Users are able to access the webpage with a web browser.  The UI that the user interacts with
-    is run on the user's computer that is being used to visit the webpage.  The web server 
-    runs on a linux machine that is being hosted remotely.  
 #### <a name="data"></a>Persistent Data Storage
 <hr>
-
-Yes, we are using a relational database for data storage.  There are three tables.
-
-1. Data Table     - Stores the user input as an int, and is associated with a floor and building id.
-
-2. Building Table - Stores information about the building that will apply to all floors. 
-
-3. Floor Table    - Stores information about each floor, and is associated with the building id. 
 
 #### <a name="network"></a>Network Protocal
 <hr>
 
-We are using HTTP. We chose HTTP simply because the majority of the group had some experie with HTTP, and it is easy to work with.  This is the network protocal that our framework of choice uses. 
-
 #### <a name="controlFlow"></a>Global Control Flow
 <hr>
 
-  ##### Execution Orderness
-
-    The system is not procedure driven.  The user has the ability to select which part of
-    the website that they would like to interact with.  There is no specific order that the 
-    client has to interact with the website.  
-
-  ##### Time Dependency
-
-    There are automated algorithms that will run at specific times in the day.  
-    These are realtime events that occur periodically.  The algorithms are for caching analyzed trends.
-
-  ##### Concurrency 
-
-    This system will run on an apache server.  That server will handle multiple requests 
-    and allow for serveral users.  The users will all access the same database.  The apache php 
-    will be single threaded. 
-
 #### <a name="hardware"></a>Hardware Requirements
 <hr>
-
-    The system runs on a linux box that is remotely hosted.  The server only need about 1GB of
-     space and a single core allocated to host and serve content.  To use the system, the client needs
-    to have a computer capable of visiting a webpage.  
 
 ### <a name="algorithmsDataStructures"></a>Alorithms and Data Structures
 <hr>
@@ -158,49 +118,46 @@ We are using HTTP. We chose HTTP simply because the majority of the group had so
 #### <a name="progressReport"></a>ProgressReport
 <hr>
 
-#### Find Spot
-The user will start at the "Find a Spot" page, which will display what campus you are at and a search prompt to find desired building. Below, there is a list of all the buildings that can be clicked on to show the availability for each floor the building has.
+### Use Cases implemented so far:
+
+|Implemented     |Use Case Description                               |
+|----------------|---------------------------------------------------|
+|**In progress** | * UC-1 User searches for open study space         |
+|**In Progress** | * UC-2 User searches for study space with amenity |
+|**No**          | * UC-3 User reserves a room                       |
+|**In progress** | * UC-4 System logs user in                        |
+|**In progress** | * UC-5 System analyzes trends                     |
+|**In limbo**    | * UC-6 User input how busy an area is             |
+|**Not yet**     | * UC-7 User leaves comment                        |
 
 
-![image](diagrams/SpotFind.PNG)
-
-
-![image](diagrams/SpotFind2.PNG)
-
-
-#### Menu
-The sidebar menu will be available to the user at all times.  One tap on the menu icon will pull up the menu and allow the user to easily navigate the site. Can choose between "Find a Spot", "My Account", and "Support"
-
-![image](diagrams/Menu.PNG)
-
-#### Login Page
-User can login to original account or create a new account, if they are new to the site.
-
-![image](diagrams/Login.PNG)
-
-#### Scenario 1: User looks for any open area nearby.
-1. Navigation: 1 Total Click
-* User clicks on one of the nearby listed building for information about open rooms.
-2. Data Entry: None
-3. Fraction of Nav vs Data Entry (Nav/Data)
-* All Navigation
-
-#### Scenario 2: User looks for any open areas, with desired features, nearby.
-1. Navigation: 1 Total Click
-* User clicks on desired features.
-
-#### Scenario 3: User contributes data for a room.
-1. Navigation: 4 Total Clicks
-* User clicks on one of the nearby listed buildings for information about open rooms.
-* User clicks "Update Status"
-* User fills out form
-* User clicks submit
-2. Data Entry: 1 click
-* User click one of the three options for how full a room is
-3. Fraction of Nav vs Data Entry (Nav/Data)
-* 4/1
-
+### UC-1
+    A search bar has been added to the front page of the website. 
+### UC-2
+    Amenities can now be chosen through a drop down accordian menu.
+### UC-3
+    Reserving of rooms has not been implemented yet.
+### UC-4
+    Login page accessible from the side menu with option to sign up. 
+### UC-5
+    A working algorithm has not been started on yet.
+### UC-6
+    No user access but admins can change traffic status.
+### UC-7
+    Option for users to leave comments have not been implemented yet.
 #### <a name="planOfWork"></a>Plan of Work
-=======
+
 <hr>
 
+![image](https://i.imgur.com/3jKowce.png)
+![image](https://i.imgur.com/O2LZJgR.png)
+
+### Breakdown of Responsibilities
+
+|Task           |Members               |
+|---------------|----------------------|
+|**Coordinator**|_**Edward**_          |
+|JavaScript     |_Edward, Alex_        |
+|HTML/CSS       |_Nick_                |
+|Algorithms     |_Travis_              |
+|Backend        |_Luke, Luis, Tara_    |
