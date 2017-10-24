@@ -162,10 +162,10 @@ We are using HTTP. We chose HTTP simply because the majority of the group had so
 The user will start at the "Find a Spot" page, which will display what campus you are at and a search prompt to find desired building. Below, there is a list of all the buildings that can be clicked on to show the availability for each floor the building has.
 
 
-![image](diagrams/SpotFind.PNG)
+![image](diagrams/FindSpot.PNG)
 
 
-![image](diagrams/SpotFind2.PNG)
+![image](diagrams/FindSpot2.PNG)
 
 
 #### Menu
