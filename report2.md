@@ -151,10 +151,53 @@ We are using HTTP. We chose HTTP simply because the majority of the group had so
 ### <a name="algorithmsDataStructures"></a>Alorithms and Data Structures
 <hr>
 
+### <a name="algorithmsDataStructures"></a>Algorithms and Data Structures
+<hr>
+
 #### <a name="algorithms"></a>Algorithms
+As of now, the team has only developed the algorithm for the user to log in. No other advanced algorithms have been developed at the moment.
+
+Log In
+Pseudo-code:
+
+//variable holding username provided
+$providedUser;
+//variable holding password provided
+$providedPassword;
+//check if user is in database
+if(doesUserExist($providedUser)){
+    //if successful then compare with password
+    if(logIn($providedUser,$providedPassword)){
+        //if successfull then log in and redirect to page for users logged in
+        $user=$providedUser;
+        request('/account/logIn');
+    }
+}
+
 <hr>
 
 #### <a name="dataStuctures"></a>Data Structures
+Arrays
+The application developed makes use of multiple two dimensional or three dimensional arrays to minimize the amount of times the information is consulted to the database.
+
+Arrays of two dimensions are as follows:
+
+Array_of_Campuses{
+    Array_of_CSUS_Campus[
+        Array_of_AIRC_Floors('Floor 1' => trafficInFloorValue1, 'Floor 2' => trafficInFloorValue2),
+        Array_of_Library_Floors('Floor 1' => trafficInFloorValue1, 'Floor 2' => trafficInFloorValue2)
+    ],
+    Array_of_Davis_Campus[
+        Array_of_StudentCenter_Floors('Floor 1' => trafficInFloorValue1, 'Floor 2' => trafficInFloorValue2),
+        Array_of_Library_Floors('Floor 1' => trafficInFloorValue1, 'Floor 2' => trafficInFloorValue2)
+    ]
+}
+
+Algorithms that the team expects to develop will pull the necessary data as needed in order to display it in the appropiate manner on the graphical user interface.
+
+Hashed Tables
+
+Hashing tables haven't been designed and are expected to be developed to protect the user's password in the database for increased protection. These passwords will be unrecoverable and new ones have to be created if the user wants to restore their account due to forgotten paswords.
 <hr>
 
 ### <a name="uIDandI"></a>User Interface Design and Implementation
