@@ -185,7 +185,7 @@ User can login to original account or create a new account, if they are new to t
 
 |Task           |Members               |
 |---------------|----------------------|
-|**Coordinator**|_**Edward**_          |
+|Coordinator    |Edward                |
 |JavaScript     |_Edward, Alex_        |
 |HTML/CSS       |_Nick_                |
 |Algorithms     |_Travis_              |
