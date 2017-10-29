@@ -8,9 +8,9 @@
 		//username
 		$user = "congressman";
 		//password
-		$pass = "litter box";
+		$pass = "h@llar!d0n@ld";
 		//database
-		$database= "dev_server";
+		$database= "spotfinder_db";
 
 		// Create connection
 		$connection = new mysqli($host, $user, $pass, $database);
