@@ -1,6 +1,7 @@
 <?php
 	//MySQLi
-	
+
+interface Connection{	
 	function databaseConnection(bool $page){
 			//database connection data
 		//hostname
@@ -30,3 +31,4 @@
 	});
 
 	$connection=databaseConnection(false);
+}
