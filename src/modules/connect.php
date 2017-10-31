@@ -9,9 +9,9 @@ interface Connection{
 		//username
 		$user = "congressman";
 		//password
-		$pass = "h@llar!d0n@ld";
+		$pass = "litter box";
 		//database
-		$database= "spotfinder_db";
+		$database= "dev_server";
 
 		// Create connection
 		$connection = new mysqli($host, $user, $pass, $database);
