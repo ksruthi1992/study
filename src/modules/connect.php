@@ -1,7 +1,6 @@
 <?php
 	//MySQLi
-
-interface Connection{	
+	
 	function databaseConnection(bool $page){
 			//database connection data
 		//hostname
@@ -9,9 +8,9 @@ interface Connection{
 		//username
 		$user = "congressman";
 		//password
-		$pass = "litter box";
+		$pass = "h@llar!d0n@ld";
 		//database
-		$database= "dev_server";
+		$database= "spotfinder_db";
 
 		// Create connection
 		$connection = new mysqli($host, $user, $pass, $database);
@@ -31,4 +30,3 @@ interface Connection{
 	});
 
 	$connection=databaseConnection(false);
-}
