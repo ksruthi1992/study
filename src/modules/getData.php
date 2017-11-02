@@ -12,5 +12,6 @@
       databaseConnection();	  
 	}
 	
+	$connection
 	
  }
