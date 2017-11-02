@@ -10,7 +10,7 @@
 
     //Modules
     //Connect to the database
-    require_once('../modules/connect.php');
+    require_once('../modules/connection.php');
     //Fetch data from the database
     require_once('../modules/getSelection.php');
     require_once('../modules/getCampuses.php');
