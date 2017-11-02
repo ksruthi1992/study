@@ -1,6 +1,6 @@
 <?php
-//error_reporting(-1);
-//ini_set('display_errors', 1);
+error_reporting(-1);
+ini_set('display_errors', 1);
 
     require '../../vendor/autoload.php';
     use \Psr\Http\Message\ServerRequestInterface as Request;
@@ -105,7 +105,7 @@
             return $response;
         }
     );
-    require_once('../app/api/counter.php');
+    require_once('../api/counter.php');
     //ALPHA end
 
     //Run app
