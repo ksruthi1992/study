@@ -1,114 +1,72 @@
 <?php
-error_reporting(-1);
-ini_set('display_errors', 1);
-
+    //Debugger
+    require_once('../modules/debugger.php');
     require '../../vendor/autoload.php';
+
+    //Slim Framework
     use \Psr\Http\Message\ServerRequestInterface as Request;
     use \Psr\Http\Message\ResponseInterface as Response;
-    use Slim\Views;
-    use Slim\Views\PhpRenderer;
+    require_once('../modules/slimFramework.php');
 
-    //App setup
-        //Create Slim app
-    $app = new \Slim\App;
-        //Fetch DI container
-    $container = $app->getContainer();
-
-
-    //Register component on container
-        //Register Twig View Helper
-    $container['view'] = function ($container) {
-        $view = new \Slim\Views\Twig('../templates',[
-            'cache' => false
-        ]);
-        // Cache has been disabled
-
-        //debugger which i dont know how to configure
-        //$twig = new Twig_Environment($loader, array(
-        //    'debug' => true
-        //));
-        //$twig->addExtension(new Twig_Extension_Debug());
-        // debugger end
-
-
-        $view->addExtension(
-            new \Slim\Views\TwigExtension(
-                $container->router,
-                $container->request->getUri()
-            )
-        );
-
-        return $view;
-    };
-
-        //MODULES
-    //Connection to the database
+    //Modules
+    //Connect to the database
     require_once('../modules/connect.php');
-    //Fetch places from database
+    //Fetch data from the database
     require_once('../modules/setSelection.php');
     require_once('../modules/getSelection.php');
     require_once('../modules/getCampuses.php');
+    require_once('../modules/getFeatures.php');
     require_once('../modules/getBuildings.php');
     require_once('../modules/getFloors.php');
 
-    //ROUTES defined
-        //Home section
+    //Routes definitions
+
+    //Home
     $app->get('/', function (Request $request, Response $response, $args) use(&$campuses, &$buildings, &$floors) {
             $data = ['campuses'=>$campuses, 'buildings'=>$buildings, 'floors'=>$floors];
             return $this->view->render($response, "index.phtml", $data);
         }
     );
-    
+    //Building
     $app->get('/building', function (Request $request, Response $response, $args) use(&$campuses) {
             $data = ['campuses'=>$campuses];
             return $this->view->render($response, "/views/building.phtml", $data);
         }
     );
-    
+    //Floor
     $app->get('/floor', function (Request $request, Response $response, $args) use(&$campuses) {
             $data = ['campuses'=>$campuses];
             return $this->view->render($response, "/views/floor.phtml", $data);
         }
     );
-    
-        //Account section
+    //Account
     $app->get('/account', function (Request $request, Response $response, $args) use(&$campuses) {
             $data = ['campuses'=>$campuses];
             return $this->view->render($response, "/views/account.phtml", $data);
         }
     );
-
-    $app->get('/signup', function (Request $request, Response $response, $args) use(&$campuses) {
+    //SignUp
+    $app->get('/signUp', function (Request $request, Response $response, $args) use(&$campuses) {
             $data = ['campuses'=>$campuses];
             return $this->view->render($response, "/views/signUp.phtml", $data);
         }
     );
+    //Support
+    $app->get('/support', function (Request $request, Response $response) {
+            $response->getBody()->write("This is the Support section");
+            return $response;
+        }
+    );
 
-        // EXAMPLES start
-    //these are just example routes, but they are currently functional
+
+    //Example
+    //This is just an example route, but it is currently functional
     $app->get('/hello/{name}', function (Request $request, Response $response) {
             $name = $request->getAttribute('name');
             $response->getBody()->write("Hello, $name");
             return $response;
         }
     );
-    $app->get('/test', function (Request $request, Response $response) {
-            $response->getBody()->write("I am testing");
-            return $response;
-        }
-    );
-        // EXAMPLES end
-
-    //Support Section
-    $app->get('/support', function (Request $request, Response $response) {
-            $response->getBody()->write("This is the Support section");
-            return $response;
-        }
-    );
-    require_once('../api/counter.php');
-    //ALPHA end
 
     //Run app
     $app->run();
-
-//removed '}', but not sure if needed

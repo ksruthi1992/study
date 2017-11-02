@@ -1,8 +1,7 @@
 <?php
 	//MySQLi
-	
-	function databaseConnection(bool $page){
-			//database connection data
+	//database connection data
+	function databaseConnection(bool $testRequest){
 		//hostname
 		$host = "teamtux.ddns.net";
 		//username
@@ -19,14 +18,19 @@
 		if ($connection->connect_error) {
 		    die("Connection failed: " . $connection->connect_error);
 		}
-		if($page){
+
+		//if the connection wants to be tested, then perform an output of the results
+		if($testRequest==true){
 			echo "Connection is succesful!";
 		} else
 			return $connection;
 	};
 
+	//connection tester
 	$app->get('/testConnection',function(){
-			databaseConnection(true);
-	});
+            return databaseConnection(true);
+		}
+	);
 
+	//set to false to connect without performing a test
 	$connection=databaseConnection(false);
