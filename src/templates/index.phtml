@@ -3,11 +3,13 @@
 {% block content %}
 <div class="ui container" >
   <div class="ui segments" style="font-size: 25px; margin-top: 25px;">
+
+    <!-- Header -->
     <div class="ui segment">
       <h1>Find a spot at California State University, Sacramento</h1>
     </div>
 
-    <!-- Find -->
+    <!-- Search -->
     <div class="ui segment" style="border-bottom: 0px; margin-bottom: 0px; padding-bottom: 0px;">
       <div class="ui category search">
         <div class="ui icon input">
@@ -40,6 +42,7 @@
 
     </div>
 
+    <!-- Buildings -->
     <div class="ui segment">
       
         <div class="ui accordion">
@@ -72,6 +75,8 @@
 
 
   </div>
+
+  <!-- JavaScript for components -->
   <script>
     $(document).ready(
       function () {
@@ -87,8 +92,6 @@
         $('.ui.indicating.progress').progress();
       }
 
-      
-
     );
     var content = [
       { title: 'AIRC/ARC Academic Information Resource Center' },
@@ -97,7 +100,7 @@
       { title: 'Santa Clara Hall' },
       { title: 'University Union'}
     ];
-
   </script>
+  
 </div>
 {% endblock %}
