@@ -12,7 +12,6 @@
     //Connect to the database
     require_once('../modules/connect.php');
     //Fetch data from the database
-    require_once('../modules/setSelection.php');
     require_once('../modules/getSelection.php');
     require_once('../modules/getCampuses.php');
     require_once('../modules/getFeatures.php');
@@ -22,37 +21,37 @@
     //Routes definitions
 
     //Home
-    $app->get('/', function (Request $request, Response $response, $args) use(&$campuses, &$buildings, &$floors) {
-            $data = ['campuses'=>$campuses, 'buildings'=>$buildings, 'floors'=>$floors];
+    $app->get('/', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses, &$buildings, &$floors) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses, 'buildings'=>$buildings, 'floors'=>$floors];
             return $this->view->render($response, "index.phtml", $data);
         }
     );
     //Building
-    $app->get('/building', function (Request $request, Response $response, $args) use(&$campuses) {
-            $data = ['campuses'=>$campuses];
+    $app->get('/building', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected,'campuses'=>$campuses];
             return $this->view->render($response, "/views/building.phtml", $data);
         }
     );
     //Floor
-    $app->get('/floor', function (Request $request, Response $response, $args) use(&$campuses) {
-            $data = ['campuses'=>$campuses];
+    $app->get('/floor', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses];
             return $this->view->render($response, "/views/floor.phtml", $data);
         }
     );
     //Account
-    $app->get('/account', function (Request $request, Response $response, $args) use(&$campuses) {
-            $data = ['campuses'=>$campuses];
+    $app->get('/account', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses];
             return $this->view->render($response, "/views/account.phtml", $data);
         }
     );
     //SignUp
-    $app->get('/signUp', function (Request $request, Response $response, $args) use(&$campuses) {
-            $data = ['campuses'=>$campuses];
+    $app->get('/signUp', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses];
             return $this->view->render($response, "/views/signUp.phtml", $data);
         }
     );
     //Support
-    $app->get('/support', function (Request $request, Response $response) {
+    $app->get('/support', function (Request $request, Response $response) use(&$page, &$campusSelected){
             $response->getBody()->write("This is the Support section");
             return $response;
         }
