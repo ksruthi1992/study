@@ -51,9 +51,9 @@
         }
     );
     //Support
-    $app->get('/support', function (Request $request, Response $response) use(&$page, &$campusSelected){
-            $response->getBody()->write("This is the Support section");
-            return $response;
+    $app->get('/support', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses];
+            return $this->view->render($response, "/views/support.phtml", $data);
         }
     );
     //About Us
