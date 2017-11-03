@@ -6,7 +6,13 @@
 
     <!-- Header -->
     <div class="ui segment">
-      <h1>Find a spot at California State University, Sacramento</h1>
+      <h1>Find a spot at 
+        {% for campus in campuses %}
+          {% if campus.idcampus == campusSelected %}
+            {{ campus.name }}
+          {% endif %}
+        {% endfor %}
+      </h1>
     </div>
 
     <!-- Search -->
@@ -54,10 +60,10 @@
               {{ building.name }}
             </div>
             <div class="content">
-              <i class="large info icon"></i><a href="/building" style="text-decoration: none;color: black;">Expand building description</a><br><br>
+              <i class="large info icon"></i><a href="/building?buildingSelected={{ building.id }}" style="text-decoration: none;color: black;">Expand building description</a><br><br>
               {% set particularBuilding = loop.index %}
               {% for floor in floors[particularBuilding] %}
-                <a href="/floor" style="color: black;">Floor {{ floors[particularBuilding][loop.index].name }}</a>
+                <a href="/floor?buildingSelected={{ building.id }}&floorSelected={{ floors[particularBuilding][loop.index].name }}" style="color: black;">Floor {{ floors[particularBuilding][loop.index].name }}</a>
                   
                 {% if (loop.last == true) %}
                   <br><br>
