@@ -5,8 +5,5 @@
 
 	while($row = $result->fetch_assoc())
 		$building_data[]=$row;
-
 	if(isset($building_data))
 		$buildings=&$building_data;
-
-	//close mysql connection
