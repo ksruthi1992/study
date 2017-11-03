@@ -56,6 +56,18 @@
             return $response;
         }
     );
+    //About Us
+    $app->get('/aboutUs', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses];
+            return $this->view->render($response, "/views/aboutUs.phtml", $data);
+        }
+    );
+    //404 Not Found
+    $app->get('/404', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses];
+            return $this->view->render($response, "/views/404.phtml", $data);
+        }
+    );
 
 
     //Example
