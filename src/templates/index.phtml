@@ -45,10 +45,10 @@
     <!-- Buildings -->
     <div class="ui segment">
       
-      <div class="ui accordion">
+      <div class="ui accordion" id="buildings">
 
         {% for building in buildings %}
-          <div id="building"> {{ building.name }}
+          <div>
             <div class="title" style="font-size: 20px;">
               <i class="dropdown icon"></i><i class="green circle icon"></i>
               {{ building.name }}
@@ -103,18 +103,14 @@
 
 
     //Search filter
-    var $listOfBuildings = $('#building');
+    var $listOfBuildings = $('#buildings div');
     $('#search').keyup(function() {
-
         var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$';
-        //window.alert("START"+val+"END");
         var reg = RegExp(val, 'i');
         var text;
-
         $listOfBuildings.show().filter(
           function() {
             text = $(this).text().replace(/\s+/g, ' ');
-            window.alert("START"+$(this).text()+"END");
             return !reg.test(text);
           }
         ).hide();
