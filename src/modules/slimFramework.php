@@ -1,6 +1,7 @@
 <?php
     use Slim\Views;
     use Slim\Views\PhpRenderer;
+
     //App setup
         //Create Slim app
     $app = new \Slim\App;
