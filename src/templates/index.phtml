@@ -94,11 +94,10 @@
 
     );
     var content = [
-      { title: 'AIRC/ARC Academic Information Resource Center' },
-      { title: 'Library' },
-      { title: 'Riverside Hall' },
-      { title: 'Santa Clara Hall' },
-      { title: 'University Union'}
+      {% for building in buildings %}
+        {title: '{{ building.name }}'},
+      {% endfor %}
+      
     ];
   </script>
   
