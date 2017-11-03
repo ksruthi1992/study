@@ -5,8 +5,5 @@
 
 	while($row = $result->fetch_assoc())
 		$campus_data[]=$row;
-
 	if(isset($campus_data))
 		$campuses=&$campus_data;
-
-	//close mysql connection
