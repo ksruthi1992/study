@@ -1,4 +1,5 @@
 <?php
+	//we need to objectify this and data.
 	//Mysqli	
 	//database connection data
 	function databaseConnection(bool $testRequest){
