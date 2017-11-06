@@ -1,111 +1,84 @@
 <?php
+    //Debugger
+    require_once('../modules/debugger.php');
     require '../../vendor/autoload.php';
+
+    //Slim Framework
     use \Psr\Http\Message\ServerRequestInterface as Request;
     use \Psr\Http\Message\ResponseInterface as Response;
-    use Slim\Views;
-    use Slim\Views\PhpRenderer;
 
-    //App setup
-        //Create Slim app
-    $app = new \Slim\App;
-        //Fetch DI container
-    $container = $app->getContainer();
+    require_once('../modules/slimFramework.php');
 
-
-    //Register component on container
-        //Register Twig View Helper
-    $container['view'] = function ($container) {
-        $view = new \Slim\Views\Twig('../templates',[
-            'cache' => false
-        ]);
-        // Cache has been disabled
-
-        //debugger which i dont know how to configure
-        //$twig = new Twig_Environment($loader, array(
-        //    'debug' => true
-        //));
-        //$twig->addExtension(new Twig_Extension_Debug());
-        // debugger end
-
-
-        $view->addExtension(
-            new \Slim\Views\TwigExtension(
-                $container->router,
-                $container->request->getUri()
-            )
-        );
-
-        return $view;
-    };
-
-        //MODULES
-    //Connection to the database
-    require_once('../modules/connect.php');
-    //Fetch places from database
-    require_once('../modules/setSelection.php');
+    //Modules
+    //Connect to the database
+    require_once('../modules/connection.php');
+    //Fetch data from the database
     require_once('../modules/getSelection.php');
     require_once('../modules/getCampuses.php');
+    require_once('../modules/getFeatures.php');
     require_once('../modules/getBuildings.php');
     require_once('../modules/getFloors.php');
 
-    //ROUTES defined
-        //Home section
-    $app->get('/', function (Request $request, Response $response, $args) use(&$campuses, &$buildings, &$floors) {
-            $data = ['campuses'=>$campuses, 'buildings'=>$buildings, 'floors'=>$floors];
+    //Routes definitions
+
+    //Home
+    $app->get('/', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses, &$buildings, &$floors) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses, 'buildings'=>$buildings, 'floors'=>$floors];
             return $this->view->render($response, "index.phtml", $data);
         }
     );
-    
-    $app->get('/building', function (Request $request, Response $response, $args) use(&$campuses) {
-            $data = ['campuses'=>$campuses];
+    //Building
+    $app->get('/building', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected,'campuses'=>$campuses];
             return $this->view->render($response, "/views/building.phtml", $data);
         }
     );
-    
-    $app->get('/floor', function (Request $request, Response $response, $args) use(&$campuses) {
-            $data = ['campuses'=>$campuses];
+    //Floor
+    $app->get('/floor', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses];
             return $this->view->render($response, "/views/floor.phtml", $data);
         }
     );
-    
-        //Account section
-    $app->get('/account', function (Request $request, Response $response, $args) use(&$campuses) {
-            $data = ['campuses'=>$campuses];
+    //Account
+    $app->get('/account', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses];
             return $this->view->render($response, "/views/account.phtml", $data);
         }
     );
-
-    $app->get('/signup', function (Request $request, Response $response, $args) use(&$campuses) {
-            $data = ['campuses'=>$campuses];
+    //SignUp
+    $app->get('/signUp', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses];
             return $this->view->render($response, "/views/signUp.phtml", $data);
         }
     );
+    //Support
+    $app->get('/support', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses];
+            return $this->view->render($response, "/views/support.phtml", $data);
+        }
+    );
+    //About Us
+    $app->get('/aboutUs', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses];
+            return $this->view->render($response, "/views/aboutUs.phtml", $data);
+        }
+    );
+    //404 Not Found
+    $app->get('/404', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses];
+            return $this->view->render($response, "/views/404.phtml", $data);
+        }
+    );
 
-        // EXAMPLES start
-    //these are just example routes, but they are currently functional
+
+    //Example
+    //This is just an example route, but it is currently functional
     $app->get('/hello/{name}', function (Request $request, Response $response) {
             $name = $request->getAttribute('name');
             $response->getBody()->write("Hello, $name");
             return $response;
         }
     );
-    $app->get('/test', function (Request $request, Response $response) {
-            $response->getBody()->write("I am testing");
-            return $response;
-        }
-    );
-        // EXAMPLES end
-
-    //Support Section
-    $app->get('/support', function (Request $request, Response $response) {
-            $response->getBody()->write("This is the Support section");
-            return $response;
-        }
-    );
-    require_once('../app/api/counter.php');
-    //ALPHA end
 
     //Run app
     $app->run();
-
-//removed '}', but not sure if needed

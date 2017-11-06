@@ -2,38 +2,35 @@
 <html lang="en">
   <head>
     <title>{% block title %}{% endblock %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Meta Tags -->
     <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="Executive Woocommerce">  
 
     <!--Semantic UI-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
+      <!--JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
     
-
+    <!-- Other libraries -->
     <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js"></script>
 
-    <!-- colors -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/base.css" />
-  </head>
-  <body>
 
-    <style media="screen">
-      .toggler {
-        cursor: pointer;
-      }
-    </style>
+    <!-- JavaScript -->
     <script type="text/javascript">
       $(
         function() {
           $('#show-sidebar').click(
             function() {
-              console.log("i'm clicking"); //I added semi-collon. Yet, I am not sure if it's necessary.
+              console.log("i'm clicking");
               $('#hamburger-button').removeClass('sidebar').addClass('sidebar');
               $('.menu.sidebar').sidebar('toggle');
             }
@@ -46,8 +43,9 @@
       );
     </script>
   </head>
+
   <body >
-    <!-- left -->
+    <!-- side menu -->
     <div class="ui left  vertical menu sidebar blue_back ">
       <div class="item">
         <div id="hide-sidebar" class="button">
@@ -67,6 +65,12 @@
       <a class="item" href="/support">
         Support<i class="life ring icon"></i>
       </a>
+
+      <!-- visible only for users logged and as admin -->
+      <a class="item" href="/admin">
+        Administration Panel<i class="configure icon"></i>
+      </a>
+
 
     </div>
     <div id="push" class="pusher" >
@@ -103,7 +107,11 @@
             </div>
             <div class="item">
               <img class="ui avatar image" src="/images/avatar/small/jenny.jpg">
-              California State University, Sacramento
+              {% for campus in campuses %}
+                {% if campus.idcampus == campusSelected %}
+                  {{ campus.name }}
+                {% endif %}
+              {% endfor %}
             </div>
             <div class="divider"></div>
             
@@ -111,17 +119,21 @@
               List of campuses
             </div>
 
-            <!-- TESTING area for campuses -->
             {% for campus in campuses %}
-            <div class="item">
+            <!-- a tags should be outside of the divs, but the CSS has to be modified first so that it displays correctly.
+              Else, the user doesn't get redirected unless the words are clicked -->
+            <div class="item" href="{{ page }}?campusSelected={{ campus.idcampus }}" style="color: black;">
               <img class="ui avatar image" src="/images/avatar/small/justen.jpg">
-              {{ campus.name }}
+              <!--<a style="color:black;">{{ campus.name }}</a>-->
             </div>
             {% endfor %}
             
 
           </div>
         </div>
+
+
+        <!-- Script so that the Change Campus menu works -->
         <script>
           $(document).ready(
             function () {
