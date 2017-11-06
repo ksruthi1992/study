@@ -7,3 +7,6 @@
 
 	if(isset($_GET['buildingSelected']))
 		$buildingSelected=$_GET['buildingSelected'];
+
+	if(isset($_GET['floorSelected']))
+		$floorSelected=$_GET['floorSelected'];
