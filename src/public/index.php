@@ -11,7 +11,7 @@
 
     //Modules
     //Connect to the database
-    require_once('../modules/connection.php');
+    require_once('../modules/connect.php');
     //Fetch data from the database
     require_once('../modules/getSelection.php');
     require_once('../modules/getCampuses.php');
@@ -63,13 +63,18 @@
             return $this->view->render($response, "/views/aboutUs.phtml", $data);
         }
     );
+    //Administration
+    $app->get('/administration', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
+            $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses];
+            return $this->view->render($response, "/views/administration.phtml", $data);
+        }
+    );
     //404 Not Found
     $app->get('/404', function (Request $request, Response $response, $args) use(&$page, &$campusSelected, &$campuses) {
             $data = ['page'=>$page, 'campusSelected'=>$campusSelected, 'campuses'=>$campuses];
             return $this->view->render($response, "/views/404.phtml", $data);
         }
     );
-
 
     //Example
     //This is just an example route, but it is currently functional

@@ -1,7 +1,8 @@
 <?php
+	
 
 	$query	= "select * from campuses order by name";
-	$result = mysqli_query($connection, $query);
+	$result = mysqli_query($connection->get(), $query);
 
 	while($row = $result->fetch_assoc())
 		$campus_data[]=$row;
