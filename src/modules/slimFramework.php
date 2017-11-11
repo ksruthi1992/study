@@ -7,7 +7,6 @@
     $app = new \Slim\App;
         //Fetch DI container
     $container = $app->getContainer();
-
     //Register component on container
         //Register Twig View Helper
     $container['view'] = function ($container) {
@@ -17,12 +16,12 @@
         ]);
 
         //Slim framework debugger which i dont know how to configure
-        /*
+        /* twig or view below
         $twig = new Twig_Environment($loader, array(
             'debug' => true
-        ));
-        $twig->addExtension(new Twig_Extension_Debug());
-        */
+        ));*/
+        //$twig->addExtension(new Twig_Extension_Debug());
+        
 
         $view->addExtension(
             new \Slim\Views\TwigExtension(

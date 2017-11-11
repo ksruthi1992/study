@@ -1,21 +1,12 @@
 <?php
 	//database connection constants
-	require_once('constants/connection.php');
+	require_once('constants/database.php');
 
 	class database_connection{
-
-		protected $hostname;
-		protected $username;
-		protected $password;
-		protected $database;
 
 		protected $connection;
 
 		function __construct($hostname, $username, $password, $database){
-			$this->hostname=$hostname;
-			$this->username=$username;
-			$this->password=$password;
-			$this->database=$database;
 
 			// Create connection
 			$this->connection = new mysqli($hostname, $username, $password, $database);
@@ -39,5 +30,3 @@
 		}
 
 	}
-
-	$connection = new database_connection(HOSTNAME,USERNAME,PASSWORD,DATABASE);
