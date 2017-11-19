@@ -1,0 +1,127 @@
+{% extends "base.twig" %}
+{% block title%}Find a Spot{% endblock %}
+{% block content %}
+<div class="ui container" >
+  <div class="ui segments" style="font-size: 25px; margin-top: 25px;">
+
+    <!-- Header -->
+    <div class="ui segment">
+      <h1>Find a spot at 
+        {% for campus in campuses %}
+          {% if campus.idcampus == campusSelected %}
+            {{ campus.name }}
+          {% endif %}
+        {% endfor %}
+      </h1>
+    </div>
+
+    <!-- Search -->
+    <div class="ui segment" style="border-bottom: 0px; margin-bottom: 0px; padding-bottom: 0px;">
+      <div class="ui category search">
+        <div class="ui icon input">
+          <img src="img/building.png" style="width: 32px;height: 32px;margin-top:5px;margin-right: 10px;" />
+          <input class="prompt" id="search" type="text" placeholder="Search building" style="border-radius: 3px;">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
+
+
+    <!-- Features -->
+    <div class="ui segment" style="border-top:0px;margin-top: 0px;">
+      <div class="ui sub header">Features</div>
+
+      <select multiple="" name="skills" class="ui fluid normal dropdown">
+        <option value="">Features</option>
+        <option value="bathrooms">Bathrooms</option>
+        <option value="quiet">Quiet</option>
+        <option value="group_friendly">Group Friendly</option>
+        <option value="water_fountain">Water Fountain</option>
+        <option value="coffee">Coffee</option>
+        <option value="snacks">Snacks</option>
+        <option value="food">Food</option>
+        <option value="power_outlets">Power Outlets</option>
+        <option value="computer_access">Computer Access</option>
+        
+      </select>
+
+    </div>
+
+    <!-- Buildings -->
+    <div class="ui segment">
+      
+      <div class="ui accordion" id="buildings">
+
+        {% for building in buildings %}
+          <div>
+            <div class="title" style="font-size: 20px;">
+              <i class="dropdown icon"></i><i class="green circle icon"></i>
+              {{ building.name }}
+            </div>
+            <div class="content">
+              <i class="large info icon"></i><a href="/building?buildingSelected={{ building.id }}" style="text-decoration: none;color: black;">Expand building description</a><br><br>
+              {% set particularBuilding = loop.index %}
+              {% for floor in floors[particularBuilding] %}
+                <a href="/floor?buildingSelected={{ building.id }}&floorSelected={{ floors[particularBuilding][loop.index].name }}" style="color: black;">Floor {{ floors[particularBuilding][loop.index].name }}</a>
+                  
+                {% if (loop.last == true) %}
+                  <br><br>
+                {% endif %}
+                <div class="ui small indicating progress" data-percent="100">
+                  <div class="bar"></div>
+                  <div class="label">There is plenty of seating available.</div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <!-- JavaScript for components -->
+  <script>
+    $(document).ready(
+      function () {
+        $('.ui.search')
+          .search({
+            source: content
+          })
+        ;
+
+        
+
+        $('.ui.accordion').accordion({ exclusive  : false});
+        $('.ui.indicating.progress').progress();
+      }
+
+    );
+    var content = [
+      {% for building in buildings %}
+        {title: '{{ building.name }}'},
+      {% endfor %}
+    ];
+
+
+    //Search filter
+    var $listOfBuildings = $('#buildings div');
+    $('#search').keyup(function() {
+        var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$';
+        var reg = RegExp(val, 'i');
+        var text;
+        $listOfBuildings.show().filter(
+          function() {
+            text = $(this).text().replace(/\s+/g, ' ');
+            return !reg.test(text);
+          }
+        ).hide();
+    });
+  </script>
+  
+</div>
+{% endblock %}

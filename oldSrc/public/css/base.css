@@ -1,33 +1,24 @@
 .white {
 	color : white;
 }
-/*not sure if needed*/
 .green_custom {
 	color : #33fda1;
 }
-/*not sure if needed*/
 .red_custom {
 	color : #fa388d
 }
-
-/*not sure if needed, but called*/
 .blue_back {
 	background-color: #005BB8;
 }
-
 .fixed {
 	position: fixed;
 }
-
 .full_wide {
 	width: 100%;
 }
-
 .bigger {
 	font-size: 25px;
 }
-
-/* Links */
 
 a:link {
     text-decoration: none;

@@ -1,31 +1,27 @@
 <?php
-    //START Header Settings - - - - - - - - - - - - - - - - - - *
     //Debugger
     require_once('../modules/debugger.php');
 
-    //Session
     session_cache_limiter(false);
     if(!isset($_SESSION))
         session_start();
 
-    //Database
-    require_once('../modules/dataHandler.php');
-    //END Header Settings - - - - - - - - - - - - - - - - - - *
+    require '../../vendor/autoload.php';
 
-
-
-    //START Libraries  - - - - - - - - - - - - - - - - - - *
     //Slim Framework
     use \Psr\Http\Message\ServerRequestInterface as Request;
     use \Psr\Http\Message\ResponseInterface as Response;
-    require '../vendor/autoload.php';
+
     require_once('../modules/slimFramework.php');
 
-    //END Libraries - - - - - - - - - - - - - - - - - - *
+    //Modules
+    //Connect to the database
+    require_once('../modules/connection.php');
+    //Fetch data from the database
+    require_once('../modules/campusData.php');
+    require_once('../modules/dataHandler.php');
 
-
-
-    //START Routing - - - - - - - - - - - - - - - - - - *
+    //Routes definition
     //Testing
     $app->get('/testing/{data1}', function (Request $request, Response $response, $args) use(&$campus){
             $campusSelected = $campus->showFloor(2,"all");
@@ -34,69 +30,63 @@
             $data2 = 69;
             $data3 = $_SESSION['campus'];
             $data = ['page'=>$page, 'data1'=>$data1, 'data2'=>$data2,'data3'=>$data3,'campusSelected'=>$campusSelected];
-            return $this->view->render($response, "views/testing.twig", $data);
+            return $this->view->render($response, "testing.phtml", $data);
         }
     );
+
     //Home
     $app->get('/', function (Request $request, Response $response, $args){
-            return $this->view->render($response, "views/home.twig");
+            return $this->view->render($response, "home.phtml");
         }
     );
     //Campus Home
     $app->get('/{campus}/', function (Request $request, Response $response, $args){
-            return $this->view->render($response, "views/home.twig");
+            return $this->view->render($response, "home.phtml");
         }
     );
     //Building
     $app->get('/{campus}/{building}', function (Request $request, Response $response, $args){
-            return $this->view->render($response, "/views/building.twig");
+            return $this->view->render($response, "/views/building.phtml");
         }
     );
     //Floor
     $app->get('/{campus}/{building}/{floor}', function (Request $request, Response $response, $args){
-            return $this->view->render($response, "/views/floor.twig");
+            return $this->view->render($response, "/views/floor.phtml");
         }
     );
     //Account
     $app->get('/account', function (Request $request, Response $response, $args){
-            return $this->view->render($response, "/views/account.twig");
+            return $this->view->render($response, "/views/account.phtml");
         }
     );
-    //Sign Up
+    //SignUp
     $app->get('/signUp', function (Request $request, Response $response, $args){
-            return $this->view->render($response, "/views/signUp.twig");
+            return $this->view->render($response, "/views/signUp.phtml");
         }
     );
     //Support
     $app->get('/support', function (Request $request, Response $response, $args){
-            return $this->view->render($response, "/views/support.twig");
+            return $this->view->render($response, "/views/support.phtml");
         }
     );
     //About Us
-    $app->get('/about', function (Request $request, Response $response, $args){
-            return $this->view->render($response, "/views/about.twig");
+    $app->get('/aboutUs', function (Request $request, Response $response, $args){
+            return $this->view->render($response, "/views/aboutUs.phtml");
         }
     );
     //Administration
-    $app->get('/admin', function (Request $request, Response $response, $args){
-            return $this->view->render($response, "/views/admin.twig");
+    $app->get('/administration', function (Request $request, Response $response, $args){
+            return $this->view->render($response, "/views/administration.phtml");
         }
     );
-    //404 Error - Not Found
+    //404 Not Found
     $app->get('/404', function (Request $request, Response $response, $args){
-            return $this->view->render($response, "/views/404.twig");
+            return $this->view->render($response, "/views/404.phtml");
         }
     );
-
-//END Routing - - - - - - - - - - - - - - - - - - *
-
-
-
-//START Footer Settings - - - - - - - - - - - - - - - - - - *
+    
     //Destroy Session
     session_destroy();
 
     //Run app
     $app->run();
-
-//END Footer Settings - - - - - - - - - - - - - - - - - - *

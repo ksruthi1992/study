@@ -1,0 +1,67 @@
+{% extends "base.twig" %}
+{% block title%}Sign Up{% endblock %}
+{% block content %}
+<div class="ui container" >
+  <div class="ui segments" style="font-size: 25px; margin-top: 25px;">
+
+    <div class="ui segment">
+      <h1>My Account</h1>
+    </div>
+
+    <div class="ui segment" style="">
+
+      <form class="ui form" method="get">
+        <div class="field">
+          <label>Email</label>
+          <input type="text" name="first-name" placeholder="Email">
+        </div>
+        <div class="field">
+          <label>Phone</label>
+          <input type="text" name="last-name" placeholder="Phone">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="text" name="last-name" placeholder="Password">
+        </div>
+        <div class="field">
+          <label>Repeat password</label>
+          <input type="text" name="last-name" placeholder="Repeat password">
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>I agree to the Terms and Conditions</label>
+          </div>
+        </div>
+        <button class="ui button" type="submit">Submit</button>
+      </form>
+
+    </div>
+
+
+  </div>
+  <script>
+    $(document).ready(
+      function () {
+        $('.ui.form')
+          .form({
+            fields : [
+            email: 'empty',
+            password: 'empty'
+            ]
+          })
+        ;
+
+        if( $('.ui.form').form('is valid', 'email')) {
+          // email is valid
+        }
+        if( $('.ui.form').form('is valid')) {
+          // form is valid (both email and name)
+        }
+      }
+
+    );
+
+  </script>
+</div>
+{% endblock %}
