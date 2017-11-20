@@ -25,8 +25,24 @@
 
     //START Routing - - - - - - - - - - - - - - - - - - *
     //Location
-    $app->get('/', function ($request, $response, $args){
-            return $this->view->render($response, "/views/home.twig");
+    $app->get('/[{campus}/[{building}[/{floor}]]]', function ($request, $response, $args) {
+        $data = array();
+        if (isset($args['floor'])) {
+            $target = "/views/floor.twig";
+            array_push($data, 'floor', $args['floor']);
+            array_push($data, 'building', $args['building']);
+            array_push($data, 'campus', $args['campus']);
+        } elseif (isset($args['building'])) {
+            $target="/views/building.twig";
+            array_push($data, 'building', $args['building']);
+            array_push($data, 'campus', $args['campus']);
+        } elseif (isset($args['campus'])){
+            $target="/views/campus.twig";
+            array_push($data, 'campus', $args['campus']);
+        }else
+            $target="/views/home.twig";
+
+            return $this->view->render($response, $target, $data);
         }
     );
     //Account
