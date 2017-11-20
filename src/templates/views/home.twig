@@ -1,4 +1,4 @@
-{% extends "base.phtml" %}
+{% extends "base.twig" %}
 {% block title%}Find a Spot{% endblock %}
 {% block content %}
 <div class="ui container" >
@@ -16,7 +16,7 @@
     </div>
 
     <!-- Search -->
-    <div class="ui segment" style="border-bottom: 0px; margin-bottom: 0px; padding-bottom: 0px;">
+    <div class="ui segment" style="border-bottom: 0; margin-bottom: 0; padding-bottom: 0;">
       <div class="ui category search">
         <div class="ui icon input">
           <img src="img/building.png" style="width: 32px;height: 32px;margin-top:5px;margin-right: 10px;" />
@@ -29,7 +29,7 @@
 
 
     <!-- Features -->
-    <div class="ui segment" style="border-top:0px;margin-top: 0px;">
+    <div class="ui segment" style="border-top:0;margin-top: 0;">
       <div class="ui sub header">Features</div>
 
       <select multiple="" name="skills" class="ui fluid normal dropdown">

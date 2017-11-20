@@ -1,9 +1,9 @@
 <?php
 
     //connection class
-    require_once('../modules/database_connection.php');
+    require_once('database_connection.php');
     //campus class
-    require_once('../modules/campusData.php');
+    require_once('campusData.php');
     //database constants
     require_once('constants/database.php');
 
