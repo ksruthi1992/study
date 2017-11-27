@@ -26,22 +26,37 @@
     //START Routing - - - - - - - - - - - - - - - - - - *
     //Location
     $app->get('/[{campus}/[{building}[/{floor}]]]', function ($request, $response, $args) {
-        $data = array();
-        if (isset($args['floor'])) {
-            $target = "/views/floor.twig";
-            array_push($data, 'floor', $args['floor']);
-            array_push($data, 'building', $args['building']);
-            array_push($data, 'campus', $args['campus']);
-        } elseif (isset($args['building'])) {
-            $target="/views/building.twig";
-            array_push($data, 'building', $args['building']);
-            array_push($data, 'campus', $args['campus']);
-        } elseif (isset($args['campus'])){
-            $target="/views/campus.twig";
-            array_push($data, 'campus', $args['campus']);
-        }else
-            $target="/views/home.twig";
+            if (isset($args['floor'])) {
+                //Floor
+                $data['campus']=$args['campus'];
+                $data['building']=$args['building'];
+                $data['floor']=$args['floor'];
 
+                $target = "/views/floor.twig";
+            } elseif (isset($args['building'])) {
+                //Building
+                $data['campus']=$args['campus'];
+                $data['building']=$args['building'];
+
+                $target="/views/building.twig";
+            } elseif (isset($args['campus'])){
+                //Campus
+                $data['campus']=$args['campus'];
+
+                $target="/views/campus.twig";
+            }else {
+                //Homepage unless campus previously selected
+                if(isset($_SESSION['campus'])){
+                    //Redirect to campus by session
+                    $data['campus']=$_SESSION['campus'];
+                    $target="/views/campus.twig";
+                }else{
+                    //Homepage
+                    $target = "/views/home.twig";
+                }
+            }
+
+            include("../modules/globalObjects.php");
             return $this->view->render($response, $target, $data);
         }
     );
