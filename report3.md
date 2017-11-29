@@ -24,83 +24,244 @@ Team members:
  *  Travis Keri
 
 ### Table of contents
- * [Interaction Diagrams](#interation)
- * [Class Diagram and Interface Specification](#interface)
-   * [Class Diagram](#classDiagram)
- * [System Architecture and System Design](#system)
-   * [Architectural Style](#architecturalStyle)
-   * [Identifying Subsystems](#identifyingSubsystems)
-   * [Mapping Subsystems to Hardware](#mapping)
-   * [Persistent Data Storage](#data)
-   * [Network Protocal](#network)
-   * [Global Control Flow](#controlFlow)
-   * [Hardware Requirements](#hardward)
- * [Algorithms and Data Structures](#algorithmsDataStructures)
-   * [Algorithms](#algorithms)
-   * [Data Structures](#dataStructures)
- * [User Interface Design and Implementation](#uIDandI)
+ * [Summary of Changes](#changeSummary)
+ * [Customer Statement of Requirements](#requirements)
+ * [Glossary](#glossary) 
+ * [Functional Requirments](#functional)
+  * [Stakeholders](#stakeholders)
+  * [Actors and Goals](#actor)
+  * [Use Cases](#usecase)
+  * [System Sequence Diagrams](#diagrams)
+ * [Nonfunctional Requirements](#nonfunctional)
+ * [Use Case Points Effort Estimation](#effortEstimation)
+ * [Domain Analysis](#domain_analysis)
+  * [Domain Model](#domain_model)
  * [Progress Report and Plan of Work](#progressReportandPOW)
    * [Progress Report](#progressReport)
    * [Plan of Work](#planOfWork)
 
-### <a name="interation"></a>Interation Diagram
+### <a name="changeSummary"></a>Summary of Changes
 <hr>
 
-**Use case 1 & 2**
+### <a name="requirements"></a>Customer Requirements  
+|Requirements|Priority|Description                                                                |
+|------------|:------:|---------------------------------------------------------------------------|
+|**REQ - 1** |5       |Find place on campus to study                                              |
+|**REQ - 2** |3       |System finds a place near me                                               |
+|**REQ - 3** |3       |System is easier to use than a map                                         |
+|**REQ - 4** |1       |System can find group space                                                | 
+|**REQ - 5** |2       |System can find quiet(nap) space                                           |
+|**REQ - 6** |3       |User can reserve a room                                                    |
+|**REQ - 7** |3       |System can search for amenities (locks/whiteboards/outlets/wi-fi/printers) |
+|**REQ - 8** |4       |System analyzes data to track trends                                       |
+|**REQ - 9** |3       |User can leave comments                                                    |
 
-![image](diagrams/Interaction_Diagrams/Use_case_1-2_interaction_diagram.jpg)
+### <a name="glossary"></a>Glossary
+  * Study Space: a place to study, sleep or work in a group
+  * Amenities: outlets for charging, quiet, whiteboards, printers, monitors
+  * Trends: useage trends for the different study spaces
 
-**Use case 3**
+### <a name="functional"></a>Functional Requirements
+   * REQ-1: Find place on campus to study
+   * REQ-2: System finds a place near me
+   * REQ-4: System ca find group space
+   * REQ-6: User can reserve a room
+   * REQ-7: System cab search for amenities (locks/whiteboards/outlets/wifi/printers)
+   * REQ-8: System analyzes data to track trends
 
-We have decided to put this use case on hold, to focus on the others. If there is time to implement them we will come back to them.
-
-**Use case 4**
-
-![image](diagrams/Interaction_Diagrams/Use_case_4_interaction_diagram.jpg)
-
-**Use case 5**
-
-![image](diagrams/Interaction_Diagrams/Use_case_5_interaction_diagram.jpg)
-
-**Use case 6**
-
-![image](diagrams/Interaction_Diagrams/Use_case_6_interaction_diagram.jpg)
-
-**Use case 7**
-
-![image](diagrams/Interaction_Diagrams/Use_case_7_interaction_diagram.jpg)
-
-### <a name="interface"></a>Class Diagram and Interface Specification
+#### <a name="stakeholders"></a>Stakeholders
+  * Students: will be able to more effiecntly find and use study spaces
+  * School: more attractive to prospective students because of it's high tech efficency
+#### <a name="actor"></a>Actors and Goals  
 <hr>
 
-#### <a name="classDiagram"></a>Class Diagram
--![image](diagrams/classDiagram.png)
+ *  Users-Use the system to find places to study 
+ *  Admins-Manage the system to add or remove locations 
+
+#### <a name="usecase"></a>Use Cases  
+<hr> 
+
+<!-- Hey guys, let's just assign our names to these okay? -->
+Use Case Description  
+ * UC-1 User searches for open study space  **_(Nick)_**
+ * UC-2 User searches for study space with amenity  **_(Travis)_**
+ * UC-3 User reserves a room  **_(Tara)_**
+ * UC-4 System logs user in  **_(Luis)_**
+ * UC-5 System analyzes trends  **_(Luke)_**			
+ * UC-6 User input how busy an area is  **_(Alex)_**
+ * UC-7 User leaves comment  **_(Edward)_**
+ 
+ <hr>
+
+|Use Case 1         |User searches for open study space                        |
+|-------------------|----------------------------------------------------------|
+|Related REQs       |REQ1, REQ2, REQ4, REQ5                                    |
+|Initiating Actors  |Student                                                   |
+|Actor's Goals      |To search for an open study spaces                        |
+|Participating Actor|Database                                                  |
+|Preconditions      |Search screen is active                                   |
+|Postconditions     |Available space displayed                                 |
+|Flow of Events     |                                                          |
+|->                 |1.User selects the search option                          |
+|<-                 |2.System displays the search page                         |
+|->                 |3.User looks through open areas                           |
+|<-                 |4.Database returns available space in the requested area  |
+
+![image](diagrams/UC1_Diagram.png)
+
+|Use Case 2         |User searches for a study space with amenity                                        |
+|-------------------|------------------------------------------------------------------------------------|
+|Related REQs       |REQ1, REQ2, REQ3, REQ7                                                                    |
+|Initiating Actors  |Student                                                                             |
+|Actor's Goals      |To search for study spaces with amenities(White boards, outlets, good wi-fi, ect...)|
+|Participating Actor|None                                                                                |
+|Preconditions      |Filter search is on screen                                                          |
+|Postconditions     |Search results displayed on screen                                                  |
+|Flow of Events     |                                                                                    |
+|->                 |1.User selects the search option                                                    |
+|<-                 |2.System displays the search page                                                   |
+|->                 |3.User selects combatination of available amenities they want to search for         |
+|<-                 |4.Database returns availible study areas and how full they are                      |
+|Alt. Flow of Events|                                                                                    |
+|->                 |3a.User selects combanation of unavailable amenities                                |
+|<-                 |	4.Database returns and displays message to refine search                         |
+
+![image](diagrams/UC2_Diagram.png)
+
+|Use Case 3         |                                  |
+|-------------------|----------------------------------|
+|Related REQs       |REQ6                              |
+|Initiating Actors  |Student                           |
+|Actor's Goals      |To reserve a room                 |
+|Participating Actor|None                              |
+|Preconditions      |Room is empty                     |
+|Postconditions     |Room will now be reserved         |
+|Flow of Events     |                                  |
+|->                 |1. User selects reserve a room option|
+|<-                 |2. System displays whether or not room is available|
+|->		    |3. User reserves available room   |
+|<-		    |4. System displays confirmation   | 
+
+![image](diagrams/UC3_diagram.png)
+
+|Use Case 4         |System logs user in                                        |
+|-------------------|------------------------------------------------------------------------------------|
+|Related REQs       |REQ3, REQ6, REQ7                                                                    |
+|Initiating Actors  |Student                                                                             |
+|Actor's Goals      |To be identified by the system so that the system can record the actor who is reserving a room and link its input as well as comments to itself.|
+|Participating Actor|None                                                                                |
+|Preconditions      |The actor has a username registered in the database or has a browser with cookies enabled to be allowed to enter to the system as a guest.                                                          |
+|Postconditions     |The user is logged in as a registered user or a guest.                                                  |
+|Flow of Events     |                                                                                    |
+|<-		|1.System displays main menu and prompts for method for system access: username account or guest|
+|->                 |2.User submits log in information                                                    |
+|<-                 |3.System displays if the user logged in successfully                                                   |
+|<-                 |4.System displays option to add input, comments or reserve a room         |
+|Alt. Flow of Events|                                                                                    |
+|->                 |2a.User has cookies enabled and logs in as a guest                                |
+|<-                 |3a.System displays option to add input as to how busy an area is                         |
+|Second Alt. Flow of Events| |
+|<-|3b. System displays that the user was unable to log in successfully and is returned to the main menu|
+
+![image](diagrams/UC4.png)
+
+|Use Case 5         |System analyzes trends                  |
+|-------------------|----------------------------------------|
+|Related REQs       | REQ1, REQ2, REQ4, REQ5, REQ6, and REQ8 |
+|Initiating Actors  | Admin                                  |
+|Actors Goal        | Analyze trends to predict study space  |
+|                   | availability                           |
+|Participating Actor| Student                                |
+|Preconditions      | database is not empty                  |
+|Postconditions     | useage trend data is updated           |
+|Event Flow         |                                        |
+|->                 | update triggers analysis algorithm     |
+|<-                 | Database releases updated trend data   |
+
+![image](diagrams/UC5.png)
+
+|Use Case 6          |User inputs how busy an area is                       |
+|--------------------|------------------------------------------------------|
+|Related REQs        |REQ9                                                  |
+|Initiating actors   |Student                                               |
+|Actor's goals       |Student can submit how busy an area is                |
+|Participating actors|None                                                  |
+|Preconditions       |Selection screen for level of space congestion        |
+|                    |Button for submitting space congestion level          |
+|Postconditions      |Data is submitted and stored in database              |
+|**Flow of events**  |**Scenario 1**                                        |
+|**->**              |1. _User selects the "Submit" button for current area_|
+|**<-**              |2. _System displays options for level of congestion_  |
+|**->**              |3a. _User selects either 1, 2 , or 3 on screen_       |
+|**<-**              |4a. _System thanks user for submitting feedback_      |
+|                    | _System sends user back to floor status page_        |
+|**Alternate events**|**Scenario 2**                                        |
+|**->**              |3b. _User selects the cancel option_                  |
+|**<-**              |4b. _System brings user back to the floor status page_|
+
+![image](diagrams/UC6_Diagram.png)
+
+|Use Case 7          |User enters a comment                                 |
+|--------------------|------------------------------------------------------|
+|Related REQs        |REQ9, REQ1                                            |
+|Initiating actors   |Student                                               |
+|Actor's goals       |Student can comment anything about a room             |
+|Participating actors|None                                                  |
+|Preconditions       |Selection of room                                     |
+|                    |Text field for inputting comments                     |
+|Postconditions      |Comment is submitted and stored in database           |
+|**Flow of events**  |**Scenario 1**                                        |
+|**->**              |1. _User selects a floor/room to comment on_          |
+|**<-**              |2. _System displays a text box_                       | 
+|**->**              |3a. _User enters and submits a comment_               |
+|**<-**              |4a. _System adds comment to db_                       |
+|**Alternate events**|**Scenario 2**                                        |
+|**->**              |3b. _User selects the cancel option_                  |
+|**<-**              |4b. _System closes text box, but stays on the page_   |
+
+![image](diagrams/UC7_Diagram.png)
+
+**Traceability Matrix**  
+
+|**Req't**|**PW**|UC1|UC2|UC3|UC4|UC5|UC6|UC7|
+|---------|:----:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|REQ1     |5     |X  |X  |   |   |X  |   | X |
+|REQ2     |3     |X  |X  |   |   |X  |   |   |
+|REQ3     |3     |   |   |   |x  |   |   |   |
+|REQ4     |1     |X  |   |   |   |X  |   |   |
+|REQ5     |2     |X  |   |   |   |X  |   |   |
+|REQ6     |3     |   |   |X  |x  |X  |   |   |
+|REQ7     |3     |   |X  |   |x  |   |   |   |
+|REQ8     |4     |   |   |   |   |X  |   |   |
+|REQ9     |3     |   |   |   |   |   |X  | X |
+|MAX PW   |      |5  |5  |3  |3  |5  |3  | 5 |
+|Total PW |      |11 |11 |3  |9  |18 |3  | 8 |
+
+#### <a name="diagrams"></a>System Sequence Diagrams
+
+![image](diagrams/System_Sequence_Diagrams/usecase_1-2.png)
+
+![image](diagrams/System_Sequence_Diagrams/usecase_6.png)
+
+![image](diagrams/System_Sequence_Diagrams/usecase_3.png)
+
+
+### <a name="nonfunctional"></a>Nonfunctional Requirements
+
+  * REQ-3: System is easier to use than a map
+  * REQ-5: System can find a quiet(nap) space
+  * REQ-9: User can leave comments
+#### <a name="effortEstimation"></a>Use Case Points Effort Estimation
 <hr>
 
-### <a name="system"></a>System Architecture and System Design
-<hr>
+    Use case points stuff goes here!!  
+	
+### <a name="domain_analysis"></a>Domain Analysis
 
-#### <a name="architcturalStyle"></a>Architecural Style
-<hr>
+#### <a name="domain_model"></a>Domain Model
 
-For our archictecture we used a central database to store all data.  It is a MYSQL database. The webserver pulls all data from this one database.
+![image](diagrams/domainmodel.png)
 
-
-#### <a name="identifyinSubsystems"></a>Identifying Subsystems
-<hr>
-
-
-  ![image](diagrams/subsystems.png)
-  <br>
-    The three subsystems are the client's browser, the server, and the database.  The client will access the server and the server retrieve data from the database. 
-
-#### <a name="mapping"></a>Mapping Subsystems to Hardware
-<hr>
-
-    There is a server that serves a website.  
-    Users are able to access the webpage with a web browser.  The UI that the user interacts with
-    is run on the user's computer that is being used to visit the webpage.  The web server 
-    runs on a linux machine that is being hosted remotely.  
 #### <a name="data"></a>Persistent Data Storage
 <hr>
 
