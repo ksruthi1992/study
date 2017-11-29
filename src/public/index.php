@@ -16,7 +16,7 @@
 
     //START Libraries  - - - - - - - - - - - - - - - - - - *
     //Slim Framework
-    require '../vendor/autoload.php';
+    require '../../vendor/autoload.php';
     require_once('../modules/slimFramework.php');
 
     //END Libraries - - - - - - - - - - - - - - - - - - *
