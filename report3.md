@@ -39,6 +39,25 @@ Team members:
  * [Progress Report and Plan of Work](#progressReportandPOW)
    * [Progress Report](#progressReport)
    * [Plan of Work](#planOfWork)
+ * [Interaction Diagrams](#interation)
+ <!--Temporary separator just so I can see better -->
+ * [Class Diagram and Interface Specification](#interface)
+   * [Class Diagram](#classDiagram)
+ * [System Architecture and System Design](#system)
+   * [Architectural Style](#architecturalStyle)
+   * [Identifying Subsystems](#identifyingSubsystems)
+   * [Mapping Subsystems to Hardware](#mapping)
+   * [Persistent Data Storage](#data)
+   * [Network Protocal](#network)
+   * [Global Control Flow](#controlFlow)
+   * [Hardware Requirements](#hardward)
+ * [Algorithms and Data Structures](#algorithmsDataStructures)
+   * [Algorithms](#algorithms)
+   * [Data Structures](#dataStructures)
+ * [User Interface Design and Implementation](#uIDandI)
+
+
+ 
 
 ### <a name="changeSummary"></a>Summary of Changes
 <hr>
@@ -447,3 +466,63 @@ User can login to original account or create a new account, if they are new to t
 |HTML/CSS       |_Nick_                |
 |Algorithms     |_Travis_              |
 |Backend        |_Luke, Luis, Tara_    |
+
+### <a name="interation"></a>Interation Diagram
+<hr>
+
+**Use case 1 & 2**
+
+![image](docs/diagrams/Interaction_Diagrams/Use_case_1-2_interaction_diagram.jpg)
+
+**Use case 3**
+
+We have decided to put this use case on hold, to focus on the others. If there is time to implement them we will come back to them.
+
+**Use case 4**
+
+![image](docs/diagrams/Interaction_Diagrams/Use_case_4_interaction_diagram.jpg)
+
+**Use case 5**
+
+![image](docs/diagrams/Interaction_Diagrams/Use_case_5_interaction_diagram.jpg)
+
+**Use case 6**
+
+![image](docs/diagrams/Interaction_Diagrams/Use_case_6_interaction_diagram.jpg)
+
+**Use case 7**
+
+![image](docs/diagrams/Interaction_Diagrams/Use_case_7_interaction_diagram.jpg)
+
+### <a name="interface"></a>Class Diagram and Interface Specification
+<hr>
+
+#### <a name="classDiagram"></a>Class Diagram
+-![image](docs/diagrams/classDiagram.png)
+<hr>
+
+<!--PLACEHOLDER-->
+### <a name="system"></a>System Architecture and System Design
+<hr>
+
+#### <a name="architcturalStyle"></a>Architecural Style
+<hr>
+
+For our archictecture we used a central database to store all data.  It is a MYSQL database. The webserver pulls all data from this one database.
+
+
+#### <a name="identifyinSubsystems"></a>Identifying Subsystems
+<hr>
+
+
+  ![image](diagrams/subsystems.png)
+  <br>
+    The three subsystems are the client's browser, the server, and the database.  The client will access the server and the server retrieve data from the database. 
+
+#### <a name="mapping"></a>Mapping Subsystems to Hardware
+<hr>
+
+    There is a server that serves a website.  
+    Users are able to access the webpage with a web browser.  The UI that the user interacts with
+    is run on the user's computer that is being used to visit the webpage.  The web server 
+    runs on a linux machine that is being hosted remotely.  
