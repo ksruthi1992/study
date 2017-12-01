@@ -25,7 +25,7 @@
 
     //START Routing - - - - - - - - - - - - - - - - - - *
     //Location
-    $app->get('/[{campus}/[{building}[/{floor}]]]', function ($request, $response, $args) {
+    $app->get('/[{campus}/[{building}[/{floor}]]]', function ($request, $response, $args) use(&$campus){
             if (isset($args['floor'])) {
                 //Floor
                 $data['campus']=$args['campus'];
@@ -41,17 +41,46 @@
                 $target="/views/building.twig";
             } elseif (isset($args['campus'])){
                 //Campus
-                $data['campus']=$args['campus'];
+                $data['campus']=$campusName=$args['campus'];
+
+                //Store campus name into data to be sent
+                $data['campusName']=$campusName;
+
+                //Pull all campuses
+                $campusesName=$campus->showCampus("all");
+                $data['campusesName']=$campusesName;
 
                 $target="/views/campus.twig";
             }else {
                 //Homepage unless campus previously selected
                 if(isset($_SESSION['campus'])){
                     //Redirect to campus by session
-                    $data['campus']=$_SESSION['campus'];
+                    $data['campus']=$selectedCampus=$_SESSION['campus'];
+
+                    //Pull selected campus
+                    $campusName=$campus->showCampus($selectedCampus);
+                    //Store campus name into data to be sent
+                    $data['campusName']=$campusName[0]['name'];
+
+                    //All campuses
+
                     $target="/views/campus.twig";
                 }else{
                     //Homepage
+                    //Auto-select CSUS id which is 1
+                    $_SESSION['campus']=$selectedCampus=1;
+
+                    //Pull selected campus
+                    $campusName=$campus->showCampus($selectedCampus);
+                    //Store campus name into data to be sent
+                    $data['campusName']=$campusName[0]['name'];
+
+                    //Pull all campuses
+                    $campusesName=$campus->showCampus("all");
+                    $data['campusesName']=$campusesName;
+
+                    //Set target to home
+                    $data['page']=$campusName[0]['name'];
                     $target = "/views/home.twig";
                 }
             }
