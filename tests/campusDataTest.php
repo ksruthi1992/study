@@ -9,15 +9,18 @@ use PHPUnit\Framework\TestCase;
 
 Class campusDataTest extends TestCase{
 
-	public function showCampusTest(){
-		$this->assertEquals(showCampus("all"), "");
+	public function testShowCampus(){
+
+		$this->assertEquals("",campusData::showCampus("all"));
 	}
 
-	public function showBuildingTest(){
-		$this->assertEquals(showBuilding("all"), "");
+	public function testShowBuilding(){
+		$this->assertEquals("",campusData::showBuilding(1,"all"));
 	}
 
-	public function showFloorTest(){
-		$this->assertEquals(showFloor("all"), '');
+	public function testShowFloor(){
+		$this->assertEquals("",campusData::showFloor(1,"all"));
 	}
 }
+
+?>
