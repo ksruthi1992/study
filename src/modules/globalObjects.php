@@ -1,2 +1,2 @@
 <?php
-    $data['campus']="the test";
+    //$data['campus']="the test";

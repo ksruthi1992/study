@@ -39,6 +39,25 @@ Team members:
  * [Progress Report and Plan of Work](#progressReportandPOW)
    * [Progress Report](#progressReport)
    * [Plan of Work](#planOfWork)
+ * [Interaction Diagrams](#interation)
+ <!--Temporary separator just so I can see better -->
+ * [Class Diagram and Interface Specification](#interface)
+   * [Class Diagram](#classDiagram)
+ * [System Architecture and System Design](#system)
+   * [Architectural Style](#architecturalStyle)
+   * [Identifying Subsystems](#identifyingSubsystems)
+   * [Mapping Subsystems to Hardware](#mapping)
+   * [Persistent Data Storage](#data)
+   * [Network Protocal](#network)
+   * [Global Control Flow](#controlFlow)
+   * [Hardware Requirements](#hardward)
+ * [Algorithms and Data Structures](#algorithmsDataStructures)
+   * [Algorithms](#algorithms)
+   * [Data Structures](#dataStructures)
+ * [User Interface Design and Implementation](#uIDandI)
+
+
+ 
 
 ### <a name="changeSummary"></a>Summary of Changes
 <hr>
@@ -107,7 +126,7 @@ Use Case Description
 |->                 |3.User looks through open areas                           |
 |<-                 |4.Database returns available space in the requested area  |
 
-![image](diagrams/UC1_Diagram.png)
+![image](docs/diagrams/UC1_Diagram.png)
 
 |Use Case 2         |User searches for a study space with amenity                                        |
 |-------------------|------------------------------------------------------------------------------------|
@@ -126,7 +145,7 @@ Use Case Description
 |->                 |3a.User selects combanation of unavailable amenities                                |
 |<-                 |	4.Database returns and displays message to refine search                         |
 
-![image](diagrams/UC2_Diagram.png)
+![image](docs/diagrams/UC2_Diagram.png)
 
 |Use Case 3         |                                  |
 |-------------------|----------------------------------|
@@ -142,7 +161,7 @@ Use Case Description
 |->		    |3. User reserves available room   |
 |<-		    |4. System displays confirmation   | 
 
-![image](diagrams/UC3_diagram.png)
+![image](docs/diagrams/UC3_diagram.png)
 
 |Use Case 4         |System logs user in                                        |
 |-------------------|------------------------------------------------------------------------------------|
@@ -163,7 +182,7 @@ Use Case Description
 |Second Alt. Flow of Events| |
 |<-|3b. System displays that the user was unable to log in successfully and is returned to the main menu|
 
-![image](diagrams/UC4.png)
+![image](docs/diagrams/UC4.png)
 
 |Use Case 5         |System analyzes trends                  |
 |-------------------|----------------------------------------|
@@ -178,7 +197,7 @@ Use Case Description
 |->                 | update triggers analysis algorithm     |
 |<-                 | Database releases updated trend data   |
 
-![image](diagrams/UC5.png)
+![image](docs/diagrams/UC5.png)
 
 |Use Case 6          |User inputs how busy an area is                       |
 |--------------------|------------------------------------------------------|
@@ -199,7 +218,7 @@ Use Case Description
 |**->**              |3b. _User selects the cancel option_                  |
 |**<-**              |4b. _System brings user back to the floor status page_|
 
-![image](diagrams/UC6_Diagram.png)
+![image](docs/diagrams/UC6_Diagram.png)
 
 |Use Case 7          |User enters a comment                                 |
 |--------------------|------------------------------------------------------|
@@ -219,7 +238,7 @@ Use Case Description
 |**->**              |3b. _User selects the cancel option_                  |
 |**<-**              |4b. _System closes text box, but stays on the page_   |
 
-![image](diagrams/UC7_Diagram.png)
+![image](docs/diagrams/UC7_Diagram.png)
 
 **Traceability Matrix**  
 
@@ -239,11 +258,11 @@ Use Case Description
 
 #### <a name="diagrams"></a>System Sequence Diagrams
 
-![image](diagrams/System_Sequence_Diagrams/usecase_1-2.png)
+![image](docs/diagrams/System_Sequence_Diagrams/usecase_1-2.png)
 
-![image](diagrams/System_Sequence_Diagrams/usecase_6.png)
+![image](docs/diagrams/System_Sequence_Diagrams/usecase_6.png)
 
-![image](diagrams/System_Sequence_Diagrams/usecase_3.png)
+![image](docs/diagrams/System_Sequence_Diagrams/usecase_3.png)
 
 
 ### <a name="nonfunctional"></a>Nonfunctional Requirements
@@ -260,7 +279,7 @@ Use Case Description
 
 #### <a name="domain_model"></a>Domain Model
 
-![image](diagrams/domainmodel.png)
+![image](docs/diagrams/domainmodel.png)
 
 #### <a name="data"></a>Persistent Data Storage
 <hr>
@@ -365,21 +384,21 @@ Arrays
 The user will start at the "Find a Spot" page, which will display what campus you are at and a search prompt to find desired building. Below, there is a list of all the buildings that can be clicked on to show the availability for each floor the building has.
 
 
-![image](diagrams/FindSpot.PNG)
+![image](docs/diagrams/FindSpot.PNG)
 
 
-![image](diagrams/FindSpot2.PNG)
+![image](docs/diagrams/FindSpot2.PNG)
 
 
 #### Menu
 The sidebar menu will be available to the user at all times.  One tap on the menu icon will pull up the menu and allow the user to easily navigate the site. Can choose between "Find a Spot", "My Account", and "Support"
 
-![image](diagrams/Menu.PNG)
+![image](docs/diagrams/Menu.PNG)
 
 #### Login Page
 User can login to original account or create a new account, if they are new to the site.
 
-![image](diagrams/Login.PNG)
+![image](docs/diagrams/Login.PNG)
 
 #### Scenario 1: User looks for any open area nearby.
 1. Navigation: 1 Total Click
@@ -435,8 +454,8 @@ User can login to original account or create a new account, if they are new to t
     Option for users to leave comments have not been implemented yet.
 #### <a name="planOfWork"></a>Plan of Work
 
-![image](diagrams/PlanOfWorkChart.png)
-![image](diagrams/PlanOfWorkGraph.png)
+![image](docs/diagrams/PlanOfWorkChart.png)
+![image](docs/diagrams/PlanOfWorkGraph.png)
 
 ### Breakdown of Responsibilities
 
@@ -447,3 +466,63 @@ User can login to original account or create a new account, if they are new to t
 |HTML/CSS       |_Nick_                |
 |Algorithms     |_Travis_              |
 |Backend        |_Luke, Luis, Tara_    |
+
+### <a name="interation"></a>Interation Diagram
+<hr>
+
+**Use case 1 & 2**
+
+![image](docs/diagrams/Interaction_Diagrams/Use_case_1-2_interaction_diagram.jpg)
+
+**Use case 3**
+
+We have decided to put this use case on hold, to focus on the others. If there is time to implement them we will come back to them.
+
+**Use case 4**
+
+![image](docs/diagrams/Interaction_Diagrams/Use_case_4_interaction_diagram.jpg)
+
+**Use case 5**
+
+![image](docs/diagrams/Interaction_Diagrams/Use_case_5_interaction_diagram.jpg)
+
+**Use case 6**
+
+![image](docs/diagrams/Interaction_Diagrams/Use_case_6_interaction_diagram.jpg)
+
+**Use case 7**
+
+![image](docs/diagrams/Interaction_Diagrams/Use_case_7_interaction_diagram.jpg)
+
+### <a name="interface"></a>Class Diagram and Interface Specification
+<hr>
+
+#### <a name="classDiagram"></a>Class Diagram
+-![image](docs/diagrams/classDiagram.png)
+<hr>
+
+<!--PLACEHOLDER-->
+### <a name="system"></a>System Architecture and System Design
+<hr>
+
+#### <a name="architcturalStyle"></a>Architecural Style
+<hr>
+
+For our archictecture we used a central database to store all data.  It is a MYSQL database. The webserver pulls all data from this one database.
+
+
+#### <a name="identifyinSubsystems"></a>Identifying Subsystems
+<hr>
+
+
+  ![image](diagrams/subsystems.png)
+  <br>
+    The three subsystems are the client's browser, the server, and the database.  The client will access the server and the server retrieve data from the database. 
+
+#### <a name="mapping"></a>Mapping Subsystems to Hardware
+<hr>
+
+    There is a server that serves a website.  
+    Users are able to access the webpage with a web browser.  The UI that the user interacts with
+    is run on the user's computer that is being used to visit the webpage.  The web server 
+    runs on a linux machine that is being hosted remotely.  
