@@ -26,11 +26,6 @@ User can login to original account or create a new account, it they are new to t
 ![image](diagrams/Login.png)
 <br>
 #### Scenario 1: User looks for any open area nearby.
-1. Navigation: 1 Total Click
-* User clicks on one of the nearby listed buildings for information about open rooms.
-2. Data Entry: None
-3. Fraction of Nav vs Data Entry (Nav/Data)
-* All Navigation
 
 #### Scenario 2: User looks for any open areas nearby.
 1. Navigation: 1 Total Click
