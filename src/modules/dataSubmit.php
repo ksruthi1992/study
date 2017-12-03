@@ -7,7 +7,7 @@
 			$this->connection=$connection;
 		}
 
-		public function insertDataEntry($campus){
+		public function insertDataEntry($campus_id, $building_id, $floor_id, $data){
 
         }
         
