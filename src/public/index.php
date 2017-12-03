@@ -81,6 +81,17 @@
 
                     //Set target to home
                     $data['page']=$campusName[0]['name'];
+
+                    //Defaults everything to Sac State
+                    //This passes all of the buildings and the floors
+                    $data['campus'] = $campus->showCampus("all");	  
+                    $data['buildings'] =  $campus->showBuilding("1", "all");
+                    foreach ( $data['buildings'] as $building) {
+ 
+                        $data['floors'][$building['id']] = $campus->showFloor( $building['id'], "all" ); 
+                     
+                    }
+                    
                     $target = "/views/home.twig";
                 }
             }
