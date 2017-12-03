@@ -154,7 +154,12 @@
       console.log("how full " + how_full);
       console.log("Mah Floor " + floor);
       console.log("mah building " + building);
-      $.post("/submit", floor, function(data){console.log(data)} );
+      data = {};
+      data["campus_id"]     = 1;
+      data["building_id"]   = building;
+      data["floor_id"]      = floor;
+      data["data"]          = how_full;
+      $.post("/submit", data, function(data){console.log(data)} );
 
     }
   </script>
