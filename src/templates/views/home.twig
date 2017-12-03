@@ -14,7 +14,14 @@
         {% endfor %}
       </h1>
     </div>
-
+{{ dump(floors)}}
+<br>
+{% for camp in campus  %}
+ {{ dump(camp) }}
+<br>
+{{camp['name']}}
+<br>
+{% endfor %}
     <!-- Search -->
     <div class="ui segment" style="border-bottom: 0; margin-bottom: 0; padding-bottom: 0;">
       <div class="ui category search">
@@ -61,12 +68,15 @@
             </div>
             <div class="content">
               <i class="large info icon"></i><a href="/building?buildingSelected={{ building.id }}" style="text-decoration: none;color: black;">Expand building description</a><br><br>
-              {% set particularBuilding = loop.index %}
+              {% set particularBuilding = loop.index  %}
               {% for floor in floors[particularBuilding] %}
-                <a href="/floor?buildingSelected={{ building.id }}&floorSelected={{ floors[particularBuilding][loop.index].name }}" style="color: black;">Floor {{ floors[particularBuilding][loop.index].name }}</a>
-                  
+               <div>
+                <span class="ui" style="color: black; font-size: 16px;">Floor {{ floor.name }}</span>
+                <button style="float: right;" class="ui tiny button" onClick="submitData({{ floor.name }}, {{ particularBuilding }})">Submit Status</button>
+           </div>
                 {% if (loop.last == true) %}
-                  <br><br>
+                 <br>
+                 <!-- <br><br> -->
                 {% endif %}
                 <div class="ui small indicating progress" data-percent="100">
                   <div class="bar"></div>
@@ -121,7 +131,54 @@
           }
         ).hide();
     });
+
+    function submitData(floor_num, building_num) {
+
+      console.log("floor num: " + floor_num);
+      console.log("building: " + building_num);
+                    $('.ui.basic.modal')
+                      .modal('show');
+                    $('.ui.basic.modal').attr("data-floor" ,floor_num); 
+                    $('.ui.basic.modal').attr("data-building" ,building_num); 
+                    
+
+                        return false;
+                    
+    }
+    function confirmData (how_full) {
+
+      floor =    $('.ui.basic.modal').attr("data-floor"); 
+      building = $('.ui.basic.modal').attr("data-building");
+      
+      $('.ui.basic.modal')
+        .modal('hide')
+      ;
+
+      console.log("how full " + how_full);
+      console.log("Mah Floor " + floor);
+      console.log("mah building " + building);
+      $.post("/submit", floor, function(data){console.log(data)} );
+
+    }
   </script>
   
+</div>
+<div class="ui basic modal" id="modal">
+  <div class="header"> How full is this floor?</div>
+  <div class="content">
+    <button class="ui green inverted button" onClick="confirmData(1)"> Free </button>
+    <button class="ui yellow inverted button" onClick="confirmData(2)"> Moderate </button>
+    <button class="ui red inverted button" onClick="confirmData(3)">Full </button> 
+  </div>
+</div>
+<div>
+<button class="ui button" onClick="(function(){
+$('.ui.basic.modal')
+  .modal('show')
+;
+
+    return false;
+})();return false;"
+>popup test </button>
 </div>
 {% endblock %}
