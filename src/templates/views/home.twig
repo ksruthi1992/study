@@ -146,6 +146,7 @@
       floor =    $('.ui.basic.modal').attr("data-floor"); 
       building = $('.ui.basic.modal').attr("data-building");
       
+
       $('.ui.basic.modal')
         .modal('hide')
       ;
@@ -167,14 +168,5 @@
     <button class="ui red inverted button" onClick="postData(3)">Full </button> 
   </div>
 </div>
-<div>
-<button class="ui button" onClick="(function(){
-$('.ui.basic.modal')
-  .modal('show')
-;
 
-    return false;
-})();return false;"
->popup test </button>
-</div>
 {% endblock %}
