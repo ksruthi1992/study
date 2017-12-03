@@ -139,8 +139,8 @@
 $app->post('/submit', function ($request, $response)  use(&$insert_obj) {
     //Submit Data
     $data = $request->getParsedBody();
-    $response = $data;
-    $insert_obj->insertDataEntry(1,1,1,1);
+
+    $insert_obj->insertDataEntry($data["campus_id"],$data["building_id"],$data["floor_id"],$data["data"]);
 });
 
 //END Post Requests - - - - - - - - - - - - - - - - - - - - *
