@@ -1,5 +1,6 @@
 <?php
 
+
 	class campusData{
 		protected $connection;
 
