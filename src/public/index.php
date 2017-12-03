@@ -134,6 +134,16 @@
 //END Routing - - - - - - - - - - - - - - - - - - *
 
 
+//START Post Requests - - - - - - - - - - - - - - - - - - - *
+
+$app->post('/submit', function ($request, $response) {
+    //Create book
+    $data = $request->getParsedBody();
+    $response = $data;
+
+});
+
+//END Post Requests - - - - - - - - - - - - - - - - - - - - *
 
 //START Footer Settings - - - - - - - - - - - - - - - - - - *
     //Destroy Session
