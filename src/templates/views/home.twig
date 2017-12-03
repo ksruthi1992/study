@@ -125,6 +125,7 @@
         ).hide();
     });
 
+    //Opens the data modal and sets attr of the modal
     function submitData(floor_num, building_num) {
 
       console.log("floor num: " + floor_num);
@@ -138,7 +139,9 @@
                         return false;
                     
     }
-    function confirmData (how_full) {
+
+    //Submits data through a post request
+    function postData (how_full) {
 
       floor =    $('.ui.basic.modal').attr("data-floor"); 
       building = $('.ui.basic.modal').attr("data-building");
@@ -159,9 +162,9 @@
 <div class="ui basic modal" id="modal">
   <div class="header"> How full is this floor?</div>
   <div class="content">
-    <button class="ui green inverted button" onClick="confirmData(1)"> Free </button>
-    <button class="ui yellow inverted button" onClick="confirmData(2)"> Moderate </button>
-    <button class="ui red inverted button" onClick="confirmData(3)">Full </button> 
+    <button class="ui green inverted button" onClick="postData(1)"> Free </button>
+    <button class="ui yellow inverted button" onClick="postData(2)"> Moderate </button>
+    <button class="ui red inverted button" onClick="postData(3)">Full </button> 
   </div>
 </div>
 <div>
