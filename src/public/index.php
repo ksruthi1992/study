@@ -136,11 +136,11 @@
 
 //START Post Requests - - - - - - - - - - - - - - - - - - - *
 
-$app->post('/submit', function ($request, $response) {
-    //Create book
+$app->post('/submit', function ($request, $response)  use(&$insert_obj) {
+    //Submit Data
     $data = $request->getParsedBody();
     $response = $data;
-
+    $insert_obj->insertDataEntry(1,1,1,1);
 });
 
 //END Post Requests - - - - - - - - - - - - - - - - - - - - *
