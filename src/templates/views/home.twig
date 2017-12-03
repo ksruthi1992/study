@@ -6,9 +6,9 @@
 
     <!-- Header -->
     <div class="ui segment">
-      <h1>Find a spot at 
+      <h1>Find a spot at Sac State
         {% for campus in campuses %}
-          {% if campus.idcampus == campusSelected %}
+          {% if campus.idcampus == 1 %}
             {{ campus.name }}
           {% endif %}
         {% endfor %}
