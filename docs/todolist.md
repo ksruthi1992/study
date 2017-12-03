@@ -2,7 +2,7 @@ Report 3 requirements
 1. cover page and Individual Contributions -- Luke
 2. Table of contents -- Luke (in progress)
 3. Summary of Changes  --
-4. Customer Statement of Requirements --
+4. Customer Statement of Requirements --Tara
 5. Glossary -- 
 6. Functional Requirements from report 1 with adjustments --
 7. Nonfunctional Requirements from report 1 with adjustments --
@@ -15,4 +15,4 @@ Report 3 requirements
 14. Yser interface design and implementation --
 15. History of work and current status of implementation --
 16. Conclusions and future work--
-17. References --
+17. References -- Travis
