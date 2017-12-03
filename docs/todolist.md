@@ -9,7 +9,7 @@ Report 3 requirements
 8. Effort Estimation Using use case points  --
 9. Domain Analysis from report 1 w/ use cases to be discussed in final demo --
 10. Interaction diagrams from report 2 --Travis
-11. class diagrams and interface specifications from report 2 --
+11. class diagrams and interface specifications from report 2 -- Luke
 12. System architecture and system design from report 2 --
 13. Algorithms and Data Structures from report 2 --Travis
 14. Yser interface design and implementation --
