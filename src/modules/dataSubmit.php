@@ -13,7 +13,7 @@
 			$building_id   = 1;
 			$floor_id      = 1;
 			$data          = 1;
-			
+
 			$query = " INSERT INTO data 
 					   (campus_id, building_id, floor_id, data)
 					   VALUES
