@@ -7,7 +7,7 @@ Report 3 requirements
 6. Functional Requirements from report 1 with adjustments --Alex
 7. Nonfunctional Requirements from report 1 with adjustments --Alex
 8. Effort Estimation Using use case points  --Travis
-9. Domain Analysis from report 1 w/ use cases to be discussed in final demo --
+9. Domain Analysis from report 1 w/ use cases to be discussed in final demo --Nick
 10. Interaction diagrams from report 2 --Travis
 11. class diagrams and interface specifications from report 2 -- Luke
 12. System architecture and system design from report 2 --Edward
