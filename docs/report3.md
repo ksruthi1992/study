@@ -126,7 +126,7 @@ Use Case Description
 |->                 |3.User looks through open areas                           |
 |<-                 |4.Database returns available space in the requested area  |
 
-![image](docs/diagrams/UC1_Diagram.png)
+![image](diagrams/UC1_Diagram.png)
 
 |Use Case 2         |User searches for a study space with amenity                                        |
 |-------------------|------------------------------------------------------------------------------------|
@@ -145,7 +145,7 @@ Use Case Description
 |->                 |3a.User selects combanation of unavailable amenities                                |
 |<-                 |	4.Database returns and displays message to refine search                         |
 
-![image](docs/diagrams/UC2_Diagram.png)
+![image](diagrams/UC2_Diagram.png)
 
 |Use Case 3         |                                  |
 |-------------------|----------------------------------|
@@ -161,7 +161,7 @@ Use Case Description
 |->		    |3. User reserves available room   |
 |<-		    |4. System displays confirmation   | 
 
-![image](docs/diagrams/UC3_diagram.png)
+![image](diagrams/UC3_diagram.png)
 
 |Use Case 4         |System logs user in                                        |
 |-------------------|------------------------------------------------------------------------------------|
@@ -182,7 +182,7 @@ Use Case Description
 |Second Alt. Flow of Events| |
 |<-|3b. System displays that the user was unable to log in successfully and is returned to the main menu|
 
-![image](docs/diagrams/UC4.png)
+![image](diagrams/UC4.png)
 
 |Use Case 5         |System analyzes trends                  |
 |-------------------|----------------------------------------|
@@ -197,7 +197,7 @@ Use Case Description
 |->                 | update triggers analysis algorithm     |
 |<-                 | Database releases updated trend data   |
 
-![image](docs/diagrams/UC5.png)
+![image](diagrams/UC5.png)
 
 |Use Case 6          |User inputs how busy an area is                       |
 |--------------------|------------------------------------------------------|
@@ -218,7 +218,7 @@ Use Case Description
 |**->**              |3b. _User selects the cancel option_                  |
 |**<-**              |4b. _System brings user back to the floor status page_|
 
-![image](docs/diagrams/UC6_Diagram.png)
+![image](diagrams/UC6_Diagram.png)
 
 |Use Case 7          |User enters a comment                                 |
 |--------------------|------------------------------------------------------|
@@ -238,7 +238,7 @@ Use Case Description
 |**->**              |3b. _User selects the cancel option_                  |
 |**<-**              |4b. _System closes text box, but stays on the page_   |
 
-![image](docs/diagrams/UC7_Diagram.png)
+![image](diagrams/UC7_Diagram.png)
 
 **Traceability Matrix**  
 
@@ -258,11 +258,11 @@ Use Case Description
 
 #### <a name="diagrams"></a>System Sequence Diagrams
 
-![image](docs/diagrams/System_Sequence_Diagrams/usecase_1-2.png)
+![image](diagrams/System_Sequence_Diagrams/usecase_1-2.png)
 
-![image](docs/diagrams/System_Sequence_Diagrams/usecase_6.png)
+![image](diagrams/System_Sequence_Diagrams/usecase_6.png)
 
-![image](docs/diagrams/System_Sequence_Diagrams/usecase_3.png)
+![image](diagrams/System_Sequence_Diagrams/usecase_3.png)
 
 
 ### <a name="nonfunctional"></a>Nonfunctional Requirements
@@ -279,7 +279,7 @@ Use Case Description
 
 #### <a name="domain_model"></a>Domain Model
 
-![image](docs/diagrams/domainmodel.png)
+![image](diagrams/domainmodel.png)
 
 #### <a name="data"></a>Persistent Data Storage
 <hr>
@@ -384,21 +384,21 @@ Arrays
 The user will start at the "Find a Spot" page, which will display what campus you are at and a search prompt to find desired building. Below, there is a list of all the buildings that can be clicked on to show the availability for each floor the building has.
 
 
-![image](docs/diagrams/FindSpot.PNG)
+![image](diagrams/FindSpot.PNG)
 
 
-![image](docs/diagrams/FindSpot2.PNG)
+![image](diagrams/FindSpot2.PNG)
 
 
 #### Menu
 The sidebar menu will be available to the user at all times.  One tap on the menu icon will pull up the menu and allow the user to easily navigate the site. Can choose between "Find a Spot", "My Account", and "Support"
 
-![image](docs/diagrams/Menu.PNG)
+![image](diagrams/Menu.PNG)
 
 #### Login Page
 User can login to original account or create a new account, if they are new to the site.
 
-![image](docs/diagrams/Login.PNG)
+![image](diagrams/Login.PNG)
 
 #### Scenario 1: User looks for any open area nearby.
 1. Navigation: 1 Total Click
@@ -454,8 +454,8 @@ User can login to original account or create a new account, if they are new to t
     Option for users to leave comments have not been implemented yet.
 #### <a name="planOfWork"></a>Plan of Work
 
-![image](docs/diagrams/PlanOfWorkChart.png)
-![image](docs/diagrams/PlanOfWorkGraph.png)
+![image](diagrams/PlanOfWorkChart.png)
+![image](diagrams/PlanOfWorkGraph.png)
 
 ### Breakdown of Responsibilities
 
@@ -472,7 +472,7 @@ User can login to original account or create a new account, if they are new to t
 
 **Use case 1 & 2**
 
-![image](docs/diagrams/Interaction_Diagrams/Use_case_1-2_interaction_diagram.jpg)
+![image](diagrams/Interaction_Diagrams/Use_case_1-2_interaction_diagram.jpg)
 
 **Use case 3**
 
@@ -480,25 +480,25 @@ We have decided to put this use case on hold, to focus on the others. If there i
 
 **Use case 4**
 
-![image](docs/diagrams/Interaction_Diagrams/Use_case_4_interaction_diagram.jpg)
+![image](diagrams/Interaction_Diagrams/Use_case_4_interaction_diagram.jpg)
 
 **Use case 5**
 
-![image](docs/diagrams/Interaction_Diagrams/Use_case_5_interaction_diagram.jpg)
+![image](diagrams/Interaction_Diagrams/Use_case_5_interaction_diagram.jpg)
 
 **Use case 6**
 
-![image](docs/diagrams/Interaction_Diagrams/Use_case_6_interaction_diagram.jpg)
+![image](diagrams/Interaction_Diagrams/Use_case_6_interaction_diagram.jpg)
 
 **Use case 7**
 
-![image](docs/diagrams/Interaction_Diagrams/Use_case_7_interaction_diagram.jpg)
+![image](diagrams/Interaction_Diagrams/Use_case_7_interaction_diagram.jpg)
 
 ### <a name="interface"></a>Class Diagram and Interface Specification
 <hr>
 
 #### <a name="classDiagram"></a>Class Diagram
--![image](docs/diagrams/classDiagram.png)
+-![image](diagrams/classDiagram.png)
 <hr>
 
 <!--PLACEHOLDER-->
