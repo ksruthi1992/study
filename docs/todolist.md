@@ -1,7 +1,7 @@
 Report 3 requirements
-1. cover page and Individual Contributions -- Luke
+1. Cover page and Individual Contributions -- Luke
 2. Table of contents -- Luke (in progress)
-3. Summary of Changes  --
+3. Summary of Changes  -- Alex (in progress)
 4. Customer Statement of Requirements --Tara
 5. Glossary --Nick  
 6. Functional Requirements from report 1 with adjustments --Alex
