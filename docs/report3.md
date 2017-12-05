@@ -26,7 +26,7 @@ Team members:
 ### Table of contents
  * [Summary of Changes](#changeSummary)
  * [Customer Statement of Requirements](#requirements)
- * [Glossary](#glossary) 
+ * [Glossary](#glossary)
  * [Functional Requirments](#functional)
   * [Stakeholders](#stakeholders)
   * [Actors and Goals](#actor)
@@ -56,9 +56,11 @@ Team members:
    * [Data Structures](#dataStructures)
  * [User Interface Design and Implementation](#uIDandI)
  * [History of Work](#history)
+ * [Conclusion and Future Work](#conclusion)
+ * [References](#references)
 
 
- 
+
 
 ### <a name="changeSummary"></a>Summary of Changes
 <hr>
@@ -75,7 +77,7 @@ Most of the changes here are deletions due to having too many extra features on 
 |**REQ - 1** |5       |Find place on campus to study                                              |
 |**REQ - 2** |3       |System finds a place near me                                               |
 |**REQ - 3** |3       |System is easier to use than a map                                         |
-|**REQ - 4** |1       |System can find group space                                                | 
+|**REQ - 4** |1       |System can find group space                                                |
 |**REQ - 5** |2       |System can find quiet(nap) space                                           |
 |**REQ - 6** |3       |User can reserve a room                                                    |
 |**REQ - 7** |3       |System can search for amenities (locks/whiteboards/outlets/wi-fi/printers) |
@@ -99,22 +101,22 @@ Most of the changes here are deletions due to having too many extra features on 
 #### <a name="actor"></a>Actors and Goals  
 <hr>
 
- *  Users-Use the system to find places to study 
- *  Admins-Manage the system to add or remove locations 
+ *  Users-Use the system to find places to study
+ *  Admins-Manage the system to add or remove locations
 
 #### <a name="usecase"></a>Use Cases  
-<hr> 
+<hr>
 
 <!-- Hey guys, let's just assign our names to these okay? -->
 Use Case Description  
  * UC-1 User searches for open study space  
  * UC-2 User searches for study space with amenity  
  * UC-3 User reserves a room  
- * UC-4 System logs user in 
+ * UC-4 System logs user in
  * UC-5 System analyzes trends  			
  * UC-6 User input how busy an area is  
- * UC-7 User leaves comment 
- 
+ * UC-7 User leaves comment
+
  <hr>
 
 |Use Case 1         |User searches for open study space                        |
@@ -164,7 +166,7 @@ Use Case Description
 |->                 |1. User selects reserve a room option|
 |<-                 |2. System displays whether or not room is available|
 |->		    |3. User reserves available room   |
-|<-		    |4. System displays confirmation   | 
+|<-		    |4. System displays confirmation   |
 
 ![image](diagrams/UC3_diagram.png)
 
@@ -236,7 +238,7 @@ Use Case Description
 |Postconditions      |Comment is submitted and stored in database           |
 |**Flow of events**  |**Scenario 1**                                        |
 |**->**              |1. _User selects a floor/room to comment on_          |
-|**<-**              |2. _System displays a text box_                       | 
+|**<-**              |2. _System displays a text box_                       |
 |**->**              |3a. _User enters and submits a comment_               |
 |**<-**              |4a. _System adds comment to db_                       |
 |**Alternate events**|**Scenario 2**                                        |
@@ -338,7 +340,7 @@ Environmental Complexity Factor (ECF)
 Use Case Points (UCP) = UUCP x TCF X ECF = 52 X 0.84 X 1.07 = 46.73 = 47
 
 **Project Duration Estimation**  = 47 X 30 = 1410 Man Hours
-	
+
 ### <a name="domain_analysis"></a>Domain Analysis
 
 #### <a name="domain_model"></a>Domain Model
@@ -361,14 +363,14 @@ For our archictecture we used a central database to store all data.  It is a MYS
 
   ![image](diagrams/subsystems.png)
   <br>
-    The three subsystems are the client's browser, the server, and the database.  The client will access the server and the server retrieve data from the database. 
+    The three subsystems are the client's browser, the server, and the database.  The client will access the server and the server retrieve data from the database.
 
 #### <a name="mapping"></a>Mapping Subsystems to Hardware
 <hr>
 
     There is a server that serves a website.  
     Users are able to access the webpage with a web browser.  The UI that the user interacts with
-    is run on the user's computer that is being used to visit the webpage.  The web server 
+    is run on the user's computer that is being used to visit the webpage.  The web server
     runs on a linux machine that is being hosted remotely.  
 #### <a name="data"></a>Persistent Data Storage
 <hr>
@@ -377,9 +379,9 @@ Yes, we are using a relational database for data storage.  There are _seven_ tab
 
 1. Data Table     - Stores the user input as an int, and is associated with a floor, campus, and building id.
 
-2. Building Table - Stores information about the building that will apply to all floors. 
+2. Building Table - Stores information about the building that will apply to all floors.
 
-3. Floor Table    - Stores information about each floor, and is associated with the building id. 
+3. Floor Table    - Stores information about each floor, and is associated with the building id.
 
 4. Campus Table   - Stores information about the various campuses, has a campus id.
 
@@ -387,12 +389,12 @@ Yes, we are using a relational database for data storage.  There are _seven_ tab
 
 6. Cached_Data Table - Stores cached data about each floor, and is associated with building, floor, and campus ids
 
-7.  User Table - Stores the log in info for user accounts, has a hashed password and a username and email. 
+7.  User Table - Stores the log in info for user accounts, has a hashed password and a username and email.
 
 #### <a name="network"></a>Network Protocal
 <hr>
 
-We are using HTTP. We chose HTTP simply because the majority of the group had some experience with HTTP, and it is easy to work with.  This is the network protocal that our framework of choice uses. 
+We are using HTTP. We chose HTTP simply because the majority of the group had some experience with HTTP, and it is easy to work with.  This is the network protocal that our framework of choice uses.
 
 #### <a name="controlFlow"></a>Global Control Flow
 <hr>
@@ -400,7 +402,7 @@ We are using HTTP. We chose HTTP simply because the majority of the group had so
   ##### Execution Orderness
 
     The system is not procedure driven.  The user has the ability to select which part of
-    the website that they would like to interact with.  There is no specific order that the 
+    the website that they would like to interact with.  There is no specific order that the
     client has to interact with the website.  
 
   ##### Time Dependency
@@ -408,11 +410,11 @@ We are using HTTP. We chose HTTP simply because the majority of the group had so
     There are automated algorithms that will run at specific times in the day.  
     These are realtime events that occur periodically.  The algorithms are for caching analyzed trends.
 
-  ##### Concurrency 
+  ##### Concurrency
 
-    This system will run on an apache server.  That server will handle multiple requests 
-    and allow for serveral users.  The users will all access the same database.  The apache php 
-    will be single threaded. 
+    This system will run on an apache server.  That server will handle multiple requests
+    and allow for serveral users.  The users will all access the same database.  The apache php
+    will be single threaded.
 
 #### <a name="hardware"></a>Hardware Requirements
 <hr>
@@ -521,7 +523,7 @@ User can login to original account or create a new account, if they are new to t
 #### Scenario 2: User looks for any open areas, with desired features, nearby.
  -1. Navigation: 1 Total Click
  -* User clicks on desired features.
- 
+
 #### Scenario 3: User contributes data for a room.
  -1. Navigation: 4 Total Clicks
  -* User clicks on one of the nearby listed buildings for information about open rooms.
@@ -549,13 +551,13 @@ User can login to original account or create a new account, if they are new to t
 
 
 ### UC-1
-    A search bar has been added to the front page of the website. 
+    A search bar has been added to the front page of the website.
 ### UC-2
     Amenities can now be chosen through a drop down accordian menu.
 ### UC-3
     Reserving of rooms has not been implemented yet.
 ### UC-4
-    Login page accessible from the side menu with option to sign up. 
+    Login page accessible from the side menu with option to sign up.
 ### UC-5
     A working algorithm has not been started on yet.
 ### UC-6
@@ -623,24 +625,76 @@ For our archictecture we used a central database to store all data.  It is a MYS
 
   ![image](diagrams/subsystems.png)
   <br>
-    The three subsystems are the client's browser, the server, and the database.  The client will access the server and the server retrieve data from the database. 
+    The three subsystems are the client's browser, the server, and the database.  The client will access the server and the server retrieve data from the database.
 
 #### <a name="mapping"></a>Mapping Subsystems to Hardware
 <hr>
 
     There is a server that serves a website.  
     Users are able to access the webpage with a web browser.  The UI that the user interacts with
-    is run on the user's computer that is being used to visit the webpage.  The web server 
+    is run on the user's computer that is being used to visit the webpage.  The web server
     runs on a linux machine that is being hosted remotely.  
 #### <a name="history"></a>History of Work
 <hr>
-	The initial design was meant to use Java but we decided to go with 
+	The initial design was meant to use Java but we decided to go with
 	php in order to use a framework that makes the U.I. easier to develop.
 	After starting with php we began a structured design that we had to
 	re work into classes upon conflicts with report specifications from
 	management.  What started as a bit of a top down decision making process
 	was quickly turned into an excercise in changing the lower level to
-	spec and the U.I.  Both strutured and object oriented approaches 
-	revolve around the MySql database connection although the class design 
+	spec and the U.I.  Both strutured and object oriented approaches
+	revolve around the MySql database connection although the class design
 	did recieve an overhaul between reports.  The current design is modular
 	enough to leave room for extension.
+
+#### <a name="conclusion"></a>Conclusion and Future Work
+<hr>
+
+  **Back End**
+
+  Early technical challenges began with the selection of the back end language. Initially the team decided to go for the implementation of Java to process all the computations on the back end with the assistance of the Spring Framework. However, since no one in the team was familiar with the framework, the team decided to proceed with an easier language and PHP was chosen. PHP doesn't have a steep learning curve and with the use of Slim Framework the back end developers were able to proceed smoothly throughout the development.
+
+  **Framework**
+
+  The Slim Framework had some minor difficulties that lied on the fact that documentation was limited and the community is small. These disadvantages didn't pose a threat to the project as the framework was very minimalistic and its code is short and easy to understand. As oposed to Laravel, the Slim framework can be learned in a single weekend with minimal technical proficiency on PHP.
+
+  **Templating System**
+
+  A greater technical challenged was posed by the implementation of the templating system of choice. In the project, it was decided that Twig would be the most convenient way to deliver the website to the end user. Twig allowed for cleaner and a more secure system that facilitated the development of the project. However, this required to adopt different working  methodologies that were complaint with Twig.
+
+  **Security Flaws**
+
+  During the development it was discovered that the server had multiple failed login attempts. This lead to the team taking actions to secure the server and limit access to SSH keys, changing default ports, and follow the most common practices to ensure that the integrity of the system was preserved.
+
+  In addition to this, the team made a backup of the contents in the database in case data corruption were to happen by external threats or accidents.
+
+  **Coding Practices**
+
+  As the project began to grow, the team encountered architectural disadvantages with the initial design and the team was forced to redesign and refactor the code to facilitate future work.
+
+  **Software Engineering Techniques**
+
+  Software Engineering Techniques allowed the team to deal with these technical difficulties in a prompt and efficient manner. Communication among members, as well as good working practices in the coding area and the repository, allowed for mutual clear communication among members that enhanced the productivity and end product of the project.
+
+  **Suggestions and Lessons**
+
+  Due to time constraints the team was limited to the different approaches that could have taken place to develop the product. In early days of development, the approach taken by team members was a "hacking" approach, that involved learning as the challenged was posed. However, this dismissed proper coding practices and often lead to inefficient code that had to be replaced in the future. It was discovered that by learning properly with books and documentation, and only then recurring to forums, once the coder is educated he/she can develop better code that follow the standards which would allow for better maintainability.
+
+  **Useful Background**
+
+  Experience in basic coding techniques by the part of all members allowed the team to learn swiftly through the different technologies. Some team members were knowledgeable about some very specific technologies that proved useful at the time the server had to be setup. Having a basic understanding in Linux and Apache allowed to team to save time and resources in the setup of the server.
+
+  **Future Work**
+
+  At the end, the project opened doors to a range of ideas such as extending this to parking lots at schools as well as the implementation of infrared sensors to produce accurate information for a minimal initial investment.
+  
+
+#### <a name="references"></a>References
+<hr>
+* [HTML](https://www.w3schools.com/html/)
+* [CSS](https://www.w3schools.com/css/)
+* [JavaScript](https://www.w3schools.com/js/)
+* [PHP](http://php.net/docs.php)
+* [Slim Framework](https://www.slimframework.com)
+* [LAMP Server](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04)
+* [Semantic UI](https://semantic-ui.com)
