@@ -710,14 +710,20 @@ For our archictecture we used a central database to store all data.  It is a MYS
   **Future Work**
 
   At the end, the project opened doors to a range of ideas such as extending this to parking lots at schools as well as the implementation of infrared sensors to produce accurate information for a minimal initial investment.
-  
+
 
 #### <a name="references"></a>References
 <hr>
 * [HTML](https://www.w3schools.com/html/)
+
 * [CSS](https://www.w3schools.com/css/)
+
 * [JavaScript](https://www.w3schools.com/js/)
+
 * [PHP](http://php.net/docs.php)
+
 * [Slim Framework](https://www.slimframework.com)
+
 * [LAMP Server](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04)
+
 * [Semantic UI](https://semantic-ui.com)
