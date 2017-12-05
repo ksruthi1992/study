@@ -107,13 +107,13 @@ Most of the changes here are deletions due to having too many extra features on 
 
 <!-- Hey guys, let's just assign our names to these okay? -->
 Use Case Description  
- * UC-1 User searches for open study space  **_(Nick)_**
- * UC-2 User searches for study space with amenity  **_(Travis)_**
- * UC-3 User reserves a room  **_(Tara)_**
- * UC-4 System logs user in  **_(Luis)_**
- * UC-5 System analyzes trends  **_(Luke)_**			
- * UC-6 User input how busy an area is  **_(Alex)_**
- * UC-7 User leaves comment  **_(Edward)_**
+ * UC-1 User searches for open study space  
+ * UC-2 User searches for study space with amenity  
+ * UC-3 User reserves a room  
+ * UC-4 System logs user in 
+ * UC-5 System analyzes trends  			
+ * UC-6 User input how busy an area is  
+ * UC-7 User leaves comment 
  
  <hr>
 
@@ -251,11 +251,11 @@ Use Case Description
 |---------|:----:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |REQ1     |5     |X  |X  |   |   |X  |   | X |
 |REQ2     |3     |X  |X  |   |   |X  |   |   |
-|REQ3     |3     |   |   |   |x  |   |   |   |
+|REQ3     |3     |   |   |   |X  |   |   |   |
 |REQ4     |1     |X  |   |   |   |X  |   |   |
 |REQ5     |2     |X  |   |   |   |X  |   |   |
-|REQ6     |3     |   |   |X  |x  |X  |   |   |
-|REQ7     |3     |   |X  |   |x  |   |   |   |
+|REQ6     |3     |   |   |X  |X  |X  |   |   |
+|REQ7     |3     |   |X  |   |X  |   |   |   |
 |REQ8     |4     |   |   |   |   |X  |   |   |
 |REQ9     |3     |   |   |   |   |   |X  | X |
 |MAX PW   |      |5  |5  |3  |3  |5  |3  | 5 |
@@ -275,10 +275,69 @@ Use Case Description
   * REQ-3: System is easier to use than a map
   * REQ-5: System can find a quiet (nap) space
   * REQ-9: User can leave comments
+
 #### <a name="effortEstimation"></a>Use Case Points Effort Estimation
 <hr>
 
-    Use case points stuff goes here!!  
+    Unadjusted Actor Weights
+
+|Actor Name|Description                                   |Complexity|Weight|
+|----------|----------------------------------------------|:--------:|:----:|
+|Student   |Student interacts though a web based interface|Average   |2     |
+
+Use Case Weights
+
+|Use Case|Description                                  |Category|Weight|
+|:------:|---------------------------------------------|:------:|:----:|
+|UC-1    |Student searches for an open study space     |Average |10    |
+|UC-2    |Student searches for study space with amenity|Average |10    |
+|UC-4    |System logs user in                          |Average |10    |
+|UC-5    |System analyzes trend                        |Average |10    |
+|UC-6    |User input how busy an area is               |Average |10    |
+|Total   |                                             |        |50    |
+
+Unadjusted UCP (UUCP) = Unadjusted Actor Weights + Use Case Weights = 52
+
+Technical Complexity Factor (TCF)
+
+|Technical Factor|Discription                       |Weight|Preceived Complexity|Calculated Factor|
+|----------------|----------------------------------|:----:|:------------------:|:---------------:|
+|T1              |Web based system                  |2     |2                   |2 X 2 = 4        |
+|T2              |User expect good runtimes         |1     |3                   |1 X 3 = 3        |
+|T3              |Needs to be efficient             |1     |2                   |1 X 2 = 2        |
+|T4              |Internal processing is simple     |1     |1                   |1 X 1 = 1        |
+|T5              |No reuseability required          |1     |0                   |1 X 0 = 0        |
+|T6              |No install required               |0.5   |0                   |0.5 X 1 = 0      |
+|T7              |Fairly easy to use                |0.5   |2                   |0.5 X 2 = 1      |
+|T8              |Needs to work on any moble device |2     |2                   |2 X 2 = 4        |
+|T9              |Easy to change                    |1     |3                   |1 X 3 = 3        |
+|T10             |Concurrent use is required        |1     |3                   |1 X 3 = 3        |
+|T11             |Security is a minimal concern     |1     |3                   |1 X 3 = 3        |
+|T12             |No direct access for third parties|1     |0                   |1 X 0 = 0        |
+|T13             |No training required              |1     |0                   |1 X 0 = 0        |
+|Total           |                                  |      |                    |24               |
+
+**TCF**  0.6 + 0.1 X 24 = **0.84**
+
+Environmental Complexity Factor (ECF)
+
+|Enviromental Factor|Desctiption                                  |Weight|Preceived Impact|Calculated Factor|
+|-------------------|---------------------------------------------|:----:|:--------------:|:---------------:|
+|E1                 |Beginner familiarity with development process|1.5   |1               |1.5 X 1 = 1.5    |
+|E2                 |No familiarity with appication problem       |0.5   |1               |0.5 X 1 = 0.5    |
+|E3                 |Some knowledge of object-oriented approach   |1     |2               |1 X 2 = 2        |
+|E4                 |No lead                                      |0.5   |0               |0.5 X 0 = 0      |
+|E5                 |Mid level motivation                         |1     |2               |1 X 2 = 2        |
+|E6                 |Stable requirements                          |2     |5               |2 X 5 = 10       |
+|E7                 |All part time staff                          |-1    |4               |-1 X 4 = -4      |
+|E8                 |Easy programming language                    |-1    |1               |-1 X 1 = -1      |
+|Total              |                                             |      |                |11               |
+
+**ECF** 1.4 - 0.3 X 11 = 1.07
+
+Use Case Points (UCP) = UUCP x TCF X ECF = 52 X 0.84 X 1.07 = 46.73 = 47
+
+**Project Duration Estimation**  = 47 X 30 = 1410 Man Hours
 	
 ### <a name="domain_analysis"></a>Domain Analysis
 
@@ -457,10 +516,6 @@ User can login to original account or create a new account, if they are new to t
     No user access but admins can change traffic status.
 ### UC-7
     Option for users to leave comments have not been implemented yet.
-#### <a name="planOfWork"></a>Plan of Work
-
-![image](diagrams/PlanOfWorkChart.png)
-![image](diagrams/PlanOfWorkGraph.png)
 
 ### Breakdown of Responsibilities
 
