@@ -540,5 +540,6 @@ For our archictecture we used a central database to store all data.  It is a MYS
 	management.  What started as a bit of a top down decision making process
 	was quickly turned into an excercise in changing the lower level to
 	spec and the U.I.  Both strutured and object oriented approaches 
-	revolve around the MySql database connection.  The design is modular
+	revolve around the MySql database connection although the class design 
+	did recieve an overhaul between reports.  The current design is modular
 	enough to leave room for extension.
