@@ -26,13 +26,21 @@ For our archictecture we used a central database to store all data.  It is a MYS
 #### <a name="data"></a>Persistent Data Storage
 <hr>
 
-Yes, we are using a relational database for data storage.  There are three tables.
+Yes, we are using a relational database for data storage.  There are _seven_ tables.
 
-1. Data Table     - Stores the user input as an int, and is associated with a floor and building id.
+1. Data Table     - Stores the user input as an int, and is associated with a floor, campus, and building id.
 
 2. Building Table - Stores information about the building that will apply to all floors. 
 
 3. Floor Table    - Stores information about each floor, and is associated with the building id. 
+
+4. Campus Table   - Stores information about the various campuses, has a campus id.
+
+5. Features Table - Stores information about the different features a floor can have, each feature is a column.
+
+6. Cached_Data Table - Stores cached data about each floor, and is associated with building, floor, and campus ids
+
+7.  User Table - Stores the log in info for user accounts, has a hashed password and a username and email. 
 
 #### <a name="network"></a>Network Protocal
 <hr>
