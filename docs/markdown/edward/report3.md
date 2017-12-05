@@ -179,8 +179,7 @@ User can login to original account or create a new account, if they are new to t
  -1. Navigation: 4 Total Clicks
  -* User clicks on one of the nearby listed buildings for information about open rooms.
  -* User clicks "Update Status"
- -* User fills out form
- -* User clicks submit
+ -* User selects the fullness of the floor
  -2. Data Entry: 1 click
  -* User click one of the three options for how full a room is
  -3. Fraction of Nav vs Data Entry (Nav/Data)

@@ -345,21 +345,54 @@ Use Case Points (UCP) = UUCP x TCF X ECF = 52 X 0.84 X 1.07 = 46.73 = 47
 
 ![image](diagrams/domainmodel.png)
 
+
+### <a name="system"></a>System Architecture and System Design
+<hr>
+
+#### <a name="architcturalStyle"></a>Architecural Style
+<hr>
+
+For our archictecture we used a central database to store all data.  It is a MYSQL database. The webserver pulls all data from this one database.
+
+
+#### <a name="identifyinSubsystems"></a>Identifying Subsystems
+<hr>
+
+
+  ![image](diagrams/subsystems.png)
+  <br>
+    The three subsystems are the client's browser, the server, and the database.  The client will access the server and the server retrieve data from the database. 
+
+#### <a name="mapping"></a>Mapping Subsystems to Hardware
+<hr>
+
+    There is a server that serves a website.  
+    Users are able to access the webpage with a web browser.  The UI that the user interacts with
+    is run on the user's computer that is being used to visit the webpage.  The web server 
+    runs on a linux machine that is being hosted remotely.  
 #### <a name="data"></a>Persistent Data Storage
 <hr>
 
-Yes, we are using a relational database for data storage.  There are three tables.
+Yes, we are using a relational database for data storage.  There are _seven_ tables.
 
-1. Data Table     - Stores the user input as an int, and is associated with a floor and building id.
+1. Data Table     - Stores the user input as an int, and is associated with a floor, campus, and building id.
 
 2. Building Table - Stores information about the building that will apply to all floors. 
 
 3. Floor Table    - Stores information about each floor, and is associated with the building id. 
 
+4. Campus Table   - Stores information about the various campuses, has a campus id.
+
+5. Features Table - Stores information about the different features a floor can have, each feature is a column.
+
+6. Cached_Data Table - Stores cached data about each floor, and is associated with building, floor, and campus ids
+
+7.  User Table - Stores the log in info for user accounts, has a hashed password and a username and email. 
+
 #### <a name="network"></a>Network Protocal
 <hr>
 
-We are using HTTP. We chose HTTP simply because the majority of the group had some experie with HTTP, and it is easy to work with.  This is the network protocal that our framework of choice uses. 
+We are using HTTP. We chose HTTP simply because the majority of the group had some experience with HTTP, and it is easy to work with.  This is the network protocal that our framework of choice uses. 
 
 #### <a name="controlFlow"></a>Global Control Flow
 <hr>
@@ -389,14 +422,13 @@ We are using HTTP. We chose HTTP simply because the majority of the group had so
     to have a computer capable of visiting a webpage.  
 
 
-### <a name="algorithmsDataStructures"></a>Alorithms and Data Structures
-<hr>
+
 
 ### <a name="algorithmsDataStructures"></a>Algorithms and Data Structures
 <hr>
 
 #### <a name="algorithms"></a>Algorithms
-As of now, the team has only developed the algorithm for the user to log in. No other advanced algorithms have been developed at the moment.
+
 <br /><br />
 Log In<br />
 Pseudo-code:<br /><br />
@@ -416,6 +448,19 @@ $providedPassword;<br />
 <br />}
 
 <hr>
+
+<br /><br />
+Data Cache<br />
+Pseudo-code:<br /><br />
+
+//pull all data for a given floor at the current hour <br>
+
+//calculate the average value of all the data submissions for that floor <br>
+
+//use that average to store a cached value of the overall "fullness" of the floor. <br>
+
+<hr>
+
 
 #### <a name="dataStuctures"></a>Data Structures
 Arrays
@@ -441,6 +486,7 @@ Arrays
 <br />Hashing tables haven't been designed and are expected to be developed to protect the user's password in the database for increased protection. These passwords will be unrecoverable and new ones have to be created if the user wants to restore their account due to forgotten paswords.
 <hr>
 
+
 ### <a name="uIDandI"></a>User Interface Design and Implementation
 <hr>
 
@@ -458,6 +504,7 @@ The user will start at the "Find a Spot" page, which will display what campus yo
 The sidebar menu will be available to the user at all times.  One tap on the menu icon will pull up the menu and allow the user to easily navigate the site. Can choose between "Find a Spot", "My Account", and "Support"
 
 ![image](diagrams/Menu.PNG)
+
 
 #### Login Page
 User can login to original account or create a new account, if they are new to the site.
@@ -479,8 +526,7 @@ User can login to original account or create a new account, if they are new to t
  -1. Navigation: 4 Total Clicks
  -* User clicks on one of the nearby listed buildings for information about open rooms.
  -* User clicks "Update Status"
- -* User fills out form
- -* User clicks submit
+ -* User selects the fullness of the floor
  -2. Data Entry: 1 click
  -* User click one of the three options for how full a room is
  -3. Fraction of Nav vs Data Entry (Nav/Data)
