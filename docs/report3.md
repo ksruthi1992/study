@@ -714,6 +714,7 @@ For our archictecture we used a central database to store all data.  It is a MYS
 
 #### <a name="references"></a>References
 <hr>
+
 * [HTML](https://www.w3schools.com/html/)
 
 * [CSS](https://www.w3schools.com/css/)
