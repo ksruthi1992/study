@@ -55,12 +55,19 @@ Team members:
    * [Algorithms](#algorithms)
    * [Data Structures](#dataStructures)
  * [User Interface Design and Implementation](#uIDandI)
+ * [History of Work](#history)
 
 
  
 
 ### <a name="changeSummary"></a>Summary of Changes
 <hr>
+
+Most of the changes here are deletions due to having too many extra features on top of the core function of the app. The necessary changes are:
+
+* The ommission of the requirement _"REQ-2: System finds a place near me"_
+* The ommission of the requirement _"REQ-6: User can reserve a room"_
+
 
 ### <a name="requirements"></a>Customer Requirements  
 |Requirements|Priority|Description                                                                |
@@ -82,8 +89,8 @@ Team members:
 
 ### <a name="functional"></a>Functional Requirements
    * REQ-1: Find place on campus to study
-   * REQ-4: System ca find group space
-   * REQ-7: System cab search for amenities (locks/whiteboards/outlets/wifi/printers)
+   * REQ-4: System can find group space
+   * REQ-7: System can search for amenities (locks/whiteboards/outlets/wifi/printers)
    * REQ-8: System analyzes data to track trends
 
 #### <a name="stakeholders"></a>Stakeholders
@@ -266,7 +273,7 @@ Use Case Description
 ### <a name="nonfunctional"></a>Nonfunctional Requirements
 
   * REQ-3: System is easier to use than a map
-  * REQ-5: System can find a quiet(nap) space
+  * REQ-5: System can find a quiet (nap) space
   * REQ-9: User can leave comments
 #### <a name="effortEstimation"></a>Use Case Points Effort Estimation
 <hr>
@@ -524,3 +531,15 @@ For our archictecture we used a central database to store all data.  It is a MYS
     Users are able to access the webpage with a web browser.  The UI that the user interacts with
     is run on the user's computer that is being used to visit the webpage.  The web server 
     runs on a linux machine that is being hosted remotely.  
+#### <a name="history"></a>History of Work
+<hr>
+	The initial design was meant to use Java but we decided to go with 
+	php in order to use a framework that makes the U.I. easier to develop.
+	After starting with php we began a structured design that we had to
+	re work into classes upon conflicts with report specifications from
+	management.  What started as a bit of a top down decision making process
+	was quickly turned into an excercise in changing the lower level to
+	spec and the U.I.  Both strutured and object oriented approaches 
+	revolve around the MySql database connection although the class design 
+	did recieve an overhaul between reports.  The current design is modular
+	enough to leave room for extension.
