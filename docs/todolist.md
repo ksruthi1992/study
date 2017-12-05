@@ -13,6 +13,6 @@ Report 3 requirements
 12. System architecture and system design from report 2 --Edward
 13. Algorithms and Data Structures from report 2 --Edward
 14. Yser interface design and implementation --Edward
-15. History of work and current status of implementation --
+15. History of work and current status of implementation --Luke
 16. Conclusions and future work--Luis
 17. References -- Travis
