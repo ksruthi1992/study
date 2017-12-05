@@ -45,7 +45,7 @@ Yes, we are using a relational database for data storage.  There are _seven_ tab
 #### <a name="network"></a>Network Protocal
 <hr>
 
-We are using HTTP. We chose HTTP simply because the majority of the group had some experie with HTTP, and it is easy to work with.  This is the network protocal that our framework of choice uses. 
+We are using HTTP. We chose HTTP simply because the majority of the group had some experience with HTTP, and it is easy to work with.  This is the network protocal that our framework of choice uses. 
 
 #### <a name="controlFlow"></a>Global Control Flow
 <hr>
@@ -101,6 +101,19 @@ $providedPassword;<br />
 <br />}
 
 <hr>
+
+<br /><br />
+Data Cache<br />
+Pseudo-code:<br /><br />
+
+//pull all data for a given floor at the current hour <br>
+
+//calculate the average value of all the data submissions for that floor <br>
+
+//use that average to store a cached value of the overall "fullness" of the floor. <br>
+
+<hr>
+
 
 #### <a name="dataStuctures"></a>Data Structures
 Arrays
