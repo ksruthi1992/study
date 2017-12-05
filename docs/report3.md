@@ -76,9 +76,11 @@ Team members:
 |**REQ - 9** |3       |User can leave comments                                                    |
 
 ### <a name="glossary"></a>Glossary
-  * Study Space: a place to study, sleep or work in a group
   * Amenities: outlets for charging, quiet, whiteboards, printers, monitors
-  * Trends: useage trends for the different study spaces
+  * Requirements: The customers list of what is expected in the final version of the program 
+  * Study Space: a place to study, sleep or work in a group
+  * Trends: Usage trends for the different study spaces
+  
 
 ### <a name="functional"></a>Functional Requirements
    * REQ-1: Find place on campus to study
@@ -323,10 +325,6 @@ We are using HTTP. We chose HTTP simply because the majority of the group had so
     The system runs on a linux box that is remotely hosted.  The server only need about 1GB of
      space and a single core allocated to host and serve content.  To use the system, the client needs
     to have a computer capable of visiting a webpage.  
-
-
-### <a name="algorithmsDataStructures"></a>Alorithms and Data Structures
-<hr>
 
 ### <a name="algorithmsDataStructures"></a>Algorithms and Data Structures
 <hr>
