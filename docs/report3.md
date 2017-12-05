@@ -55,6 +55,7 @@ Team members:
    * [Algorithms](#algorithms)
    * [Data Structures](#dataStructures)
  * [User Interface Design and Implementation](#uIDandI)
+ * [History of Work](#history)
 
 
  
@@ -524,3 +525,14 @@ For our archictecture we used a central database to store all data.  It is a MYS
     Users are able to access the webpage with a web browser.  The UI that the user interacts with
     is run on the user's computer that is being used to visit the webpage.  The web server 
     runs on a linux machine that is being hosted remotely.  
+#### <a name="history"></a>History of Work
+<hr>
+	The initial design was meant to use Java but we decided to go with 
+	php in order to use a framework that makes the U.I. easier to develop.
+	After starting with php we began a structured design that we had to
+	re work into classes upon conflicts with report specifications from
+	management.  What started as a bit of a top down decision making process
+	was quickly turned into an excercise in changing the lower level to
+	spec and the U.I.  Both strutured and object oriented approaches 
+	revolve around the MySql database connection.  The design is modular
+	enough to leave room for extension.
