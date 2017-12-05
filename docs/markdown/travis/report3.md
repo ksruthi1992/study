@@ -55,19 +55,12 @@ Team members:
    * [Algorithms](#algorithms)
    * [Data Structures](#dataStructures)
  * [User Interface Design and Implementation](#uIDandI)
- * [History of Work](#history)
 
 
  
 
 ### <a name="changeSummary"></a>Summary of Changes
 <hr>
-
-Most of the changes here are deletions due to having too many extra features on top of the core function of the app. The necessary changes are:
-
-* The ommission of the requirement _"REQ-2: System finds a place near me"_
-* The ommission of the requirement _"REQ-6: User can reserve a room"_
-
 
 ### <a name="requirements"></a>Customer Requirements  
 |Requirements|Priority|Description                                                                |
@@ -89,8 +82,8 @@ Most of the changes here are deletions due to having too many extra features on 
 
 ### <a name="functional"></a>Functional Requirements
    * REQ-1: Find place on campus to study
-   * REQ-4: System can find group space
-   * REQ-7: System can search for amenities (locks/whiteboards/outlets/wifi/printers)
+   * REQ-4: System ca find group space
+   * REQ-7: System cab search for amenities (locks/whiteboards/outlets/wifi/printers)
    * REQ-8: System analyzes data to track trends
 
 #### <a name="stakeholders"></a>Stakeholders
@@ -107,13 +100,13 @@ Most of the changes here are deletions due to having too many extra features on 
 
 <!-- Hey guys, let's just assign our names to these okay? -->
 Use Case Description  
- * UC-1 User searches for open study space  
- * UC-2 User searches for study space with amenity  
- * UC-3 User reserves a room  
- * UC-4 System logs user in 
- * UC-5 System analyzes trends  			
- * UC-6 User input how busy an area is  
- * UC-7 User leaves comment 
+ * UC-1 User searches for open study space  **_(Nick)_**
+ * UC-2 User searches for study space with amenity  **_(Travis)_**
+ * UC-3 User reserves a room  **_(Tara)_**
+ * UC-4 System logs user in  **_(Luis)_**
+ * UC-5 System analyzes trends  **_(Luke)_**			
+ * UC-6 User input how busy an area is  **_(Alex)_**
+ * UC-7 User leaves comment  **_(Edward)_**
  
  <hr>
 
@@ -251,11 +244,11 @@ Use Case Description
 |---------|:----:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |REQ1     |5     |X  |X  |   |   |X  |   | X |
 |REQ2     |3     |X  |X  |   |   |X  |   |   |
-|REQ3     |3     |   |   |   |X  |   |   |   |
+|REQ3     |3     |   |   |   |x  |   |   |   |
 |REQ4     |1     |X  |   |   |   |X  |   |   |
 |REQ5     |2     |X  |   |   |   |X  |   |   |
-|REQ6     |3     |   |   |X  |X  |X  |   |   |
-|REQ7     |3     |   |X  |   |X  |   |   |   |
+|REQ6     |3     |   |   |X  |x  |X  |   |   |
+|REQ7     |3     |   |X  |   |x  |   |   |   |
 |REQ8     |4     |   |   |   |   |X  |   |   |
 |REQ9     |3     |   |   |   |   |   |X  | X |
 |MAX PW   |      |5  |5  |3  |3  |5  |3  | 5 |
@@ -273,13 +266,13 @@ Use Case Description
 ### <a name="nonfunctional"></a>Nonfunctional Requirements
 
   * REQ-3: System is easier to use than a map
-  * REQ-5: System can find a quiet (nap) space
+  * REQ-5: System can find a quiet(nap) space
   * REQ-9: User can leave comments
 
 #### <a name="effortEstimation"></a>Use Case Points Effort Estimation
 <hr>
 
-    Unadjusted Actor Weights
+Unadjusted Actor Weights
 
 |Actor Name|Description                                   |Complexity|Weight|
 |----------|----------------------------------------------|:--------:|:----:|
@@ -338,6 +331,7 @@ Environmental Complexity Factor (ECF)
 Use Case Points (UCP) = UUCP x TCF X ECF = 52 X 0.84 X 1.07 = 46.73 = 47
 
 **Project Duration Estimation**  = 47 X 30 = 1410 Man Hours
+
 	
 ### <a name="domain_analysis"></a>Domain Analysis
 
@@ -516,6 +510,10 @@ User can login to original account or create a new account, if they are new to t
     No user access but admins can change traffic status.
 ### UC-7
     Option for users to leave comments have not been implemented yet.
+#### <a name="planOfWork"></a>Plan of Work
+
+![image](diagrams/PlanOfWorkChart.png)
+![image](diagrams/PlanOfWorkGraph.png)
 
 ### Breakdown of Responsibilities
 
@@ -586,15 +584,3 @@ For our archictecture we used a central database to store all data.  It is a MYS
     Users are able to access the webpage with a web browser.  The UI that the user interacts with
     is run on the user's computer that is being used to visit the webpage.  The web server 
     runs on a linux machine that is being hosted remotely.  
-#### <a name="history"></a>History of Work
-<hr>
-	The initial design was meant to use Java but we decided to go with 
-	php in order to use a framework that makes the U.I. easier to develop.
-	After starting with php we began a structured design that we had to
-	re work into classes upon conflicts with report specifications from
-	management.  What started as a bit of a top down decision making process
-	was quickly turned into an excercise in changing the lower level to
-	spec and the U.I.  Both strutured and object oriented approaches 
-	revolve around the MySql database connection although the class design 
-	did recieve an overhaul between reports.  The current design is modular
-	enough to leave room for extension.
