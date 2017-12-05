@@ -137,6 +137,7 @@ The sidebar menu will be available to the user at all times.  One tap on the men
 
 ![image](diagrams/Menu.PNG)
 
+
 #### Login Page
 User can login to original account or create a new account, if they are new to the site.
 
