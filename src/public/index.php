@@ -141,11 +141,17 @@
 
 //START Post Requests - - - - - - - - - - - - - - - - - - - *
 
-$app->post('/submit', function ($request, $response)  use(&$insert_obj) {
+$app->post('/submit', function ($request, $response)  use(&$insert_obj, &$analyze_obj) {
     //Submit Data
-    $data = $request->getParsedBody();
-
+    $data      = $request->getParsedBody();
     $insert_obj->insertDataEntry($data["campus_id"],$data["building_id"],$data["floor_id"],$data["data"]);
+
+    $past_data = $analyze_obj->getData($data["campus_id"],$data["building_id"],$data["floor_id"]);
+
+    $analyze_obj->calculateAverage($data["campus_id"],$data["building_id"],$data["floor_id"], $past_data);
+
+       
+
 });
 
 //END Post Requests - - - - - - - - - - - - - - - - - - - - *

@@ -7,7 +7,7 @@
     //data submit class
     require_once('dataSubmit.php');
     //data analyze class
-    require_one('analyze.php');
+    require_once('analyze.php');
     //database constants
     require_once('constants/database.php');
     
@@ -17,3 +17,5 @@
     $campus      = new campusData($connection);
     
     $insert_obj  = new dataSubmit($connection);
+
+    $analyze_obj = new Analyze($connection);
