@@ -6,8 +6,11 @@
     require_once('campusData.php');
     //data submit class
     require_once('dataSubmit.php');
+    //data analyze class
+    require_one('analyze.php');
     //database constants
     require_once('constants/database.php');
+    
 
 	$connection  = new database_connection(HOSTNAME,USERNAME,PASSWORD,DATABASE);
 
