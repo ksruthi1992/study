@@ -59,4 +59,27 @@
 			
 			return $data_array;
 		}
+
+		public function showPercentage($campus, $building, $floor){
+
+				$campus=(int)$campus;
+				$query="SELECT percentage FROM cached_data
+						WHERE  
+                          campus_id     = {$campus}    AND 
+                          building_id   = {$building}  AND
+                          floor_id      = {$floor}     
+						 
+						";
+			
+
+			$result = mysqli_query($this->connection->get(), $query);
+
+			if ($result->num_rows === 0) {
+				return false;
+			}
+			while($row = $result->fetch_assoc())
+				$data_array[]=$row;
+			
+			return $data_array;
+		}
 	}

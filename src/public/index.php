@@ -88,7 +88,13 @@
                     $data['buildings'] =  $campus->showBuilding("1", "all");
                     foreach ( $data['buildings'] as $building) {
  
-                        $data['floors'][$building['id']] = $campus->showFloor( $building['id'], "all" ); 
+                        $data['floors'][$building['id']] = $campus->showFloor( $building['id'], "all" );
+                        
+                        foreach ($data['floors'][$building['id']] as $key=>$value) {
+
+                            $data['floors'][$building['id']][$key]["percent"] = $campus->showPercentage(1,$building['id'], $value['name'] );
+
+                        }
                      
                     }
                     

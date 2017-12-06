@@ -6,8 +6,12 @@
 
     <!-- Header -->
     <div class="ui segment">
-      <h1>Find a spot at
-        {{ campusName }}
+      <h1>Find a spot at Sac State
+        {% for campus in campuses %}
+          {% if campus.idcampus == 1 %}
+            {{ campus.name }}
+          {% endif %}
+        {% endfor %}
       </h1>
     </div>
 
@@ -59,6 +63,7 @@
               <i class="large info icon"></i><a href="/building?buildingSelected={{ building.id }}" style="text-decoration: none;color: black;">Expand building description</a><br><br>
               {% set particularBuilding = loop.index  %}
               {% for floor in floors[particularBuilding] %}
+              {{ dump(floor) }}
                <div>
                 <span class="ui" style="color: black; font-size: 16px;">Floor {{ floor.name }}</span>
                 <button style="float: right;" class="ui tiny button" onClick="submitData({{ floor.name }}, {{ particularBuilding }})">Submit Status</button>
@@ -67,7 +72,7 @@
                  <br>
                  <!-- <br><br> -->
                 {% endif %}
-                <div class="ui small indicating progress" data-percent="100">
+                <div class="ui small indicating progress" data-percent="{{ floor.percent|first.percentage }}">
                   <div class="bar"></div>
                   <div class="label">There is plenty of seating available.</div>
                 </div>

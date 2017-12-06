@@ -42,10 +42,19 @@
                 
                         foreach($value_array as $value)
                             $count++;
+                            if ($value == 1) {
+                                $value =0;
+                            }
                             $total += $value;
                         
                     }
-            $calculated_value =  1 - (($total) / ($count * 3));
+            $calculated_value =  100 * (1 - (($total) / ($count * 3)));
+            if ($calculated_value > 100)
+                    $calculated_value = 100;
+
+            if ($calculated_value  < 10) {
+                $calculated_value = 1;
+            }
 
             if ($this->checkCache($campus_id, $building_id, $floor_id)) {
                 
