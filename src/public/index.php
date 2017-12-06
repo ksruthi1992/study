@@ -96,19 +96,24 @@
                 }
             }
 
-            include("../modules/globalObjects.php");
+            $data['mainMenu']=true;
             return $this->view->render($response, $target, $data);
         }
     );
     //Account
     $app->get('/account', function ($request, $response, $args){
-            return $this->view->render($response, "/views/home.twig");
+            return $this->view->render($response, "/views/account.twig");
         }
     );
     //Sign Up
     $app->get('/signUp', function ($request, $response, $args){
             return $this->view->render($response, "/views/signUp.twig");
         }
+    );
+    //Recover
+    $app->get('/recover', function ($request, $response, $args){
+        return $this->view->render($response, "/views/recover.twig");
+    }
     );
     //Support
     $app->get('/support', function ($request, $response, $args){

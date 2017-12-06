@@ -4,15 +4,15 @@
 <div class="ui container" >
   <div class="ui segments" style="font-size: 25px; margin-top: 25px;">
 
-    <div class="ui segment">
+    <div class="ui segment" style="color:black">
       <h1>My Account</h1>
     </div>
     
-    <div class="ui segment" style="">
+    <div class="ui segment">
 
       <div class="ui two column middle aligned relaxed grid basic segment" style="display: inline-block; width: 100%">
         <div class="column" style="display: inline-block;width: 45%;">
-          <div class="ui form segment">
+          <div class="ui form segment"><form action="/account" method="post">
             <div class="field">
               <label>Username</label>
               <div class="ui left labeled icon input">
@@ -33,8 +33,8 @@
                 </div>
               </div>
             </div>
-            <div class="ui blue submit button">Login</div> Forgot?
-          </div>
+            <button class="ui blue submit button">Login</button> <a href="/recover"><span style="color:black;">Forgot?</span><a/>
+          </div></form>
         </div>
         <div class="ui vertical divider" style="display: inline-block; width: 10%  ">
           Or
