@@ -63,7 +63,7 @@
               <i class="large info icon"></i><a href="/building?buildingSelected={{ building.id }}" style="text-decoration: none;color: black;">Expand building description</a><br><br>
               {% set particularBuilding = loop.index  %}
               {% for floor in floors[particularBuilding] %}
-              {{ dump(floor) }}
+ 
                <div>
                 <span class="ui" style="color: black; font-size: 16px;">Floor {{ floor.name }}</span>
                 <button style="float: right;" class="ui tiny button" onClick="submitData({{ floor.name }}, {{ particularBuilding }})">Submit Status</button>
@@ -74,7 +74,16 @@
                 {% endif %}
                 <div class="ui small indicating progress" data-percent="{{ floor.percent|first.percentage }}">
                   <div class="bar"></div>
-                  <div class="label">There is plenty of seating available.</div>
+                  {% if ( floor.percent|first.percentage  == false) %}
+                    <div class="label">There is no data for this floor.</div> 
+                  {% elseif (floor.percent|first.percentage  <= 25 )%}
+                    <div class="label">There is practically no seating.</div>
+                  {% elseif ( floor.percent|first.percentage  >= 66) %}
+                    <div class="label">There is plenty of seating.</div>
+                  {% else %}
+                  <div class="label">There is some seating</div>                  
+                  {% endif %}
+
                 </div>
               {% endfor %}
             </div>
