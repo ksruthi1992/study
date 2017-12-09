@@ -1,6 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+use PHPUnit\DbUnit\TestCaseTrait;
+
 
 
 /**
@@ -9,14 +11,22 @@ use PHPUnit\Framework\TestCase;
 
 Class analyzeTest extends TestCase{
 
-	function testGetData(){
+	protected $connection;
 
-		$this->assertEquals("",analyze::getData());
-	}
+		function __construct($connection){
+			$this->connection=$connection;
+		}
 
 	function testCalculateAverage(){
 
 		$this->assertEquals("",analyze::calculateAverage());
+	}
+
+	use TestCaseTrait;
+
+	function testGetData(){
+
+		$this->assertEquals("",analyze::getData());
 	}
 
 	function testCheckCache(){

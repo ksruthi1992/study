@@ -1,6 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+use PHPUnit\DbUnit\TestCaseTrait;
 
 
 /**
@@ -9,8 +10,16 @@ use PHPUnit\Framework\TestCase;
 
 Class campusDataTest extends TestCase{
 
-	public function testShowCampus(){
+	protected $connection;
 
+		function __construct($connection){
+			$this->connection=$connection;
+		}
+
+	use TestCaseTrait;
+
+	public function testShowCampus(){
+		$this->assertEquals(2, $this->getConnection()->getRowCount('campus'), "Pre-Condition");
 		$this->assertEquals("",campusData::showCampus("all"));
 	}
 

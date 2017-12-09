@@ -1,6 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+use PHPUnit\DbUnit\TestCaseTrait;
 
 
 /**
@@ -9,8 +10,16 @@ use PHPUnit\Framework\TestCase;
 
 Class dataSubmitTest extends TestCase{
 
+	protected $connection;
+
+		function __construct($connection){
+			$this->connection=$connection;
+		}
+
+	use TestCaseTrait;
+
 	function testInsertDataEntry{
 
-		$this->assertEquals("", dataSubmit::insertDataEntry());
+		
 	}
 }
