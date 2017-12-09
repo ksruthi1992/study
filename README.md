@@ -15,3 +15,5 @@ mysql-client
 
 PHP packages from the official Linux Mint repositories:
 	php7.0
+
+Install the required php dependencies with "composer update" in the root dir
