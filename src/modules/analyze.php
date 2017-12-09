@@ -10,7 +10,7 @@
 		public function getData($campus_id, $building_id, $floor_id){
 
 
-            //SELECT foo from bar WHERE HOUR(your_time_field) = HOUR(CURTIME()) AND DATE(field) = CURDATE() 
+            ///SELECT foo from bar WHERE HOUR(your_time_field) = HOUR(CURTIME()) AND DATE(field) = CURDATE() 
 
 			$query = " SELECT data FROM data 
                        WHERE  

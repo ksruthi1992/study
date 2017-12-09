@@ -1,14 +1,14 @@
 <?php
 
-    //connection class
+    ///connection class
     require_once('database_connection.php');
-    //campus class
+    ///campus class
     require_once('campusData.php');
-    //data submit class
+    ///data submit class
     require_once('dataSubmit.php');
-    //data analyze class
+    ///data analyze class
     require_once('analyze.php');
-    //database constants
+    ///database constants
     require_once('constants/database.php');
     
 
